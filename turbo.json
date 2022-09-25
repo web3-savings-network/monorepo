@@ -40,11 +40,11 @@
       "dependsOn": ["^clean"]
     },
     "lab": {
-      "dependsOn": ["^watch", "^chain", "@turbo-eth/react-app#dev"],
+      "dependsOn": ["^watch", "^chain", "@chance-cards/react-app#dev"],
       "outputs": [""]
     },
     "lab:fork": {
-      "dependsOn": ["^watch", "chain:fork", "@turbo-eth/react-app#dev:fork"]
+      "dependsOn": ["^watch", "chain:fork", "@chance-cards/react-app#dev:fork"]
     }
   }
 }

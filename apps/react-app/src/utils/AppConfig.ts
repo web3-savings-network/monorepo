@@ -1,7 +1,7 @@
 export const AppConfig = {
-  emoji: "⚡",
-  title: "TurboETH",
-  site_name: "TurboETH - Ship Faster.",
-  description: "Ethereum dApp Build System",
+  emoji: "🍀",
+  title: "Chance Cards",
+  site_name: "Chance Cards - Powered by PoolTogether.",
+  description: "A chance to win a prize every day.",
   locale: "en",
 };

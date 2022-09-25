@@ -1,19 +1,7 @@
-![banner](https://user-images.githubusercontent.com/3408362/174462135-3aaeefba-554a-40d7-bd58-f58bf20725cb.png)
-
-# ⚡ TurboETH
+# Chance Cards Workspace
 
 ![TS](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
 [![GPLv3 license](https://img.shields.io/badge/License-MIT-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-
-Turbo ETH is an Ethereum dApp Build System; designed to make building Web3 applications fast.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fturbo-eth%2Fturbo-eth)
-
-### Installation & Usage
-
-```sh
-git clone git@github.com:turbo-eth/turbo-eth.git
-```
 
 **Installation**
 

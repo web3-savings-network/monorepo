@@ -1,10 +1,10 @@
 // @ts-nocheck
-import erc20MintableABI from '@turbo-lab/core-sol/abis/contracts/MintableERC20.sol/MintableERC20.json'
-import erc721MintableABI from '@turbo-lab/core-sol/abis/contracts/MintableERC721.sol/MintableERC721.json'
+import chanceCardABI from '@chance-cards/core-sol/abis/contracts/ChanceCard.sol/ChanceCard.json'
+import chanceCardStorageABI from '@chance-cards/core-sol/abis/contracts/ChanceCardStorage.sol/ChanceCardStorage.json'
 
-import turboTokenMainnet from '@turbo-lab/core-sol/deployments/localhost/TurboToken.json';
-import turboTokenTestnet from '@turbo-lab/core-sol/deployments/localhost/TurboToken.json';
-import turboTokenLocalhost from '@turbo-lab/core-sol/deployments/localhost/TurboToken.json';
+import ChanceCardMainnet from '@chance-cards/core-sol/deployments/localhost/ChanceCard.json';
+import ChanceCardTestnet from '@chance-cards/core-sol/deployments/localhost/ChanceCard.json';
+import ChanceCardLocalhost from '@chance-cards/core-sol/deployments/localhost/ChanceCard.json';
 
 
 function useNetworkContract(network: string, contract: string) {
@@ -12,22 +12,22 @@ function useNetworkContract(network: string, contract: string) {
     switch (network) {
         case 'mainnet':
             switch (contract) {
-                case 'TurboToken':
-                    return turboToken
+                case 'ChanceCard':
+                    return ChanceCard
                 default:
                     throw new Error(`Unknown contract ${contract}`);
             }
         case 'testnet':
             switch (contract) {
-                case 'TurboToken':
-                    return turboTokenTestnet
+                case 'ChanceCard':
+                    return ChanceCardTestnet
                 default:
                     throw new Error(`Unknown contract ${contract}`);
             }
         case 'localhost':
             switch (contract) {
-                case 'TurboToken':
-                    return turboTokenLocalhost
+                case 'ChanceCard':
+                    return ChanceCardLocalhost
                 default:
                     throw new Error(`Unknown contract ${contract}`);
             }
@@ -37,4 +37,4 @@ function useNetworkContract(network: string, contract: string) {
 
 }
 
-export { erc20MintableABI, erc721MintableABI, useNetworkContract }
+export { chanceCardABI, chanceCardStorageABI, useNetworkContract }

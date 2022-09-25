@@ -13,18 +13,6 @@ import { HardhatUserConfig } from 'hardhat/config';
 import networks from './hardhat.network';
 
 const optimizerEnabled = !process.env.OPTIMIZER_DISABLED;
-const foundryEnabled = process.env.FOUNDRY_ENABLED;
-
-/**
- * The Foundry integration is a new experimental feature.
- * Not all of the bugs have been fixed yet for usage in a monorepo.
- * Only enabled when the environment variable FOUNDRY_ENABLED is set to true.
- */
-if (foundryEnabled) {
-  require('@foundry-rs/hardhat');
-  require('@foundry-rs/hardhat-anvil');
-  require('@foundry-rs/hardhat-forge');
-}
 
 const config: HardhatUserConfig = {
   abiExporter: {
@@ -46,8 +34,10 @@ const config: HardhatUserConfig = {
   external: {
     contracts: [
       {
-        artifacts:
+        artifacts: [
           '@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol:IERC721Enumerable',
+          "@erc721k/core-sol/contracts/ERC721K.sol:ERC721K",
+        ]
       },
     ],
   },

@@ -1,5 +1,5 @@
 {
-  "name": "@turbo-lab/core-sol",
+  "name": "@chance-cards/core-sol",
   "version": "0.0.0-beta.0",
   "description": "Smart Contracts.",
   "main": "index.js",
@@ -41,6 +41,8 @@
     "prepack": "yarn compile"
   },
   "dependencies": {
+    "@erc721k/core-sol": "0.0.0-beta.0",
+    "@erc721k/periphery-sol": "0.0.0-beta.0",
     "@openzeppelin/contracts": "^4.7.2"
   },
   "devDependencies": {
