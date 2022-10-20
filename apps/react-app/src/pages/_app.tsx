@@ -1,4 +1,5 @@
 import "../styles/global.css";
+import "../styles/app.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import {
   connectorsForWallets,
@@ -13,10 +14,14 @@ import { publicProvider } from "wagmi/providers/public";
 import IsMounted from "@/components/IsMounted";
 import { AppConfig } from "@/utils/AppConfig";
 import { ModalProvider } from "react-modal-hook";
-import { ALCHEMY_ID, ENABLE_TESTNETS, FORKING_ENABLED } from "@/utils/constants";
+import {
+  ALCHEMY_ID,
+  ENABLE_TESTNETS,
+  FORKING_ENABLED,
+} from "@/utils/constants";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
-console.log(FORKING_ENABLED)
+console.log(FORKING_ENABLED);
 const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
@@ -35,12 +40,13 @@ const { chains, provider, webSocketProvider } = configureChains(
             http: "http://127.0.0.1:8545",
           }),
         }),
-        publicProvider()
+        publicProvider(),
         // alchemyProvider({ alchemyId: ALCHEMY_ID }),
       ]
     : [
-      // alchemyProvider({ alchemyId: ALCHEMY_ID }), 
-      publicProvider()]
+        // alchemyProvider({ alchemyId: ALCHEMY_ID }),
+        publicProvider(),
+      ]
 );
 
 const { wallets } = getDefaultWallets({

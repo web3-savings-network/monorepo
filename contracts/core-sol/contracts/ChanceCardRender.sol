@@ -69,7 +69,7 @@ contract ChanceCardRender is Ownable {
             svg.prop("font-size", "22"),
             svg.prop("fill", "white")
           ),
-          "U+1F33F"
+          unicode"🍀"
           // "Weekly Chances - 1:254"
         ),
         svg.text(
@@ -100,7 +100,7 @@ contract ChanceCardRender is Ownable {
             svg.prop("font-weight", "bold"),
             svg.prop("fill", "white")
           ),
-          string.concat("Chance")
+          string.concat("Deposit")
         ),
         svg.text(
           string.concat(
