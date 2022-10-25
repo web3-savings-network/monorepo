@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-contract ChanceCardMinter {
+contract Web3CardMinter {
   address public ercTwab;
 
   constructor() {}

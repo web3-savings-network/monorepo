@@ -7,10 +7,10 @@ import { IStream } from "./interfaces/IStream.sol";
 import { ITraitsFetch } from "./interfaces/ITraitsFetch.sol";
 
 /**
- * @title ChanceCardTraits
+ * @title Web3CardTraits
  * @author Kames Geraghty
  */
-contract ChanceCardTraits is ITraitsFetch, Ownable {
+contract Web3CardTraits is ITraitsFetch, Ownable {
   constructor() {}
 
   /* ===================================================================================== */

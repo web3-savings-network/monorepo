@@ -9,7 +9,7 @@ import { SVGLibrary } from "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol"
 import { SVGRegistry } from "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol";
 import { Base64 } from "base64-sol/base64.sol";
 
-contract ChanceCardRender is Ownable {
+contract Web3CardRender is Ownable {
   address internal _svgLibrary;
   address internal _svgRegistry;
 
@@ -41,12 +41,13 @@ contract ChanceCardRender is Ownable {
   }
 
   function _render(bytes memory input) internal view returns (string memory) {
-    (address owner, uint256 balance, uint256 claimable, string memory ens) = abi.decode(
-      input,
-      (address, uint256, uint256, string)
-    );
-
-    // uint256
+    (
+      address owner,
+      uint256 balance,
+      uint256 avgBalance2Weeks,
+      uint256 avgBalance4Weeks,
+      uint256 avgBalance26Weeks
+    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256));
 
     return
       string.concat(
@@ -132,7 +133,7 @@ contract ChanceCardRender is Ownable {
             svg.prop("font-weight", "500"),
             svg.prop("fill", "white")
           ),
-          string(abi.encodePacked(svgUtils.round2Txt(claimable, 6, 2)))
+          string(abi.encodePacked(svgUtils.round2Txt(avgBalance26Weeks, 6, 2)))
         ),
         svg.text(
           string.concat(

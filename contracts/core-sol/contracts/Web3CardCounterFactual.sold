@@ -7,7 +7,7 @@ import { ERC721Storage } from "@erc721k/core-sol/contracts/ERC721Storage.sol";
 import { ISVGRender } from "./interfaces/ISVGRender.sol";
 import { ERC20TWAB } from "./ERC20TWAB.sol";
 
-contract ChanceCard is ERC721K {
+contract Web3CardCounterFactual is ERC721K {
   address public ercTwab;
 
   address private _minter;

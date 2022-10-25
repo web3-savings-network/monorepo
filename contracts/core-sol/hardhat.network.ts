@@ -46,8 +46,8 @@ if (ARCHIVE_NODE_RPC_URL && FORK_ENABLED) {
     allowUnlimitedContractSize: true,
     forking: {
       url: ARCHIVE_NODE_RPC_URL,
-      // blockNumber: Number(FORK_BLOCK_NUMBER || "1"),
-      blockNumber: Number("15606000" || "1"),
+      blockNumber: Number(FORK_BLOCK_NUMBER || "1"),
+      // blockNumber: Number(process.env.FORK_BLOCK_NUMBER || "1"),
     },
   };
 } else {

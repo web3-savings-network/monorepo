@@ -61,6 +61,9 @@ const config: HardhatUserConfig = {
     deployer: {
       default: 0,
     },
+    erc20TWAB: {
+      default: '0xdd4d117723C257CEe402285D3aCF218E9A8236E1', // PoolTogether USDC Ticket
+    },
   },
   networks,
   solidity: {

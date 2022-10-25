@@ -8,7 +8,7 @@ import { svgUtils } from "@erc721k/periphery-sol/contracts/svg/svgUtils.sol";
 import { SVGLibrary } from "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol";
 import { ISVGModule } from "./interfaces/ISVGModule.sol";
 
-contract ChanceCardSvgModule is ISVGModule, Ownable {
+contract Web3CardSvgModule is ISVGModule, Ownable {
   SVGLibrary private _svgLibrary;
 
   string private _encoding = "(uint8)";
