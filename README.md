@@ -3,6 +3,25 @@
 ![TS](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
 [![GPLv3 license](https://img.shields.io/badge/License-MIT-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
+## Application
+
+marketing: chancecards.surge.sh
+app: chancecardsApp.surge.sh
+admin: chancecardsAdmin.surge.sh
+
+## MongoDB Local
+
+Start:
+`brew services start mongodb-community@6.0`
+
+Stop:
+
+`brew services stop mongodb-community@6.0`
+
+Run as background process:
+
+`mongod --config /opt/homebrew/etc/mongod.conf --fork`
+
 **Installation**
 
 [`pnpm`](https://pnpm.io/) is the **recommended** package manager.

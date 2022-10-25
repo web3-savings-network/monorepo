@@ -1,0 +1,47 @@
+import * as React from "react";
+import classNames from "classnames";
+
+interface InputWithLabelProps {
+  className?: string;
+  label?: string;
+  register: Function;
+  required?: boolean;
+  disabled?: boolean;
+  hidden?: boolean;
+  name?: string;
+  placeholder?: string;
+  type?: string;
+}
+
+export const InputWithLabel = ({
+  className,
+  name,
+  label,
+  register,
+  required = false,
+  disabled = false,
+  hidden = false,
+  placeholder,
+  type,
+}: InputWithLabelProps) => {
+  const containerClassName = classNames(className, "InputWithLabel");
+  return (
+    <div className={containerClassName}>
+      <div className="flex items-center justify-center">
+        <input
+          className="input"
+          type={type}
+          disabled={disabled}
+          hidden={hidden}
+          placeholder={placeholder}
+          {...register(name, { required })}
+        />
+        <label className="px-3 py-2 bg-emerald-500 text-white text-center rounded-sm">
+          <span className="uppercase text-xs font-bold">{label}</span>
+        </label>
+      </div>
+    </div>
+  );
+};
+
+export default InputWithLabel;
