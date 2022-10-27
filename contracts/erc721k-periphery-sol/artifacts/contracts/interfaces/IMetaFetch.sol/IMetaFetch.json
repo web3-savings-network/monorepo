@@ -1,0 +1,212 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IMetaFetch",
+  "sourceName": "contracts/interfaces/IMetaFetch.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "data",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "background_color",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "animation_url",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "external_url",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "youtube_url",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IMetaFetch.Core",
+          "name": "core",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "image",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "image_data",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "background_color",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "animation_url",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "external_url",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "youtube_url",
+              "type": "string"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "display_type",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "trait_type",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "value",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct IMetaFetch.Trait[]",
+              "name": "attributes",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct IMetaFetch.Metadata",
+          "name": "meta",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "image",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "image",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "image_data",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IMetaFetch.Image",
+          "name": "image",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "traits",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "display_type",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "trait_type",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IMetaFetch.Trait[]",
+          "name": "traits",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

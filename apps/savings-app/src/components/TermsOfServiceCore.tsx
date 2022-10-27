@@ -45,7 +45,7 @@ export const TermsOfServiceCore = ({ className }: TermsOfServiceCoreProps) => {
         Interface is distinct from the Protocol. The Protocol itself has three
         versions, designated as v1, v2, and v3, each of which comprises
         open-source or source-available self-executing smart contracts that are
-        deployed on various public blockchains, such as Ethereum. Chance Cards
+        deployed on various public blockchains, such as Ethereum. Web3 Savings Network
         (Kames Cox Geraghty) does not control or operate any version of the
         Protocol on any blockchain network. By using the Interface, you
         understand that you are not buying or selling digital assets from us and
@@ -244,8 +244,8 @@ export const TermsOfServiceCore = ({ className }: TermsOfServiceCoreProps) => {
         statements made by third parties concerning the Interface.
       </p>
       <p className="">
-        Chance Cards uses the PoolTogether protocol, which has entities in the
-        state of New York, which is why we expect visitors to the Chance Cards
+        Web3 Savings Network uses the PoolTogether protocol, which has entities in the
+        state of New York, which is why we expect visitors to the Web3 Savings Network
         website(s) to follow the laws pursuant to the state of New York's
         jurisdiction.
       </p>

@@ -23,7 +23,7 @@ const TermsOfService = () => {
             <hr className="my-10" />
             <h5 className="font-bold text-3xl">tl;dr:</h5> <br />
             <p className="leading-relaxed text-lg">
-              <span className="font-bold">Chance Cards is a free service.</span>{" "}
+              <span className="font-bold">Web3 Savings Network is a free service.</span>{" "}
               We do not collect any personal information. We do not sell your
               data. We do not use cookies. We do not use tracking pixels. We do
               not use analytics. We do not use third-party services. We do not
@@ -34,44 +34,44 @@ const TermsOfService = () => {
             <ul className="list-disc pl-8">
               <li>
                 <span className="">
-                  Chance Cards is NOT a real savings account.
+                  Web3 Savings Network is NOT a real savings account.
                 </span>
               </li>
               <li>
                 <span className="">
-                  Chance Cards is NOT a replacement for a real savings account.
+                  Web3 Savings Network is NOT a replacement for a real savings account.
                 </span>
               </li>
               <li>
                 <span className="">
-                  Chance Cards is NOT a financial service.
+                  Web3 Savings Network is NOT a financial service.
                 </span>
               </li>
               <li>
                 <span className="">
-                  Chance Cards is NOT an investment service.
+                  Web3 Savings Network is NOT an investment service.
                 </span>
               </li>
               <li>
                 <span className="">
-                  Chance Cards is NOT responsible for your actions on blockchain
+                  Web3 Savings Network is NOT responsible for your actions on blockchain
                   networks i.e Ethereum, etc...
                 </span>
               </li>
             </ul>
-            <h3 className="font-normal text-lg">What Chance Cards IS.</h3>
+            <h3 className="font-normal text-lg">What Web3 Savings Network IS.</h3>
             <ul className="list-disc pl-8">
               <li>
-                <span className="">Chance Cards is a FREE website.</span>
+                <span className="">Web3 Savings Network is a FREE website.</span>
               </li>
               <li>
                 <span className="">
-                  Chance Cards is a FREE to activate NFT with no monetary value.
+                  Web3 Savings Network is a FREE to activate NFT with no monetary value.
                 </span>
               </li>
               <li>
                 <span className="">
-                  Chance Cards is a graphical representation of a blockchain
+                  Web3 Savings Network is a graphical representation of a blockchain
                   account actions.
                 </span>
               </li>
