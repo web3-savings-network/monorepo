@@ -49,8 +49,8 @@ contract Web3Card is ERC721K, AccessControl {
   // READS
   // --------------------------------------
 
-  function preview(uint256 tokenId) external view returns (string memory) {
-    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getImageBytes(tokenId);
+  function preview(address account) external view returns (string memory) {
+    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getPreview(1, account);
     return ISVGRender(ERC721Storage(_erc721Storage).getSvgRender()).render(imageBytes);
   }
 

@@ -11,6 +11,7 @@ import 'hardhat-gas-reporter';
 import 'solidity-coverage';
 import { HardhatUserConfig } from 'hardhat/config';
 import networks from './hardhat.network';
+import { constants } from 'ethers';
 
 const optimizerEnabled = !process.env.OPTIMIZER_DISABLED;
 
@@ -66,7 +67,9 @@ const config: HardhatUserConfig = {
       default: 0,
     },
     erc20TWAB: {
-      default: '0xdd4d117723C257CEe402285D3aCF218E9A8236E1', // PoolTogether USDC Ticket
+      default: constants.AddressZero,
+      1: '0xdd4d117723C257CEe402285D3aCF218E9A8236E1', // PoolTogether USDC Ticket
+      10: '0x62BB4fc73094c83B5e952C2180B23fA7054954c4', // PoolTogether USDC Ticket
     },
   },
   networks,

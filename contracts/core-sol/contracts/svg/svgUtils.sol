@@ -101,12 +101,12 @@ library svgUtils {
   }
 
   function splitAddress(address account) internal pure returns (string memory) {
-    // bytes memory b = abi.encodePacked(account);
     bytes memory start = BytesLib.slice(abi.encodePacked(account), 0, 3);
-    bytes memory end = BytesLib.slice(abi.encodePacked(account), 8, 3);
+    // bytes memory end = BytesLib.slice(abi.encodePacked(account), 2, 3);
     // 0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31
-    return
-      string.concat("0x", string(abi.encodePacked(start)), "...", string(abi.encodePacked(end)));
+    return string(abi.encodePacked("0x000", "..."));
+    // return
+    // string.concat("0x", string(abi.encodePacked(start)), "...", string(abi.encodePacked(start)));
   }
 
   function toString(address account) internal pure returns (string memory) {

@@ -51,10 +51,14 @@ contract PoolTogetherV0Render is Ownable {
   /* Internal Functions                                                                    */
   /* ===================================================================================== */
   function _construct(bytes memory input) internal view returns (string memory) {
-    (address owner, uint256 balance, string memory emoji) = abi.decode(
-      input,
-      (address, uint256, string)
-    );
+    (
+      address owner,
+      uint256 balance,
+      uint256 avgBalance2Weeks,
+      uint256 avgBalance8Weeks,
+      uint256 avgBalance26Weeks,
+      string memory emoji
+    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, string));
 
     // string memory emoji = unicode"text";
     string memory tagline = "Web3 Savings Network";
@@ -80,7 +84,7 @@ contract PoolTogetherV0Render is Ownable {
         ),
         '<g mask="url(#mask0_213_860)"> <ellipse opacity="0.1" cx="93" cy="300" rx="230" ry="145" fill="black"/> <ellipse opacity="0.08" cx="550" cy="-119" rx="450" ry="247" fill="black"/> </g>',
         renderHeader(balance),
-        renderFooter(owner, balance, emoji, tagline),
+        renderFooter(owner, avgBalance8Weeks, emoji, tagline),
         '<defs><style>.cls-1{fill:#FFF;}.text-shadow-md {text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);}</style><linearGradient id="myGradient" gradientTransform="rotate(90)"> <stop offset="5%" stop-color="gold" /> <stop offset="95%" stop-color="red" /> </linearGradient></defs>',
         "</svg>"
       );
@@ -127,19 +131,14 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "start"),
             svg.prop("fill", "white")
           ),
-          // balance
-          "$55,000"
+          string(svgUtils.round2Txt(balance, 6, 2))
         )
       );
   }
 
-  function balanceDetails(uint256 balance) internal view returns (string memory) {
+  function avgBalanceDetails(uint256 avgBalance8Weeks) internal view returns (string memory) {
     return
       string.concat(
-        // svg.g(
-        //   string.concat(svg.prop("transform", "translate(50,50)")),
-        //   _registry(BYTES32_WEB3_ASSETS, abi.encode(BYTES32_TOKEN_USDC))
-        // ),
         svg.text(
           string.concat(
             svg.prop("x", "95%"),
@@ -149,7 +148,7 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "end"),
             svg.prop("fill", "white")
           ),
-          "USDC Balance"
+          "Avg 60 Day Balance"
         ),
         svg.text(
           string.concat(
@@ -160,15 +159,14 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "end"),
             svg.prop("fill", "white")
           ),
-          // balance
-          "$1,420.69"
+          string(svgUtils.round2Txt(avgBalance8Weeks, 6, 2))
         )
       );
   }
 
   function renderFooter(
     address account,
-    uint256 balance,
+    uint256 avgBalance8Weeks,
     string memory emoji,
     string memory tagline
   ) internal view returns (string memory) {
@@ -176,7 +174,7 @@ contract PoolTogetherV0Render is Ownable {
       string.concat(
         accountDetails(account, emoji, tagline),
         renderNetwork(),
-        balanceDetails(balance)
+        avgBalanceDetails(avgBalance8Weeks)
       );
   }
 
@@ -207,13 +205,12 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "start"),
             svg.prop("fill", "white")
           ),
-          "0x000...000"
-          // svgUtils.splitAddress(account)
+          svgUtils.splitAddress(account)
         ),
         svg.text(
           string.concat(
             svg.prop("x", "7.5%"),
-            svg.prop("y", "85%"),
+            svg.prop("y", "87.5%"),
             svg.prop("font-size", "14"),
             svg.prop("font-weight", "300"),
             svg.prop("alignment-baseline", "middle"),

@@ -13,9 +13,8 @@ import { IERC721 } from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 contract Web3CardStorage is ERC721Storage {
   address public erc20TWABInstance;
   address public erc721KInstance;
-  mapping(uint256 => string) _name;
-
-  mapping(uint256 => string) private _emoji;
+  mapping(uint256 => string) private _name;
+  mapping(uint256 => string) private _emojiMap;
 
   constructor(
     address _svgRender_,
@@ -42,36 +41,27 @@ contract Web3CardStorage is ERC721Storage {
     return _name[_tokenId];
   }
 
-  function getImageBytes(uint256 tokenId) external view returns (bytes memory imageData) {
+  function getImageBytes(uint256 tokenId) external view returns (bytes memory) {
     address account = IERC721(erc721KInstance).ownerOf(tokenId);
-    uint256 balance;
-    string memory emojiFetch = _emoji[tokenId];
-    if (bytes(emojiFetch).length == 0) {
-      _emoji[tokenId] = unicode"💳";
-    }
-    if (erc20TWABInstance != address(0)) {
-      balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
-    }
-    imageData = bytes(abi.encode(account, currentBalance, emojiFetch));
+    return _generateBytesData(tokenId, account);
   }
 
-  function getTraitsBytes(uint256 tokenId) external view returns (bytes memory traitsData) {
-    uint256 balance;
+  function getTraitsBytes(uint256 tokenId) external view returns (bytes memory) {
     address account = IERC721(erc721KInstance).ownerOf(tokenId);
-    string memory emojiFetch = _emoji[tokenId];
-    if (bytes(emojiFetch).length == 0) {
-      _emoji[tokenId] = unicode"💳";
-    }
-    if (erc20TWABInstance != address(0)) {
-      balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
-    }
-    traitsData = bytes(abi.encode(account, currentBalance, emojiFetch));
-    return bytes(abi.encode(IERC721(erc721KInstance).ownerOf(tokenId)));
+    return _generateBytesData(tokenId, account);
   }
 
-  function setEmoji(uint256 _tokenId, string memory _emoji) external {
-    require(msg.sender == IERC721(erc721KInstance).ownerOf(_tokenId), "Web3CardStorage:not-owner");
-    _emoji[_tokenId] = _emoji;
+  function getPreview(uint256 tokenId, address account)
+    external
+    view
+    returns (bytes memory imageData)
+  {
+    return _generateBytesData(tokenId, account);
+  }
+
+  function setEmoji(uint256 tokenId, string memory emoji) external {
+    require(_msgSender() == IERC721(erc721KInstance).ownerOf(tokenId), "Web3CardStorage:not-owner");
+    _emojiMap[tokenId] = emoji;
   }
 
   function setERC20TWABInstance(address _erc20TWABInstance) external onlyOwner {
@@ -80,6 +70,60 @@ contract Web3CardStorage is ERC721Storage {
 
   function setERC721KInstance(address _erc721KInstance) external onlyOwner {
     erc721KInstance = _erc721KInstance;
+  }
+
+  function _generateBytesData(uint256 _tokenId, address account)
+    internal
+    view
+    returns (bytes memory bytesData)
+  {
+    uint256 balance;
+    uint256 avgBalance2Weeks;
+    uint256 avgBalance8Weeks;
+    uint256 avgBalance26Weeks;
+    string memory emojiFetch = _emojiMap[_tokenId];
+
+    if (bytes(emojiFetch).length == 0) {
+      emojiFetch = unicode"💳";
+    }
+
+    if (erc20TWABInstance != address(0)) {
+      console.log(erc20TWABInstance, "erc20TWABInstance");
+      // uint256 balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
+      uint256 balance = 0;
+      console.log(balance, "balance");
+      // Average Balances
+      uint64 start2Weeks = uint64(block.timestamp - 2 weeks);
+      uint64 start8Weeks = uint64(block.timestamp - 8 weeks);
+      uint64 start26Weeks = uint64(block.timestamp - 26 weeks);
+      uint64 end = uint64(block.timestamp);
+      avgBalance2Weeks = ERC20TWAB(erc20TWABInstance).getAverageBalanceBetween(
+        account,
+        start2Weeks,
+        end
+      );
+      avgBalance8Weeks = ERC20TWAB(erc20TWABInstance).getAverageBalanceBetween(
+        account,
+        start8Weeks,
+        end
+      );
+      avgBalance26Weeks = ERC20TWAB(erc20TWABInstance).getAverageBalanceBetween(
+        account,
+        start26Weeks,
+        end
+      );
+    }
+
+    bytesData = bytes(
+      abi.encode(
+        account,
+        balance,
+        avgBalance2Weeks,
+        avgBalance8Weeks,
+        avgBalance26Weeks,
+        emojiFetch
+      )
+    );
   }
 
   /* ===================================================================================== */
