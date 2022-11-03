@@ -52,10 +52,20 @@ contract Web3CardStorage is ERC721Storage {
     if (erc20TWABInstance != address(0)) {
       balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
     }
-    imageData = bytes(abi.encode(account, currentBalance, unicode"💳"));
+    imageData = bytes(abi.encode(account, currentBalance, emojiFetch));
   }
 
-  function getTraitsBytes(uint256 tokenId) external view returns (bytes memory) {
+  function getTraitsBytes(uint256 tokenId) external view returns (bytes memory traitsData) {
+    uint256 balance;
+    address account = IERC721(erc721KInstance).ownerOf(tokenId);
+    string memory emojiFetch = _emoji[tokenId];
+    if (bytes(emojiFetch).length == 0) {
+      _emoji[tokenId] = unicode"💳";
+    }
+    if (erc20TWABInstance != address(0)) {
+      balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
+    }
+    traitsData = bytes(abi.encode(account, currentBalance, emojiFetch));
     return bytes(abi.encode(IERC721(erc721KInstance).ownerOf(tokenId)));
   }
 
