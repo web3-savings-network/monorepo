@@ -15,6 +15,8 @@ contract Web3CardStorage is ERC721Storage {
   address public erc721KInstance;
   mapping(uint256 => string) _name;
 
+  mapping(uint256 => string) private _emoji;
+
   constructor(
     address _svgRender_,
     address _traitsFetch_,
@@ -42,17 +44,24 @@ contract Web3CardStorage is ERC721Storage {
 
   function getImageBytes(uint256 tokenId) external view returns (bytes memory imageData) {
     address account = IERC721(erc721KInstance).ownerOf(tokenId);
-    uint256 currentBalance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
+    uint256 balance;
+    string memory emojiFetch = _emoji[tokenId];
+    if (bytes(emojiFetch).length == 0) {
+      _emoji[tokenId] = unicode"💳";
+    }
+    if (erc20TWABInstance != address(0)) {
+      balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
+    }
     imageData = bytes(abi.encode(account, currentBalance, unicode"💳"));
   }
 
-  /**
-   * @notice Get the trait bytes for a Pixel Pooly character
-   * @param tokenId uint256 - The token ID to query.
-   * @return bytes - Packed instructions for traits PixelPoolyTraits
-   */
   function getTraitsBytes(uint256 tokenId) external view returns (bytes memory) {
     return bytes(abi.encode(IERC721(erc721KInstance).ownerOf(tokenId)));
+  }
+
+  function setEmoji(uint256 _tokenId, string memory _emoji) external {
+    require(msg.sender == IERC721(erc721KInstance).ownerOf(_tokenId), "Web3CardStorage:not-owner");
+    _emoji[_tokenId] = _emoji;
   }
 
   function setERC20TWABInstance(address _erc20TWABInstance) external onlyOwner {
