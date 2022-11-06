@@ -19,6 +19,7 @@
   "dependencies": {
     "@chance-cards/core-sol": "0.0.0-beta.0",
     "@chance-cards/deployments": "0.0.0-beta.0",
+    "@chance-cards/framework-react": "0.0.0-beta.0",
     "@rainbow-me/rainbowkit": "0.4.6",
     "@turbo-eth/core-wagmi": "0.0.0-beta.2",
     "@turbo-eth/erc20-wagmi": "0.0.0-beta.0",

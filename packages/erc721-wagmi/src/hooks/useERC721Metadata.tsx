@@ -1,4 +1,5 @@
-import { DiscoERC721 } from "@district-labs/disco-deployments";
+// @ts-nocheck
+import { erc721ABI } from "wagmi";
 import { useState, useEffect } from "react";
 import { useContractRead } from "wagmi";
 
@@ -23,7 +24,7 @@ export function useERC721Metadata({
   const [tokenData, setTokenData] = useState<ERC721Metadata | undefined>();
   const txRead = useContractRead({
     addressOrName: contractAddress,
-    contractInterface: DiscoERC721,
+    contractInterface: erc721ABI,
     functionName: "tokenURI",
     args: [tokenId],
   });

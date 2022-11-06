@@ -1,25 +1,28 @@
+// @ts-nocheck
 import * as React from "react";
 import { useERC721Metadata } from "../hooks/useERC721Metadata";
 
-interface ERC721AttributesProps {
+interface ERC721TokenURIProps {
   className?: string;
   contractAddress: string;
   tokenId: string;
 }
 
-export const ERC721Attributes = ({
+export const ERC721TokenURI = ({
   contractAddress,
   tokenId,
-}: ERC721AttributesProps) => {
+}: ERC721TokenURIProps) => {
   const tokenData = useERC721Metadata({
     contractAddress,
     tokenId,
   });
 
   if (!tokenData) return null;
-  return tokenData?.attributes?.map((attribute) => (
-    <Attribute name={attribute?.trait_type} value={attribute?.value} />
-  ));
+  return <code>
+    <pre>
+        {`${JSON.stringify(tokenData)}`}
+    </pre>
+  </code>
 };
 
 function Attribute({ name, value }) {
@@ -31,4 +34,4 @@ function Attribute({ name, value }) {
   );
 }
 
-export default ERC721Attributes;
+export default ERC721TokenURI;

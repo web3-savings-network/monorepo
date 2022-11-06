@@ -4,6 +4,7 @@ import { AppConfig } from "@/utils/AppConfig";
 import classNames from "classnames";
 import { ResponsiveMobileAndDesktop } from "@chance-cards/framework-react";
 import FormUtilsStringBytes32Encode from "@/components/FormUtilsStringBytes32Encode";
+import FormMintSavingsCard from "@/components/FormMintSavingsCard";
 
 const Activate = () => {
   return (
@@ -40,6 +41,7 @@ const SectionDesktop = () => {
       <div className="container mx-auto max-w-screen-sm">
         <div className="w-full col-span-12 h-full">
           <FormUtilsStringBytes32Encode className="w-full" />
+          <FormMintSavingsCard className="w-full" />
         </div>
       </div>
     </div>

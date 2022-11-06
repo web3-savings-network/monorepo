@@ -131,7 +131,7 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "start"),
             svg.prop("fill", "white")
           ),
-          string(svgUtils.round2Txt(balance, 6, 2))
+          string.concat("$", string(svgUtils.round2Txt(balance, 6, 2)))
         )
       );
   }
@@ -159,7 +159,7 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "end"),
             svg.prop("fill", "white")
           ),
-          string(svgUtils.round2Txt(avgBalance8Weeks, 6, 2))
+          string.concat("$", string(svgUtils.round2Txt(avgBalance8Weeks, 6, 2)))
         )
       );
   }

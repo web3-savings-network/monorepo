@@ -4,7 +4,7 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
   const { deployments, getNamedAccounts, ethers } = hardhat;
 
   const { deploy } = deployments;
-  const { deployer, erc20TWAB } = await getNamedAccounts();
+  const { admin, deployer, erc20TWAB } = await getNamedAccounts();
 
   const SVGLibrary = await deployments.get("SVGLibrary");
   const SVGRegistry = await deployments.get("SVGRegistry");
@@ -26,8 +26,8 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
   });
 
   const contactInformation = {
-    name: "Web3 Savings",
-    description: "Web3 Saving Cards - Powered by PoolTogether",
+    name: "Web3 Savings Cards",
+    description: "Saving Cards for Web3",
     image: "",
     externalLink: "https://web3savings.network",
     sellerFeeBasisPoints: "0",
@@ -45,7 +45,7 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
   const Web3Card = await deploy("Web3Card", {
     contract: "Web3Card",
     from: deployer,
-    args: ["Web3 Savings Card TESTNET", "SAVE", Web3CardStorage.address],
+    args: ["Web3 Savings Card", "SAVE", Web3CardStorage.address, admin],
     skipIfAlreadyDeployed: false,
     log: true,
   });

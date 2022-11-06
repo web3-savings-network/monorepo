@@ -1,22 +1,27 @@
 import * as React from "react";
 import { useForm, Controller } from "react-hook-form";
 import classNames from "classnames";
-import { useContractRead } from "wagmi";
+import {
+  useAccount,
+  useContractRead,
+  useContractWrite,
+  usePrepareContractWrite,
+} from "wagmi";
 import { BigNumber, utils } from "ethers";
 import Select from "react-select";
 
 import { useNetworkContract } from "@chance-cards/deployments";
 
-interface FormMintChanceCardProps {
+interface FormMintSavingsCardProps {
   className?: string;
   defaults?: any;
   symbol?: string;
 }
 
-export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
-  const ABICoder = new utils.AbiCoder();
-
-  const contract = useNetworkContract("localhost", "ChanceCard");
+export const FormMintSavingsCard = ({
+  className,
+}: FormMintSavingsCardProps) => {
+  const contract = useNetworkContract("localhost", "Web3Card");
 
   const {
     control,
@@ -32,26 +37,24 @@ export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
       pos4: { value: "3", label: "Octo" },
     },
   });
-  const watchAll = watch();
-
-  const txRead = useContractRead({
-    addressOrName: contract?.address || "",
-    contractInterface: contract?.abi || "",
-    functionName: "preview",
-    // args: '0x00'
-    // args: [BigNumber.from("0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31")],
-    args: ["0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31"],
+  const account = useAccount();
+  const { config } = usePrepareContractWrite({
+    addressOrName: "0xE7e558Bced1dee713aA337b78EB81e5E6b1658Ef" || "",
+    contractInterface: contract?.abi,
+    functionName: "mint",
+    args: [account.address],
   });
 
-  console.log(txRead,'data')
+  const writing = useContractWrite(config);
 
   const onSubmit = async (_data: any) => {
     console.log("writing");
+    writing.write();
   };
 
   const classes = classNames(
     className,
-    "FormMintChanceCard"
+    "FormMintSavingsCard"
     // "grid grid-cols-12 gap-10"
   );
   const classesLabel = "text-xs font-semibold mb-1 block ";
@@ -59,9 +62,6 @@ export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
   return (
     <>
       <div className={classes}>
-        <div className="text-center z-5 relative col-span-8">
-          <img className="rounded-xl shadow-lg mx-auto w-full" src={txRead.data} />
-        </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="z-0 relative col-span-4"
@@ -75,4 +75,4 @@ export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
   );
 };
 
-export default FormMintChanceCard;
+export default FormMintSavingsCard;

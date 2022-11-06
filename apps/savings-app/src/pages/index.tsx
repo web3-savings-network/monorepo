@@ -6,12 +6,11 @@ import { Main } from "@/templates/Main";
 import { Meta } from "@/templates/Meta";
 import { AppConfig } from "@/utils/AppConfig";
 import classNames from "classnames";
+import { ERC721TokenURI } from "@turbo-eth/erc721-wagmi";
 
-import {
-  ModalInjectIFrame,
-  ResponsiveMobileAndDesktop,
-} from "@chance-cards/framework-react";
+import { ResponsiveMobileAndDesktop } from "@chance-cards/framework-react";
 import Web3CardPreview from "@/components/Web3CardPreview";
+import { useNetworkContract } from "@chance-cards/deployments";
 
 const Card = () => {
   const classes = classNames("py-32");
@@ -48,6 +47,7 @@ const SectionMobile = () => {
 
 const SectionDesktop = () => {
   const classes = classNames("py-32");
+  const contract = useNetworkContract("localhost", "Web3Card");
   return (
     <div className={classes}>
       <div className="container mx-auto max-w-screen-xl grid grid-cols-12">
@@ -84,6 +84,10 @@ const SectionDesktop = () => {
           <div className="mt-20" />
           <div className="flex flex-center">
             <Web3CardPreview />
+            <ERC721TokenURI
+              tokenId={1}
+              contractAddress={"0xE7e558Bced1dee713aA337b78EB81e5E6b1658Ef"}
+            />
             {/* <img src="/img/card-stack.png" className="w-2/3 max-auto blur-md" /> */}
           </div>
         </div>

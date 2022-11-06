@@ -1,4 +1,4 @@
-import { DiscoERC721 } from "@district-labs/disco-deployments";
+import { Web3CardABI as Web3Card } from "@chance-cards/deployments";
 import { useState, useEffect } from "react";
 import { useContractRead } from "wagmi";
 
@@ -24,7 +24,7 @@ export function useERC721ContractMetadata({
   const [tokenData, setTokenData] = useState<ERC721Metadata | undefined>();
   const txRead = useContractRead({
     addressOrName: contractAddress,
-    contractInterface: DiscoERC721,
+    contractInterface: Web3Card,
     functionName: "contractURI",
     args: [],
   });

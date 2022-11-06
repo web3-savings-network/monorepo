@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import "hardhat/console.sol";
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 import { svg } from "@erc721k/periphery-sol/contracts/svg/svg.sol";
 import { svgUtils } from "@erc721k/periphery-sol/contracts/svg/svgUtils.sol";

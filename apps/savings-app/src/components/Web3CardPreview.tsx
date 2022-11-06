@@ -17,7 +17,7 @@ export const Web3CardPreview = ({ className }: Web3CardPreviewProps) => {
       <ERC721KPreview
         className="rounded-xl w-full"
         contractAddress={contract?.address || ""}
-        args={[account.address]}
+        args={["0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31"]}
       />
     </div>
   );

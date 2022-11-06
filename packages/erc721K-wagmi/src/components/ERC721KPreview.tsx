@@ -21,8 +21,6 @@ export const ERC721KPreview = ({
     args: args,
   });
 
-  console.log(txRead, "txRead");
-
   if (!txRead.data || !txRead.isSuccess) return null;
   const classes = classNames(className, "ERC721KPreview");
   return <img className={classes} src={String(txRead.data)} />;

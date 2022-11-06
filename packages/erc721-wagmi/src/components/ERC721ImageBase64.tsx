@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useContractRead } from "wagmi";
-import { DiscoERC721 } from "@district-labs/disco-deployments";
+import { erc721ABI } from "wagmi";
 
 interface ERC721ImageBase64Props {
   className?: string;
@@ -14,7 +14,7 @@ export const ERC721ImageBase64 = ({
 }: ERC721ImageBase64Props) => {
   const txRead = useContractRead({
     addressOrName: contractAddress,
-    contractInterface: DiscoERC721,
+    contractInterface: erc721ABI,
     functionName: "tokenURI",
     args: [tokenId],
   });

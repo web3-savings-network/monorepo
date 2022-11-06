@@ -1,6 +1,5 @@
 pragma solidity 0.8.15;
 
-import "hardhat/console.sol";
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
 import { ERC20TWAB } from "./ERC20TWAB.sol";
 import { ERC721Storage } from "@erc721k/core-sol/contracts/ERC721Storage.sol";
@@ -26,11 +25,11 @@ contract Web3CardStorage is ERC721Storage {
   /* Override Functions                                                                    */
   /* ===================================================================================== */
   function _parseName(uint256 _tokenId) internal view override returns (string memory) {
-    return string.concat("Example #", Strings.toString(_tokenId));
+    return string.concat("Web3 Savings Card #", Strings.toString(_tokenId));
   }
 
   function _parseDescription(uint256 _tokenId) internal view override returns (string memory) {
-    return string.concat("Member #", Strings.toString(_tokenId), " of Example.");
+    return string.concat("Member #", Strings.toString(_tokenId), " Web3 Savings Network");
   }
 
   /* ===================================================================================== */
@@ -88,10 +87,7 @@ contract Web3CardStorage is ERC721Storage {
     }
 
     if (erc20TWABInstance != address(0)) {
-      console.log(erc20TWABInstance, "erc20TWABInstance");
-      // uint256 balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
-      uint256 balance = 0;
-      console.log(balance, "balance");
+      balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
       // Average Balances
       uint64 start2Weeks = uint64(block.timestamp - 2 weeks);
       uint64 start8Weeks = uint64(block.timestamp - 8 weeks);

@@ -10,7 +10,6 @@ import {
 import type { AppProps } from "next/app";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
 import IsMounted from "@/components/IsMounted";
 import { AppConfig } from "@/utils/AppConfig";
 import { ModalProvider } from "react-modal-hook";
@@ -21,7 +20,6 @@ import {
 } from "@/utils/constants";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
-console.log(FORKING_ENABLED);
 const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
@@ -44,13 +42,13 @@ const { chains, provider, webSocketProvider } = configureChains(
         // alchemyProvider({ alchemyId: ALCHEMY_ID }),
       ]
     : [
-      jsonRpcProvider({
-        priority: 0,
-        rpc: () => ({
-          http: "http://127.0.0.1:8545",
+        jsonRpcProvider({
+          priority: 0,
+          rpc: () => ({
+            http: "http://127.0.0.1:8545",
+          }),
         }),
-      }),
-        // alchemyProvider({ alchemyId: ALCHEMY_ID }),
+        alchemyProvider({ apiKey: ALCHEMY_ID }),
         // publicProvider(),
       ]
 );

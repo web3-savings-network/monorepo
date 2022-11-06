@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-// import "hardhat/console.sol";
 import { AccessControl } from "@openzeppelin/contracts/access/AccessControl.sol";
 import { Ownable, Context } from "@openzeppelin/contracts/access/Ownable.sol";
 import { Delegatable, DelegatableCore } from "./Delegatable/Delegatable.sol";

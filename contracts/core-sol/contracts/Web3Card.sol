@@ -16,8 +16,13 @@ contract Web3Card is ERC721K, AccessControl {
   constructor(
     string memory name,
     string memory symbol,
-    address erc721Storage
-  ) ERC721K(name, symbol, erc721Storage) {}
+    address erc721Storage,
+    address admin
+  ) ERC721K(name, symbol, erc721Storage) {
+    _idCounter++;
+    _setupRole(DEFAULT_ADMIN_ROLE, admin);
+    _setupRole(MINTER_BURNER_ROLE, admin);
+  }
 
   /* ===================================================================================== */
   /* Override Functions                                                                    */
@@ -50,7 +55,7 @@ contract Web3Card is ERC721K, AccessControl {
   // --------------------------------------
 
   function preview(address account) external view returns (string memory) {
-    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getPreview(1, account);
+    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getPreview(0, account);
     return ISVGRender(ERC721Storage(_erc721Storage).getSvgRender()).render(imageBytes);
   }
 
@@ -63,11 +68,11 @@ contract Web3Card is ERC721K, AccessControl {
    * @param to address - Address to mint to`
    */
   function mint(address to) external {
-    require(hasRole(MINTER_BURNER_ROLE, _msgSender()), "DiscoERC721:unauthorized");
+    require(hasRole(MINTER_BURNER_ROLE, _msgSender()), "Web3Card:unauthorized");
     unchecked {
       uint256 nextId = _idCounter++;
       _tokenOwners[to] = nextId;
-      _mint(to, _idCounter++);
+      _mint(to, nextId);
     }
   }
 
@@ -76,7 +81,7 @@ contract Web3Card is ERC721K, AccessControl {
    * @param tokenId uint256 - Token ID to burn
    */
   function burn(uint256 tokenId) external {
-    require(hasRole(MINTER_BURNER_ROLE, _msgSender()), "DiscoERC721:unauthorized");
+    require(hasRole(MINTER_BURNER_ROLE, _msgSender()), "Web3Card:unauthorized");
     _burn(tokenId);
   }
 

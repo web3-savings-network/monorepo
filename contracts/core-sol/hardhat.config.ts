@@ -66,6 +66,10 @@ const config: HardhatUserConfig = {
     deployer: {
       default: 0,
     },
+    admin: {
+      default: '0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31',
+      10: '0xF9646b896b600D6faB5A4B1e35b4ab9E5E78a566',
+    },
     erc20TWAB: {
       default: constants.AddressZero,
       1: '0xdd4d117723C257CEe402285D3aCF218E9A8236E1', // PoolTogether USDC Ticket

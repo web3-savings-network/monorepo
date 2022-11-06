@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useContractRead } from "wagmi";
-import { DiscoERC721 } from "@district-labs/disco-deployments";
+import { Web3CardABI as Web3Card } from "@chance-cards/deployments";
 import { BigNumber } from "ethers";
 
 interface ERC721TotalSupplyProps {
@@ -13,7 +13,7 @@ export const ERC721TotalSupply = ({
 }: ERC721TotalSupplyProps) => {
   const txRead = useContractRead({
     addressOrName: contractAddress,
-    contractInterface: DiscoERC721,
+    contractInterface: Web3Card,
     functionName: "totalSupply",
     args: [],
   });

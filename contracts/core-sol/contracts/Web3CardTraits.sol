@@ -18,7 +18,29 @@ contract Web3CardTraits is ITraitsFetch, Ownable {
   /* ===================================================================================== */
 
   function fetch(bytes memory input) external view returns (string memory) {
-    return string.concat(_generateTrait("friend", "true"));
+    (
+      address account,
+      uint256 balance,
+      uint256 avgBalance2Weeks,
+      uint256 avgBalance8Weeks,
+      uint256 avgBalance26Weeks,
+      string memory emoji
+    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, string));
+    string memory _address = Strings.toHexString(uint256(uint160(account)), 20);
+    return
+      string.concat(
+        _generateTrait("owner", _address),
+        ",",
+        _generateTrait("emoji", emoji),
+        ",",
+        _generateTrait("balance", Strings.toString(balance)),
+        ",",
+        _generateTrait("avgBalance2Weeks", Strings.toString(avgBalance2Weeks)),
+        ",",
+        _generateTrait("avgBalance8Weeks", Strings.toString(avgBalance8Weeks)),
+        ",",
+        _generateTrait("avgBalance26Weeks", Strings.toString(avgBalance26Weeks))
+      );
   }
 
   /* ===================================================================================== */

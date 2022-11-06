@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
-import "@openzeppelin/contracts/utils/Strings.sol";
 
+import "@openzeppelin/contracts/utils/Strings.sol";
 import { BytesLib } from "../libraries/BytesLib.sol";
 
 /**
@@ -101,12 +101,10 @@ library svgUtils {
   }
 
   function splitAddress(address account) internal pure returns (string memory) {
-    bytes memory start = BytesLib.slice(abi.encodePacked(account), 0, 3);
-    // bytes memory end = BytesLib.slice(abi.encodePacked(account), 2, 3);
-    // 0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31
-    return string(abi.encodePacked("0x000", "..."));
-    // return
-    // string.concat("0x", string(abi.encodePacked(start)), "...", string(abi.encodePacked(start)));
+    string memory addy = Strings.toHexString(uint256(uint160(account)), 20);
+    bytes memory start = BytesLib.slice(abi.encodePacked(addy), 0, 6);
+    bytes memory end = BytesLib.slice(abi.encodePacked(addy), 37, 4);
+    return string.concat(string(abi.encodePacked(start)), "...", string(abi.encodePacked(end)));
   }
 
   function toString(address account) internal pure returns (string memory) {

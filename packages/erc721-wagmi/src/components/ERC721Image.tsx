@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import * as React from "react";
-import useERC721Metadata from "./useERC721Metadata";
+import { useERC721Metadata } from "../hooks/useERC721Metadata";
 
 interface ERC721ImageProps {
   className?: string;
