@@ -81,7 +81,7 @@ const ViewContentAndIOSPreview = (props) => (
     </div>
     <div className="col-span-7">
       <div className="" style={{ width: "130%" }}>
-        <img className="max-w-screen-xs" src="/img/ios-screens.png" alt="" />
+        <img src="/img/ios-screens.png" alt="IOS Screens" />
       </div>
     </div>
   </div>
