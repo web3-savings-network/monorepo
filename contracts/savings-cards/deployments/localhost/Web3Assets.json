@@ -1,0 +1,321 @@
+{
+  "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "Unauthorized",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "ownerCandidate",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdateInitiated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "confirmOwner",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "input",
+          "type": "bytes"
+        }
+      ],
+      "name": "decode",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "position",
+          "type": "bytes32"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEncoding",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwner",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "position",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "svg",
+          "type": "string"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xcaabf4a4328fde407c127e0606884c140ad9595daab3ee9c3c9622409b959c29",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+    "transactionIndex": 0,
+    "gasUsed": "1024345",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000240000000000000000000000000000000020000000000000100000800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000002000000000000001000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xef4d870f944edeaf5b35e17779f145497b45a51e7bb9facf083ad444a42f4afe",
+    "transactionHash": "0xcaabf4a4328fde407c127e0606884c140ad9595daab3ee9c3c9622409b959c29",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 6,
+        "transactionHash": "0xcaabf4a4328fde407c127e0606884c140ad9595daab3ee9c3c9622409b959c29",
+        "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0xef4d870f944edeaf5b35e17779f145497b45a51e7bb9facf083ad444a42f4afe"
+      }
+    ],
+    "blockNumber": 6,
+    "cumulativeGasUsed": "1024345",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "0fa140c32b10b548f50f357244af68e7",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"Unauthorized\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"ownerCandidate\",\"type\":\"address\"}],\"name\":\"OwnerUpdateInitiated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"confirmOwner\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"input\",\"type\":\"bytes\"}],\"name\":\"decode\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"position\",\"type\":\"bytes32\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEncoding\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwner\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"position\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"svg\",\"type\":\"string\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"transferOwnership(address)\":{\"params\":{\"newOwner\":\"The `_ownerCandidate` that will `confirmOwner()`.\"}}},\"version\":1},\"userdoc\":{\"errors\":{\"Unauthorized()\":[{\"notice\":\"----------------------------------------------------------------------- Custom Errors -----------------------------------------------------------------------\"}]},\"events\":{\"OwnerUpdateInitiated(address,address)\":{\"notice\":\"----------------------------------------------------------------------- Events -----------------------------------------------------------------------\"}},\"kind\":\"user\",\"methods\":{\"confirmOwner()\":{\"notice\":\"Confirm ownership between `owner` and `_ownerCandidate`.\"},\"owner()\":{\"notice\":\"----------------------------------------------------------------------- Ownership Storage -----------------------------------------------------------------------\"},\"renounceOwner()\":{\"notice\":\"Terminate ownership by `owner`.\"},\"transferOwnership(address)\":{\"notice\":\"Initiate ownership transfer.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Web3Assets.sol\":\"Web3Assets\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.15;\\n\\ninterface ISVGModule {\\n  function decode(bytes memory input) external view returns (string memory);\\n\\n  function getEncoding() external view returns (string memory);\\n}\\n\",\"keccak256\":\"0x70f4c0eaf41834648df3204650a9d8fd238ce3691995043628b0a086fe9aa57f\",\"license\":\"MIT\"},\"@erc721k/periphery-sol/contracts/svg/SVGColor.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.15;\\nimport \\\"@openzeppelin/contracts/utils/Strings.sol\\\";\\n\\ncontract SVGColor {\\n  using Strings for uint256;\\n  using Strings for uint8;\\n\\n  mapping(string => bytes) public colors;\\n\\n  constructor() {\\n    colors[\\\"Black\\\"] = hex\\\"000000\\\";\\n    colors[\\\"White\\\"] = hex\\\"FFFFFF\\\";\\n    colors[\\\"Dark1\\\"] = hex\\\"232323\\\";\\n    colors[\\\"Dark2\\\"] = hex\\\"464646\\\";\\n  }\\n\\n  function getColor(string memory _colorName) public view returns (bytes memory) {\\n    require(colors[_colorName].length == 3, \\\"Unknown color\\\");\\n    return abi.encodePacked(colors[_colorName], hex\\\"64\\\");\\n  }\\n\\n  function getColor(string memory _colorName, uint8 _alpha) public view returns (bytes memory) {\\n    require(colors[_colorName].length == 3, \\\"Unknown color\\\");\\n    return abi.encodePacked(colors[_colorName], _alpha);\\n  }\\n\\n  function getRgba(string memory _colorName) public view returns (string memory) {\\n    return string(toRgba(getColor(_colorName), 0));\\n  }\\n\\n  // Input: array of colors (without alpha)\\n  // Ouputs a linearGradient\\n  function autoLinearGradient(\\n    bytes memory _colors,\\n    bytes memory _id,\\n    bytes memory _customAttributes\\n  ) public view returns (bytes memory) {\\n    return this.autoLinearGradient(\\\"\\\", _colors, _id, _customAttributes);\\n  }\\n\\n  function autoLinearGradient(\\n    bytes memory _coordinates,\\n    bytes memory _colors,\\n    bytes memory _id,\\n    bytes memory _customAttributes\\n  ) external view returns (bytes memory) {\\n    bytes memory _b;\\n    if (_coordinates.length > 3) {\\n      _b = abi.encodePacked(uint8(128), _coordinates);\\n    } else {\\n      _b = hex\\\"00\\\";\\n    }\\n    // Count the number of colors passed, each on 4 byte\\n    uint256 colorCount = _colors.length / 4;\\n    uint8 i = 0;\\n    while (i < colorCount) {\\n      _b = abi.encodePacked(\\n        _b,\\n        uint8(i * (100 / (colorCount - 1))), // grad. stop %\\n        uint8(_colors[i * 4]),\\n        uint8(_colors[i * 4 + 1]),\\n        uint8(_colors[i * 4 + 2]),\\n        uint8(_colors[i * 4 + 3])\\n      );\\n      i++;\\n    }\\n    return linearGradient(_b, _id, _customAttributes);\\n  }\\n\\n  function linearGradient(\\n    bytes memory _lg,\\n    bytes memory _id,\\n    bytes memory _customAttributes\\n  ) public pure returns (bytes memory) {\\n    bytes memory grdata;\\n    uint8 offset = 1;\\n\\n    if (uint8(_lg[0]) & 128 == 128) {\\n      grdata = abi.encodePacked(\\n        'x1=\\\"',\\n        byte2uint8(_lg, 1).toString(),\\n        '%\\\" x2=\\\"',\\n        byte2uint8(_lg, 2).toString(),\\n        '%\\\" y1=\\\"',\\n        byte2uint8(_lg, 3).toString(),\\n        '%\\\" y2=\\\"',\\n        byte2uint8(_lg, 4).toString(),\\n        '%\\\"'\\n      );\\n      offset = 5;\\n    }\\n    grdata = abi.encodePacked('<linearGradient id=\\\"', _id, '\\\" ', _customAttributes, grdata, \\\">\\\");\\n    for (uint256 i = offset; i < _lg.length; i += 5) {\\n      grdata = abi.encodePacked(\\n        grdata,\\n        '<stop offset=\\\"',\\n        byte2uint8(_lg, i).toString(),\\n        '%\\\" stop-color=\\\"',\\n        toRgba(_lg, i + 1),\\n        '\\\" id=\\\"',\\n        _id,\\n        byte2uint8(_lg, i).toString(),\\n        '\\\"/>'\\n      );\\n    }\\n    return abi.encodePacked(grdata, \\\"</linearGradient>\\\");\\n  }\\n\\n  function toRgba(bytes memory _rgba, uint256 offset) public pure returns (bytes memory) {\\n    return\\n      abi.encodePacked(\\n        \\\"rgba(\\\",\\n        byte2uint8(_rgba, offset).toString(),\\n        \\\",\\\",\\n        byte2uint8(_rgba, offset + 1).toString(),\\n        \\\",\\\",\\n        byte2uint8(_rgba, offset + 2).toString(),\\n        \\\",\\\",\\n        byte2uint8(_rgba, offset + 3).toString(),\\n        \\\"%)\\\"\\n      );\\n  }\\n\\n  function byte2uint8(bytes memory _data, uint256 _offset) public pure returns (uint8) {\\n    require(_data.length > _offset, \\\"Out of range\\\");\\n    return uint8(_data[_offset]);\\n  }\\n\\n  // formats rgba white with a specified opacity / alpha\\n  function white_a(uint256 _a) internal pure returns (string memory) {\\n    return rgba(255, 255, 255, _a);\\n  }\\n\\n  // formats rgba black with a specified opacity / alpha\\n  function black_a(uint256 _a) internal pure returns (string memory) {\\n    return rgba(0, 0, 0, _a);\\n  }\\n\\n  // formats generic rgba color in css\\n  function rgba(\\n    uint256 _r,\\n    uint256 _g,\\n    uint256 _b,\\n    uint256 _a\\n  ) internal pure returns (string memory) {\\n    string memory formattedA = _a < 100 ? string.concat(\\\"0.\\\", uint2str(_a)) : \\\"1\\\";\\n    return\\n      string.concat(\\n        \\\"rgba(\\\",\\n        uint2str(_r),\\n        \\\",\\\",\\n        uint2str(_g),\\n        \\\",\\\",\\n        uint2str(_b),\\n        \\\",\\\",\\n        formattedA,\\n        \\\")\\\"\\n      );\\n  }\\n\\n  function uint2str(uint256 _i) internal pure returns (string memory _uintAsString) {\\n    if (_i == 0) {\\n      return \\\"0\\\";\\n    }\\n    uint256 j = _i;\\n    uint256 len;\\n    while (j != 0) {\\n      len++;\\n      j /= 10;\\n    }\\n    bytes memory bstr = new bytes(len);\\n    uint256 k = len;\\n    while (_i != 0) {\\n      k = k - 1;\\n      uint8 temp = (48 + uint8(_i - (_i / 10) * 10));\\n      bytes1 b1 = bytes1(temp);\\n      bstr[k] = b1;\\n      _i /= 10;\\n    }\\n    return string(bstr);\\n  }\\n}\\n\",\"keccak256\":\"0xc557b51c7de06c817069ed380f4ac41b0233d44468125db0ec6497453a636dd2\",\"license\":\"MIT\"},\"@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.15;\\n\\nimport { Ownable } from \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\nimport { svg } from \\\"./svg.sol\\\";\\nimport { svgUtils } from \\\"./svgUtils.sol\\\";\\nimport { SVGColor } from \\\"./SVGColor.sol\\\";\\n\\ncontract SVGLibrary {\\n  address private _colors;\\n\\n  bytes32 private immutable BUILD = keccak256(\\\"BUILD\\\");\\n  bytes32 private immutable COLOR = keccak256(\\\"COLOR\\\");\\n  bytes32 private immutable UTILS = keccak256(\\\"UTILS\\\");\\n\\n  mapping(bytes32 => address) _modules;\\n\\n  constructor(address _colors_) {\\n    _colors = _colors_;\\n  }\\n\\n  function execute(bytes32 package, bytes calldata input)\\n    external\\n    view\\n    returns (string memory data)\\n  {\\n    if (_modules[package] != 0x0000000000000000000000000000000000000000) {\\n      (bool success, bytes memory data) = address(_modules[package]).staticcall(input);\\n      return string(data);\\n    } else if (package == BUILD) {\\n      (bool success, bytes memory data) = address(svg).staticcall(input);\\n      return string(data);\\n    } else if (package == COLOR) {\\n      (bool success, bytes memory data) = _colors.staticcall(input);\\n      return string(data);\\n    } else if (package == UTILS) {\\n      (bool success, bytes memory data) = address(svgUtils).staticcall(input);\\n      return string(data);\\n    } else {\\n      return string(data);\\n      revert(\\\"SVGLibrary:invalid-operation\\\");\\n    }\\n  }\\n}\\n\",\"keccak256\":\"0x8250249bdb8e9c4eb9056f8a77eada2db6380ce880bb2cacfb7c426a983e0bd7\",\"license\":\"MIT\"},\"@erc721k/periphery-sol/contracts/svg/svg.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity ^0.8.15;\\n\\nimport \\\"@openzeppelin/contracts/utils/Strings.sol\\\";\\nimport \\\"./svgUtils.sol\\\";\\n\\n/**\\n * @title svg\\n * @author Kames Geraghty\\n * @notice SVG construction library using web-like API.\\n * @dev Original code from w1nt3r-eth/hot-chain-svg (https://github.com/w1nt3r-eth/hot-chain-svg)\\n */\\nlibrary svg {\\n  using Strings for uint256;\\n  using Strings for uint8;\\n\\n  function g(string memory _props, string memory _children) internal pure returns (string memory) {\\n    return el(\\\"g\\\", _props, _children);\\n  }\\n\\n  function path(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"path\\\", _props, _children);\\n  }\\n\\n  function text(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"text\\\", _props, _children);\\n  }\\n\\n  function line(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"line\\\", _props, _children);\\n  }\\n\\n  function circle(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"circle\\\", _props, _children);\\n  }\\n\\n  function circle(string memory _props) internal pure returns (string memory) {\\n    return el(\\\"circle\\\", _props);\\n  }\\n\\n  function rect(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"rect\\\", _props, _children);\\n  }\\n\\n  function rect(string memory _props) internal pure returns (string memory) {\\n    return el(\\\"rect\\\", _props);\\n  }\\n\\n  function stop(string memory _props) internal pure returns (string memory) {\\n    return el(\\\"stop\\\", _props);\\n  }\\n\\n  function filter(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"filter\\\", _props, _children);\\n  }\\n\\n  function defs(string memory _children) internal pure returns (string memory) {\\n    return el(\\\"defs\\\", \\\"\\\", _children);\\n  }\\n\\n  function cdata(string memory _content) internal pure returns (string memory) {\\n    return string.concat(\\\"<![CDATA[\\\", _content, \\\"]]>\\\");\\n  }\\n\\n  /* GRADIENTS */\\n  function radialGradient(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"radialGradient\\\", _props, _children);\\n  }\\n\\n  function linearGradient(string memory _props, string memory _children)\\n    internal\\n    pure\\n    returns (string memory)\\n  {\\n    return el(\\\"linearGradient\\\", _props, _children);\\n  }\\n\\n  function gradientStop(\\n    uint256 offset,\\n    string memory stopColor,\\n    string memory _props\\n  ) internal pure returns (string memory) {\\n    return\\n      el(\\n        \\\"stop\\\",\\n        string.concat(\\n          prop(\\\"stop-color\\\", stopColor),\\n          \\\" \\\",\\n          prop(\\\"offset\\\", string.concat(svgUtils.uint2str(offset), \\\"%\\\")),\\n          \\\" \\\",\\n          _props\\n        )\\n      );\\n  }\\n\\n  function animateTransform(string memory _props) internal pure returns (string memory) {\\n    return el(\\\"animateTransform\\\", _props);\\n  }\\n\\n  function image(string memory _href, string memory _props) internal pure returns (string memory) {\\n    return el(\\\"image\\\", string.concat(prop(\\\"href\\\", _href), \\\" \\\", _props));\\n  }\\n\\n  function start() internal pure returns (string memory) {\\n    return\\n      string.concat(\\n        '<svg width=\\\"320\\\" height=\\\"320\\\" style=\\\"background:#FFF\\\" ',\\n        'viewBox=\\\"0 0 320 320\\\" ',\\n        'xmlns=\\\"http://www.w3.org/2000/svg\\\" ',\\n        \\\">\\\"\\n      );\\n  }\\n\\n  function end() internal pure returns (bytes memory) {\\n    return (\\\"</svg>\\\");\\n  }\\n\\n  /* COMMON */\\n  // A generic element, can be used to construct any SVG (or HTML) element\\n  function el(\\n    string memory _tag,\\n    string memory _props,\\n    string memory _children\\n  ) internal pure returns (string memory) {\\n    return string.concat(\\\"<\\\", _tag, \\\" \\\", _props, \\\">\\\", _children, \\\"</\\\", _tag, \\\">\\\");\\n  }\\n\\n  // A generic element, can be used to construct any SVG (or HTML) element without children\\n  function el(string memory _tag, string memory _props) internal pure returns (string memory) {\\n    return string.concat(\\\"<\\\", _tag, \\\" \\\", _props, \\\"/>\\\");\\n  }\\n\\n  // an SVG attribute\\n  function prop(string memory _key, string memory _val) internal pure returns (string memory) {\\n    return string.concat(_key, \\\"=\\\", '\\\"', _val, '\\\" ');\\n  }\\n\\n  function stringifyIntSet(\\n    bytes memory _data,\\n    uint256 _offset,\\n    uint256 _len\\n  ) public pure returns (bytes memory) {\\n    bytes memory res;\\n    require(_data.length >= _offset + _len, \\\"Out of range\\\");\\n    for (uint256 i = _offset; i < _offset + _len; i++) {\\n      res = abi.encodePacked(res, byte2uint8(_data, i).toString(), \\\" \\\");\\n    }\\n    return res;\\n  }\\n\\n  function byte2uint8(bytes memory _data, uint256 _offset) public pure returns (uint8) {\\n    require(_data.length > _offset, \\\"Out of range\\\");\\n    return uint8(_data[_offset]);\\n  }\\n}\\n\",\"keccak256\":\"0xf644e6733bbb569d02a52d975bb84834bb89d66894becb3ee4af2324e7934077\",\"license\":\"MIT\"},\"@erc721k/periphery-sol/contracts/svg/svgUtils.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity ^0.8.15;\\nimport \\\"@openzeppelin/contracts/utils/Strings.sol\\\";\\n\\n/**\\n * @title  SVG Utilities\\n * @author Kames Geraghty\\n * @notice The SVG Utilities Library provides functions for constructing SVG; format CSS and numbers.\\n * @dev Original code from w1nt3r-eth/hot-chain-svg (https://github.com/w1nt3r-eth/hot-chain-svg)\\n */\\nlibrary svgUtils {\\n  using Strings for uint256;\\n  using Strings for uint8;\\n\\n  /// @notice Empty SVG element\\n  string internal constant NULL = \\\"\\\";\\n\\n  /**\\n   * @notice Formats a CSS variable line. Includes a semicolon for formatting.\\n   * @param _key User for which to calculate prize amount.\\n   * @param _val User for which to calculate prize amount.\\n   * @return string Generated CSS variable.\\n   */\\n  function setCssVar(string memory _key, string memory _val) internal pure returns (string memory) {\\n    return string.concat(\\\"--\\\", _key, \\\":\\\", _val, \\\";\\\");\\n  }\\n\\n  /**\\n   * @notice Formats getting a css variable\\n   * @param _key User for which to calculate prize amount.\\n   * @return string Generated CSS variable.\\n   */\\n  function getCssVar(string memory _key) internal pure returns (string memory) {\\n    return string.concat(\\\"var(--\\\", _key, \\\")\\\");\\n  }\\n\\n  // formats getting a def URL\\n  function getDefURL(string memory _id) internal pure returns (string memory) {\\n    return string.concat(\\\"url(#\\\", _id, \\\")\\\");\\n  }\\n\\n  // checks if two strings are equal\\n  function stringsEqual(string memory _a, string memory _b) internal pure returns (bool) {\\n    return keccak256(abi.encodePacked(_a)) == keccak256(abi.encodePacked(_b));\\n  }\\n\\n  // returns the length of a string in characters\\n  function utfStringLength(string memory _str) internal pure returns (uint256 length) {\\n    uint256 i = 0;\\n    bytes memory string_rep = bytes(_str);\\n\\n    while (i < string_rep.length) {\\n      if (string_rep[i] >> 7 == 0) i += 1;\\n      else if (string_rep[i] >> 5 == bytes1(uint8(0x6))) i += 2;\\n      else if (string_rep[i] >> 4 == bytes1(uint8(0xE))) i += 3;\\n      else if (string_rep[i] >> 3 == bytes1(uint8(0x1E)))\\n        i += 4;\\n        //For safety\\n      else i += 1;\\n\\n      length++;\\n    }\\n  }\\n\\n  function round2Txt(\\n    uint256 _value,\\n    uint8 _decimals,\\n    uint8 _prec\\n  ) internal pure returns (bytes memory) {\\n    return\\n      abi.encodePacked(\\n        (_value / 10**_decimals).toString(),\\n        \\\".\\\",\\n        (_value / 10**(_decimals - _prec) - (_value / 10**(_decimals)) * 10**_prec).toString()\\n      );\\n  }\\n\\n  // converts an unsigned integer to a string\\n  function uint2str(uint256 _i) internal pure returns (string memory _uintAsString) {\\n    if (_i == 0) {\\n      return \\\"0\\\";\\n    }\\n    uint256 j = _i;\\n    uint256 len;\\n    while (j != 0) {\\n      len++;\\n      j /= 10;\\n    }\\n    bytes memory bstr = new bytes(len);\\n    uint256 k = len;\\n    while (_i != 0) {\\n      k = k - 1;\\n      uint8 temp = (48 + uint8(_i - (_i / 10) * 10));\\n      bytes1 b1 = bytes1(temp);\\n      bstr[k] = b1;\\n      _i /= 10;\\n    }\\n    return string(bstr);\\n  }\\n}\\n\",\"keccak256\":\"0xeef5c418c0fb41d2cad2e737b0b321bf22221b12514382259faa8e5cb6573f4a\",\"license\":\"MIT\"},\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() {\\n        _transferOwnership(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Strings.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (utils/Strings.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev String operations.\\n */\\nlibrary Strings {\\n    bytes16 private constant _HEX_SYMBOLS = \\\"0123456789abcdef\\\";\\n    uint8 private constant _ADDRESS_LENGTH = 20;\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` decimal representation.\\n     */\\n    function toString(uint256 value) internal pure returns (string memory) {\\n        // Inspired by OraclizeAPI's implementation - MIT licence\\n        // https://github.com/oraclize/ethereum-api/blob/b42146b063c7d6ee1358846c198246239e9360e8/oraclizeAPI_0.4.25.sol\\n\\n        if (value == 0) {\\n            return \\\"0\\\";\\n        }\\n        uint256 temp = value;\\n        uint256 digits;\\n        while (temp != 0) {\\n            digits++;\\n            temp /= 10;\\n        }\\n        bytes memory buffer = new bytes(digits);\\n        while (value != 0) {\\n            digits -= 1;\\n            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));\\n            value /= 10;\\n        }\\n        return string(buffer);\\n    }\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation.\\n     */\\n    function toHexString(uint256 value) internal pure returns (string memory) {\\n        if (value == 0) {\\n            return \\\"0x00\\\";\\n        }\\n        uint256 temp = value;\\n        uint256 length = 0;\\n        while (temp != 0) {\\n            length++;\\n            temp >>= 8;\\n        }\\n        return toHexString(value, length);\\n    }\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.\\n     */\\n    function toHexString(uint256 value, uint256 length) internal pure returns (string memory) {\\n        bytes memory buffer = new bytes(2 * length + 2);\\n        buffer[0] = \\\"0\\\";\\n        buffer[1] = \\\"x\\\";\\n        for (uint256 i = 2 * length + 1; i > 1; --i) {\\n            buffer[i] = _HEX_SYMBOLS[value & 0xf];\\n            value >>= 4;\\n        }\\n        require(value == 0, \\\"Strings: hex length insufficient\\\");\\n        return string(buffer);\\n    }\\n\\n    /**\\n     * @dev Converts an `address` with fixed length of 20 bytes to its not checksummed ASCII `string` hexadecimal representation.\\n     */\\n    function toHexString(address addr) internal pure returns (string memory) {\\n        return toHexString(uint256(uint160(addr)), _ADDRESS_LENGTH);\\n    }\\n}\\n\",\"keccak256\":\"0xaf159a8b1923ad2a26d516089bceca9bdeaeacd04be50983ea00ba63070f08a3\",\"license\":\"MIT\"},\"@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.4;\\n\\n/// @notice Three-step single owner authorization mixin.\\n/// @author SolBase (https://github.com/Sol-DAO/solbase/blob/main/src/auth/OwnedThreeStep.sol)\\n/// @author Modified from Solmate (https://github.com/transmissions11/solmate/blob/main/src/auth/Owned.sol)\\nabstract contract OwnedThreeStep {\\n    /// -----------------------------------------------------------------------\\n    /// Events\\n    /// -----------------------------------------------------------------------\\n\\n    event OwnerUpdateInitiated(address indexed user, address indexed ownerCandidate);\\n\\n    event OwnershipTransferred(address indexed user, address indexed newOwner);\\n\\n    /// -----------------------------------------------------------------------\\n    /// Custom Errors\\n    /// -----------------------------------------------------------------------\\n\\n    error Unauthorized();\\n\\n    /// -----------------------------------------------------------------------\\n    /// Ownership Storage\\n    /// -----------------------------------------------------------------------\\n\\n    address public owner;\\n\\n    address internal _ownerCandidate;\\n\\n    bool internal _ownerCandidateConfirmed;\\n\\n    modifier onlyOwner() virtual {\\n        if (msg.sender != owner) revert Unauthorized();\\n\\n        _;\\n    }\\n\\n    /// -----------------------------------------------------------------------\\n    /// Constructor\\n    /// -----------------------------------------------------------------------\\n\\n    /// @notice Create contract and set `owner`.\\n    /// @param _owner The `owner` of contract.\\n    constructor(address _owner) {\\n        owner = _owner;\\n\\n        emit OwnershipTransferred(address(0), _owner);\\n    }\\n\\n    /// -----------------------------------------------------------------------\\n    /// Ownership Logic\\n    /// -----------------------------------------------------------------------\\n\\n    /// @notice Initiate ownership transfer.\\n    /// @param newOwner The `_ownerCandidate` that will `confirmOwner()`.\\n    function transferOwnership(address newOwner) public payable virtual onlyOwner {\\n        _ownerCandidate = newOwner;\\n\\n        emit OwnerUpdateInitiated(msg.sender, newOwner);\\n    }\\n\\n    /// @notice Confirm ownership between `owner` and `_ownerCandidate`.\\n    function confirmOwner() public payable virtual {\\n        if (_ownerCandidateConfirmed) {\\n            if (msg.sender != owner) revert Unauthorized();\\n\\n            delete _ownerCandidateConfirmed;\\n\\n            address newOwner = _ownerCandidate;\\n\\n            owner = newOwner;\\n\\n            emit OwnershipTransferred(msg.sender, newOwner);\\n        } else {\\n            if (msg.sender != _ownerCandidate) revert Unauthorized();\\n\\n            _ownerCandidateConfirmed = true;\\n        }\\n    }\\n\\n    /// @notice Terminate ownership by `owner`.\\n    function renounceOwner() public payable virtual onlyOwner {\\n        delete owner;\\n\\n        emit OwnershipTransferred(msg.sender, address(0));\\n    }\\n}\\n\",\"keccak256\":\"0x2a10ba15d4033be6dbe7ae30fbc5c8bf09fdf84a563128b3aefc788d042b9885\",\"license\":\"MIT\"},\"contracts/Web3Assets.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.15;\\n\\nimport { svg } from \\\"@erc721k/periphery-sol/contracts/svg/svg.sol\\\";\\nimport { OwnedThreeStep } from \\\"@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol\\\";\\nimport { svgUtils } from \\\"@erc721k/periphery-sol/contracts/svg/svgUtils.sol\\\";\\nimport { SVGLibrary } from \\\"@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol\\\";\\nimport { ISVGModule } from \\\"@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol\\\";\\n\\ncontract Web3Assets is OwnedThreeStep {\\n  string private encoding = \\\"(uint8, uint8)\\\";\\n  mapping(bytes32 => string) private assets;\\n\\n  /* ===================================================================================== */\\n  /* Constructor & Modifiers                                                               */\\n  /* ===================================================================================== */\\n\\n  constructor(address _owner) OwnedThreeStep(_owner) {}\\n\\n  /* ===================================================================================== */\\n  /* External Functions                                                                    */\\n  /* ===================================================================================== */\\n\\n  function getEncoding() external view returns (string memory) {\\n    return encoding;\\n  }\\n\\n  function get(bytes32 position) external view returns (string memory) {\\n    return assets[position];\\n  }\\n\\n  function decode(bytes memory input) external view returns (string memory) {\\n    bytes32 position = abi.decode(input, (bytes32));\\n    return assets[position];\\n  }\\n\\n  function set(bytes32 position, string memory svg) external onlyOwner {\\n    assets[position] = svg;\\n  }\\n}\\n\",\"keccak256\":\"0x582c4d90446e32f2751413aa1dadd86e6462e42accf3202c8e82ec2c967f9433\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280600e81526020017f2875696e74382c2075696e743829000000000000000000000000000000000000815250600290816200004a91906200039c565b503480156200005857600080fd5b506040516200159d3803806200159d83398181016040528101906200007e9190620004ed565b80806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a350506200051f565b600081519050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680620001a457607f821691505b602082108103620001ba57620001b96200015c565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302620002247fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82620001e5565b620002308683620001e5565b95508019841693508086168417925050509392505050565b6000819050919050565b6000819050919050565b60006200027d62000277620002718462000248565b62000252565b62000248565b9050919050565b6000819050919050565b62000299836200025c565b620002b1620002a88262000284565b848454620001f2565b825550505050565b600090565b620002c8620002b9565b620002d58184846200028e565b505050565b5b81811015620002fd57620002f1600082620002be565b600181019050620002db565b5050565b601f8211156200034c576200031681620001c0565b6200032184620001d5565b8101602085101562000331578190505b620003496200034085620001d5565b830182620002da565b50505b505050565b600082821c905092915050565b6000620003716000198460080262000351565b1980831691505092915050565b60006200038c83836200035e565b9150826002028217905092915050565b620003a78262000122565b67ffffffffffffffff811115620003c357620003c26200012d565b5b620003cf82546200018b565b620003dc82828562000301565b600060209050601f831160018114620004145760008415620003ff578287015190505b6200040b85826200037e565b8655506200047b565b601f1984166200042486620001c0565b60005b828110156200044e5784890151825560018201915060208501945060208101905062000427565b868310156200046e57848901516200046a601f8916826200035e565b8355505b6001600288020188555050505b505050505050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000620004b58262000488565b9050919050565b620004c781620004a8565b8114620004d357600080fd5b50565b600081519050620004e781620004bc565b92915050565b60006020828403121562000506576200050562000483565b5b60006200051684828501620004d6565b91505092915050565b61106e806200052f6000396000f3fe60806040526004361061007b5760003560e01c8063b48000331161004e578063b48000331461011d578063bd9b6d8614610146578063e5c5e9a314610150578063f2fde38b1461018d5761007b565b806328c23a45146100805780638da5cb5b1461008a5780638eaa6ac0146100b5578063b1cd921f146100f2575b600080fd5b6100886101a9565b005b34801561009657600080fd5b5061009f6102af565b6040516100ac91906108ed565b60405180910390f35b3480156100c157600080fd5b506100dc60048036038101906100d79190610952565b6102d3565b6040516100e99190610a18565b60405180910390f35b3480156100fe57600080fd5b50610107610378565b6040516101149190610a18565b60405180910390f35b34801561012957600080fd5b50610144600480360381019061013f9190610b6f565b61040a565b005b61014e6104b4565b005b34801561015c57600080fd5b5061017760048036038101906101729190610c6c565b6106cb565b6040516101849190610a18565b60405180910390f35b6101a760048036038101906101a29190610ce1565b610789565b005b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461022e576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6000806101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055600073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60606003600083815260200190815260200160002080546102f390610d3d565b80601f016020809104026020016040519081016040528092919081815260200182805461031f90610d3d565b801561036c5780601f106103415761010080835404028352916020019161036c565b820191906000526020600020905b81548152906001019060200180831161034f57829003601f168201915b50505050509050919050565b60606002805461038790610d3d565b80601f01602080910402602001604051908101604052809291908181526020018280546103b390610d3d565b80156104005780601f106103d557610100808354040283529160200191610400565b820191906000526020600020905b8154815290600101906020018083116103e357829003601f168201915b5050505050905090565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461048f576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b806003600084815260200190815260200160002090816104af9190610f24565b505050565b600160149054906101000a900460ff16156106275760008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461054e576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600160146101000a81549060ff02191690556000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3506106c9565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146106ae576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b60018060146101000a81548160ff0219169083151502179055505b565b60606000828060200190518101906106e3919061100b565b905060036000828152602001908152602001600020805461070390610d3d565b80601f016020809104026020016040519081016040528092919081815260200182805461072f90610d3d565b801561077c5780601f106107515761010080835404028352916020019161077c565b820191906000526020600020905b81548152906001019060200180831161075f57829003601f168201915b5050505050915050919050565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461080e576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f365e8eca24e61548e99db9d948e4f9cf79224bcbf4fc81afe651e6e80921c87560405160405180910390a350565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006108d7826108ac565b9050919050565b6108e7816108cc565b82525050565b600060208201905061090260008301846108de565b92915050565b6000604051905090565b600080fd5b600080fd5b6000819050919050565b61092f8161091c565b811461093a57600080fd5b50565b60008135905061094c81610926565b92915050565b60006020828403121561096857610967610912565b5b60006109768482850161093d565b91505092915050565b600081519050919050565b600082825260208201905092915050565b60005b838110156109b957808201518184015260208101905061099e565b838111156109c8576000848401525b50505050565b6000601f19601f8301169050919050565b60006109ea8261097f565b6109f4818561098a565b9350610a0481856020860161099b565b610a0d816109ce565b840191505092915050565b60006020820190508181036000830152610a3281846109df565b905092915050565b600080fd5b600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610a7c826109ce565b810181811067ffffffffffffffff82111715610a9b57610a9a610a44565b5b80604052505050565b6000610aae610908565b9050610aba8282610a73565b919050565b600067ffffffffffffffff821115610ada57610ad9610a44565b5b610ae3826109ce565b9050602081019050919050565b82818337600083830152505050565b6000610b12610b0d84610abf565b610aa4565b905082815260208101848484011115610b2e57610b2d610a3f565b5b610b39848285610af0565b509392505050565b600082601f830112610b5657610b55610a3a565b5b8135610b66848260208601610aff565b91505092915050565b60008060408385031215610b8657610b85610912565b5b6000610b948582860161093d565b925050602083013567ffffffffffffffff811115610bb557610bb4610917565b5b610bc185828601610b41565b9150509250929050565b600067ffffffffffffffff821115610be657610be5610a44565b5b610bef826109ce565b9050602081019050919050565b6000610c0f610c0a84610bcb565b610aa4565b905082815260208101848484011115610c2b57610c2a610a3f565b5b610c36848285610af0565b509392505050565b600082601f830112610c5357610c52610a3a565b5b8135610c63848260208601610bfc565b91505092915050565b600060208284031215610c8257610c81610912565b5b600082013567ffffffffffffffff811115610ca057610c9f610917565b5b610cac84828501610c3e565b91505092915050565b610cbe816108cc565b8114610cc957600080fd5b50565b600081359050610cdb81610cb5565b92915050565b600060208284031215610cf757610cf6610912565b5b6000610d0584828501610ccc565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680610d5557607f821691505b602082108103610d6857610d67610d0e565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302610dd07fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82610d93565b610dda8683610d93565b95508019841693508086168417925050509392505050565b6000819050919050565b6000819050919050565b6000610e21610e1c610e1784610df2565b610dfc565b610df2565b9050919050565b6000819050919050565b610e3b83610e06565b610e4f610e4782610e28565b848454610da0565b825550505050565b600090565b610e64610e57565b610e6f818484610e32565b505050565b5b81811015610e9357610e88600082610e5c565b600181019050610e75565b5050565b601f821115610ed857610ea981610d6e565b610eb284610d83565b81016020851015610ec1578190505b610ed5610ecd85610d83565b830182610e74565b50505b505050565b600082821c905092915050565b6000610efb60001984600802610edd565b1980831691505092915050565b6000610f148383610eea565b9150826002028217905092915050565b610f2d8261097f565b67ffffffffffffffff811115610f4657610f45610a44565b5b610f508254610d3d565b610f5b828285610e97565b600060209050601f831160018114610f8e5760008415610f7c578287015190505b610f868582610f08565b865550610fee565b601f198416610f9c86610d6e565b60005b82811015610fc457848901518255600182019150602085019450602081019050610f9f565b86831015610fe15784890151610fdd601f891682610eea565b8355505b6001600288020188555050505b505050505050565b60008151905061100581610926565b92915050565b60006020828403121561102157611020610912565b5b600061102f84828501610ff6565b9150509291505056fea26469706673582212209cf16217a2e890f94786c0cb192bb0d6c6b480a056d1527115a7ed04c0726cc564736f6c634300080f0033",
+  "deployedBytecode": "0x60806040526004361061007b5760003560e01c8063b48000331161004e578063b48000331461011d578063bd9b6d8614610146578063e5c5e9a314610150578063f2fde38b1461018d5761007b565b806328c23a45146100805780638da5cb5b1461008a5780638eaa6ac0146100b5578063b1cd921f146100f2575b600080fd5b6100886101a9565b005b34801561009657600080fd5b5061009f6102af565b6040516100ac91906108ed565b60405180910390f35b3480156100c157600080fd5b506100dc60048036038101906100d79190610952565b6102d3565b6040516100e99190610a18565b60405180910390f35b3480156100fe57600080fd5b50610107610378565b6040516101149190610a18565b60405180910390f35b34801561012957600080fd5b50610144600480360381019061013f9190610b6f565b61040a565b005b61014e6104b4565b005b34801561015c57600080fd5b5061017760048036038101906101729190610c6c565b6106cb565b6040516101849190610a18565b60405180910390f35b6101a760048036038101906101a29190610ce1565b610789565b005b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461022e576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6000806101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055600073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60606003600083815260200190815260200160002080546102f390610d3d565b80601f016020809104026020016040519081016040528092919081815260200182805461031f90610d3d565b801561036c5780601f106103415761010080835404028352916020019161036c565b820191906000526020600020905b81548152906001019060200180831161034f57829003601f168201915b50505050509050919050565b60606002805461038790610d3d565b80601f01602080910402602001604051908101604052809291908181526020018280546103b390610d3d565b80156104005780601f106103d557610100808354040283529160200191610400565b820191906000526020600020905b8154815290600101906020018083116103e357829003601f168201915b5050505050905090565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461048f576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b806003600084815260200190815260200160002090816104af9190610f24565b505050565b600160149054906101000a900460ff16156106275760008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461054e576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600160146101000a81549060ff02191690556000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3506106c9565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146106ae576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b60018060146101000a81548160ff0219169083151502179055505b565b60606000828060200190518101906106e3919061100b565b905060036000828152602001908152602001600020805461070390610d3d565b80601f016020809104026020016040519081016040528092919081815260200182805461072f90610d3d565b801561077c5780601f106107515761010080835404028352916020019161077c565b820191906000526020600020905b81548152906001019060200180831161075f57829003601f168201915b5050505050915050919050565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461080e576040517f82b4290000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f365e8eca24e61548e99db9d948e4f9cf79224bcbf4fc81afe651e6e80921c87560405160405180910390a350565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006108d7826108ac565b9050919050565b6108e7816108cc565b82525050565b600060208201905061090260008301846108de565b92915050565b6000604051905090565b600080fd5b600080fd5b6000819050919050565b61092f8161091c565b811461093a57600080fd5b50565b60008135905061094c81610926565b92915050565b60006020828403121561096857610967610912565b5b60006109768482850161093d565b91505092915050565b600081519050919050565b600082825260208201905092915050565b60005b838110156109b957808201518184015260208101905061099e565b838111156109c8576000848401525b50505050565b6000601f19601f8301169050919050565b60006109ea8261097f565b6109f4818561098a565b9350610a0481856020860161099b565b610a0d816109ce565b840191505092915050565b60006020820190508181036000830152610a3281846109df565b905092915050565b600080fd5b600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610a7c826109ce565b810181811067ffffffffffffffff82111715610a9b57610a9a610a44565b5b80604052505050565b6000610aae610908565b9050610aba8282610a73565b919050565b600067ffffffffffffffff821115610ada57610ad9610a44565b5b610ae3826109ce565b9050602081019050919050565b82818337600083830152505050565b6000610b12610b0d84610abf565b610aa4565b905082815260208101848484011115610b2e57610b2d610a3f565b5b610b39848285610af0565b509392505050565b600082601f830112610b5657610b55610a3a565b5b8135610b66848260208601610aff565b91505092915050565b60008060408385031215610b8657610b85610912565b5b6000610b948582860161093d565b925050602083013567ffffffffffffffff811115610bb557610bb4610917565b5b610bc185828601610b41565b9150509250929050565b600067ffffffffffffffff821115610be657610be5610a44565b5b610bef826109ce565b9050602081019050919050565b6000610c0f610c0a84610bcb565b610aa4565b905082815260208101848484011115610c2b57610c2a610a3f565b5b610c36848285610af0565b509392505050565b600082601f830112610c5357610c52610a3a565b5b8135610c63848260208601610bfc565b91505092915050565b600060208284031215610c8257610c81610912565b5b600082013567ffffffffffffffff811115610ca057610c9f610917565b5b610cac84828501610c3e565b91505092915050565b610cbe816108cc565b8114610cc957600080fd5b50565b600081359050610cdb81610cb5565b92915050565b600060208284031215610cf757610cf6610912565b5b6000610d0584828501610ccc565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680610d5557607f821691505b602082108103610d6857610d67610d0e565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302610dd07fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82610d93565b610dda8683610d93565b95508019841693508086168417925050509392505050565b6000819050919050565b6000819050919050565b6000610e21610e1c610e1784610df2565b610dfc565b610df2565b9050919050565b6000819050919050565b610e3b83610e06565b610e4f610e4782610e28565b848454610da0565b825550505050565b600090565b610e64610e57565b610e6f818484610e32565b505050565b5b81811015610e9357610e88600082610e5c565b600181019050610e75565b5050565b601f821115610ed857610ea981610d6e565b610eb284610d83565b81016020851015610ec1578190505b610ed5610ecd85610d83565b830182610e74565b50505b505050565b600082821c905092915050565b6000610efb60001984600802610edd565b1980831691505092915050565b6000610f148383610eea565b9150826002028217905092915050565b610f2d8261097f565b67ffffffffffffffff811115610f4657610f45610a44565b5b610f508254610d3d565b610f5b828285610e97565b600060209050601f831160018114610f8e5760008415610f7c578287015190505b610f868582610f08565b865550610fee565b601f198416610f9c86610d6e565b60005b82811015610fc457848901518255600182019150602085019450602081019050610f9f565b86831015610fe15784890151610fdd601f891682610eea565b8355505b6001600288020188555050505b505050505050565b60008151905061100581610926565b92915050565b60006020828403121561102157611020610912565b5b600061102f84828501610ff6565b9150509291505056fea26469706673582212209cf16217a2e890f94786c0cb192bb0d6c6b480a056d1527115a7ed04c0726cc564736f6c634300080f0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "transferOwnership(address)": {
+        "params": {
+          "newOwner": "The `_ownerCandidate` that will `confirmOwner()`."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "Unauthorized()": [
+        {
+          "notice": "----------------------------------------------------------------------- Custom Errors -----------------------------------------------------------------------"
+        }
+      ]
+    },
+    "events": {
+      "OwnerUpdateInitiated(address,address)": {
+        "notice": "----------------------------------------------------------------------- Events -----------------------------------------------------------------------"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "confirmOwner()": {
+        "notice": "Confirm ownership between `owner` and `_ownerCandidate`."
+      },
+      "owner()": {
+        "notice": "----------------------------------------------------------------------- Ownership Storage -----------------------------------------------------------------------"
+      },
+      "renounceOwner()": {
+        "notice": "Terminate ownership by `owner`."
+      },
+      "transferOwnership(address)": {
+        "notice": "Initiate ownership transfer."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 2066,
+        "contract": "contracts/Web3Assets.sol:Web3Assets",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 2068,
+        "contract": "contracts/Web3Assets.sol:Web3Assets",
+        "label": "_ownerCandidate",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 2070,
+        "contract": "contracts/Web3Assets.sol:Web3Assets",
+        "label": "_ownerCandidateConfirmed",
+        "offset": 20,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 2318,
+        "contract": "contracts/Web3Assets.sol:Web3Assets",
+        "label": "encoding",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 2322,
+        "contract": "contracts/Web3Assets.sol:Web3Assets",
+        "label": "assets",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_bytes32,t_string_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_bytes32,t_string_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => string)",
+        "numberOfBytes": "32",
+        "value": "t_string_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
