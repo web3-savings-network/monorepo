@@ -1108,10 +1108,10 @@
     "inherits" "^2.0.1"
     "safe-buffer" "^5.0.1"
 
-"solc@^0.8.13":
+"solc@^0.8.15":
   "integrity" "sha512-C0yTN+rjEOGO6uVOXI8+EKa75SFMuZpQ2tryex4QxWIg0HRWZvCHKfVPuLZ5wx06Sb6GBp6uQA5yqQyXZnXOJw=="
-  "resolved" "https://registry.npmjs.org/solc/-/solc-0.8.13.tgz"
-  "version" "0.8.13"
+  "resolved" "https://registry.npmjs.org/solc/-/solc-0.8.15.tgz"
+  "version" "0.8.15"
   dependencies:
     "command-exists" "^1.2.8"
     "commander" "^8.1.0"

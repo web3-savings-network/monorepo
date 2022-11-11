@@ -436,7 +436,7 @@ importers:
       node-watch: 0.7.3
       prettier: ^2.6.2
       prettier-plugin-solidity: 1.0.0-beta.19
-      solc: 0.8.13
+      solc: 0.8.15
       solhint: 3.3.6
       solidity-coverage: 0.7.18
       solidity-docgen: 0.5.16
@@ -481,7 +481,7 @@ importers:
       node-watch: 0.7.3
       prettier: 2.7.1
       prettier-plugin-solidity: 1.0.0-beta.19_prettier@2.7.1
-      solc: 0.8.13_debug@4.3.3
+      solc: 0.8.15_debug@4.3.3
       solhint: 3.3.6
       solidity-coverage: 0.7.18
       solidity-docgen: 0.5.16
@@ -524,7 +524,7 @@ importers:
       node-watch: 0.7.3
       prettier: ^2.6.2
       prettier-plugin-solidity: 1.0.0-beta.19
-      solc: 0.8.13
+      solc: 0.8.15
       solhint: 3.3.6
       solidity-coverage: 0.7.18
       solidity-docgen: 0.5.16
@@ -566,7 +566,7 @@ importers:
       node-watch: 0.7.3
       prettier: 2.7.1
       prettier-plugin-solidity: 1.0.0-beta.19_prettier@2.7.1
-      solc: 0.8.13_debug@4.3.3
+      solc: 0.8.15_debug@4.3.3
       solhint: 3.3.6
       solidity-coverage: 0.7.18
       solidity-docgen: 0.5.16
@@ -609,7 +609,7 @@ importers:
       node-watch: 0.7.3
       prettier: ^2.6.2
       prettier-plugin-solidity: 1.0.0-beta.19
-      solc: 0.8.13
+      solc: 0.8.15
       solhint: 3.3.6
       solidity-coverage: 0.7.18
       solidity-docgen: 0.5.16
@@ -651,7 +651,7 @@ importers:
       node-watch: 0.7.3
       prettier: 2.7.1
       prettier-plugin-solidity: 1.0.0-beta.19_prettier@2.7.1
-      solc: 0.8.13_debug@4.3.3
+      solc: 0.8.15_debug@4.3.3
       solhint: 3.3.6
       solidity-coverage: 0.7.18
       solidity-docgen: 0.5.16
@@ -24039,22 +24039,6 @@ packages:
       js-sha3: 0.8.0
       memorystream: 0.3.1
       require-from-string: 2.0.2
-      semver: 5.7.1
-      tmp: 0.0.33
-    transitivePeerDependencies:
-      - debug
-    dev: true
-
-  /solc/0.8.13_debug@4.3.3:
-    resolution: {integrity: sha512-C0yTN+rjEOGO6uVOXI8+EKa75SFMuZpQ2tryex4QxWIg0HRWZvCHKfVPuLZ5wx06Sb6GBp6uQA5yqQyXZnXOJw==}
-    engines: {node: '>=10.0.0'}
-    hasBin: true
-    dependencies:
-      command-exists: 1.2.9
-      commander: 8.3.0
-      follow-redirects: 1.15.1_debug@4.3.3
-      js-sha3: 0.8.0
-      memorystream: 0.3.1
       semver: 5.7.1
       tmp: 0.0.33
     transitivePeerDependencies:
