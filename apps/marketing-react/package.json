@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3000",
-    "dev:fork": "NEXT_PUBLIC_FORKING_ENABLED=true next dev",
-    "build": "next build ; next export ; cp -r ./out ../../public",
-    "build:prd": "next build ; next export ; touch out/.nojekyll",
+    "dev:fork": "NEXT_PUBLIC_FORKING_ENABLED=true next dev --port 3000",
+    "build": "next build",
+    "build:marketing": "next build",
     "export": "next export",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",

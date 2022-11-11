@@ -21,7 +21,9 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "build:prd": "turbo run build:prd",
+    "build:app": "turbo run build:app",
+    "build:admin": "turbo run build:admin",
+    "build:marketing": "turbo run build:marketing",
     "compile": "turbo run compile",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",

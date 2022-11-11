@@ -22,7 +22,7 @@ import {
   FORKING_ENABLED,
 } from "@/utils/constants";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
-import React, { useEffect } from "react";
+import React from "react";
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
@@ -43,7 +43,6 @@ const { chains, provider, webSocketProvider } = configureChains(
           }),
         }),
         alchemyProvider({ apiKey: ALCHEMY_ID, priority: 1 }),
-        publicProvider(),
       ]
     : [alchemyProvider({ apiKey: ALCHEMY_ID, priority: 1 }), publicProvider()]
 );

@@ -27,36 +27,53 @@
       "outputs": [""]
     },
     "watch": {
-      "dependsOn": ["^watch"]
+      "dependsOn": ["^watch"],
+      "outputs": ["dist"]
     },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "outputs": ["dist"]
     },
-    "build:prd": {
-      "dependsOn": ["^build:prd"],
-      "outputs": [".next", "out"]
+    "build:marketing": {
+      "dependsOn": ["^build:package", "^build:marketing"],
+      "outputs": [".next", "out", "dist"]
+    },
+    "build:app": {
+      "dependsOn": ["^build:package", "^build:app`"],
+      "outputs": [".next", "out", "dist"]
+    },
+    "build:admin": {
+      "dependsOn": ["^build:package", "^build:admin"],
+      "outputs": [".next", "out", "dist"]
+    },
+    "build:package": {
+      "dependsOn": ["^build:package", "^build:marketing"],
+      "outputs": [".next", "out", "dist"]
     },
     "clean": {
       "dependsOn": ["^clean"]
     },
     "lab": {
       "dependsOn": [
+        "^build:package",
         "^watch",
         "^chain",
         "@web3-savings-cards/marketing-react#dev",
         "@web3-savings-cards/admin-react#dev",
         "@web3-savings-cards/app-react#dev"
       ],
-      "outputs": [""]
+      "outputs": [".next", "out", "public"]
     },
     "lab:fork": {
       "dependsOn": [
+        "^build:package",
         "^watch",
         "@web3-savings-cards/core-sol#chain:fork",
         "@web3-savings-cards/marketing-react#dev",
         "@web3-savings-cards/admin-react#dev",
         "@web3-savings-cards/app-react#dev"
-      ]
+      ],
+      "outputs": [".next", "out", "dist", "public"]
     }
   }
 }
