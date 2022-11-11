@@ -124,11 +124,18 @@ const SectionHero = (props) => (
               width: "170%",
             }}
           >
-            <Image
+            {/* <Image
               className="pt-2"
               alt="IOS Devices"
               src={IOS}
               // src="/img/ios-horiz.png"
+              // width={1000}
+              // height={500}
+            /> */}
+            <img
+              className="pt-2"
+              alt="IOS Devices"
+              src="/img/ios-horiz.png"
               // width={1000}
               // height={500}
             />

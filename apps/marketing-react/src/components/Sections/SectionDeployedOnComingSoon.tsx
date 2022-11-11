@@ -1,7 +1,9 @@
 import * as React from "react";
+
 import classNames from "classnames";
-import ModalCardActivate from "../ModalCardActivate";
 import src from "react-select/dist/declarations/src";
+
+import ModalCardActivate from "../ModalCardActivate";
 
 interface SectionDeployedOnComingSoonProps {
   className?: string;
@@ -20,7 +22,7 @@ export const SectionDeployedOnComingSoon = ({
       <div className={"container mx-auto max-w-screen-xl"}>
         <div className="text-center">
           <span className="text-4xl">💸</span>
-          <h3 className="font-normal text-2xl">
+          <h3 className="text-2xl font-normal">
             <span className="font-semibold">Web3 Savings Cards</span> can be
             activated anywhere{" "}
             <span className="font-semibold">PoolTogether</span> is deployed.
@@ -29,7 +31,7 @@ export const SectionDeployedOnComingSoon = ({
             Except Avalanche because they rugged PoolTogether users on promised
             rewards.
           </p>
-          <hr className="max-w-xs mx-auto mt-5 mb-10 opacity-50" />
+          <hr className="mx-auto mt-5 mb-10 max-w-xs opacity-50" />
         </div>
         <div className="grid grid-cols-12 gap-x-4 gap-y-20 text-center">
           <Network
@@ -52,7 +54,7 @@ export const SectionDeployedOnComingSoon = ({
           />
         </div>
         <div className="my-10" />
-        <p className="text-sm text-center">
+        <p className="text-center text-sm">
           Powered by the{" "}
           <a className="link" target={"blank"} href="https://pooltogether.com/">
             PoolTogether protocol
@@ -74,7 +76,7 @@ export const SectionDeployedOnComingSoon = ({
 const Network = ({
   className,
   title = "Ethereum",
-  imgSrc = "/img/network/ethereum.svg",
+  imgSrc = "/img/network/Ethereum.svg",
 }: any) => {
   const classes = classNames(className, "Icon");
   const iconStyle = classNames("Icon", "w-16 h-16 mx-auto");

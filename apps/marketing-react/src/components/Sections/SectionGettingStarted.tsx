@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import classNames from "classnames";
 
 interface SectionGettingStartedProps {
@@ -18,15 +19,15 @@ export const SectionGettingStarted = ({
           src="https://thumbs.gfycat.com/FrayedSeriousIchneumonfly-size_restricted.gif"
         />
 
-        <h3 className="font-bold text-7xl">Gooo Super DeFi</h3>
+        <h3 className="text-7xl font-bold">Gooo Super DeFi</h3>
         <div className="my-4" />
-        <p className="block font-normal text-2xl text-center">
+        <p className="block text-center text-2xl font-normal">
           The <span className="font-bold">Web3 Savings Protocol</span> that
           grows stronger with <span className="font-bold">every deposit</span>
         </p>
       </div>
       <div className="my-20" />
-      <div className="container max-w-screen-xl mx-auto flex flex-wrap">
+      <div className="container mx-auto flex max-w-screen-xl flex-wrap">
         <ViewContentAndIOSPreview />
       </div>
       <div className="my-20" />
@@ -46,46 +47,44 @@ export const SectionGettingStarted = ({
   );
 };
 
-const ViewContentAndIOSPreview = (props) => {
-  return (
-    <div className="grid grid-cols-12 ">
-      <div className="col-span-5 flex flex-center">
-        <div className="">
-          <img
-            className="w-10 rounded-full"
-            src="https://thumbs.gfycat.com/EagerFaithfulBobolink-max-1mb.gif"
-          />
-          <div className="my-4" />
-          <h3 className="font-normal text-4xl">
-            Adventure. Explore.
-            <br />
-            <span className="font-semibold">Earn chances to WIN!</span>
-          </h3>
-          <div className="my-10" />
-          <p className="leading-8 text-xl">
-            The PoolTogether Savings protocol is a{" "}
-            <span className="font-semibold">community-owned</span> protocol that
-            allows you to save money in popular cryptocurrencies like USDC.
-          </p>
-          <div className="my-10" />
-          <p className="leading-6 font-semibold">
-            You can also win prizes for practicing sgood financial habits.
-          </p>
-          <p className="">
-            The more you save, the the higher your chances of winning! Save
-            money, win prizes and get rewards from partner protocols.
-            <br />
-            <span className="font-bold">It's a win/win/win.</span>
-          </p>
-        </div>
-      </div>
-      <div className="col-span-7">
-        <div className="" style={{ width: "130%" }}>
-          <img className="max-w-screen-xs" src="/img/ios-screens.png" alt="" />
-        </div>
+const ViewContentAndIOSPreview = (props) => (
+  <div className="grid grid-cols-12 ">
+    <div className="flex-center col-span-5 flex">
+      <div className="">
+        <img
+          className="w-10 rounded-full"
+          src="https://thumbs.gfycat.com/EagerFaithfulBobolink-max-1mb.gif"
+        />
+        <div className="my-4" />
+        <h3 className="text-4xl font-normal">
+          Adventure. Explore.
+          <br />
+          <span className="font-semibold">Earn chances to WIN!</span>
+        </h3>
+        <div className="my-10" />
+        <p className="text-xl leading-8">
+          The PoolTogether Savings protocol is a{" "}
+          <span className="font-semibold">community-owned</span> protocol that
+          allows you to save money in popular cryptocurrencies like USDC.
+        </p>
+        <div className="my-10" />
+        <p className="font-semibold leading-6">
+          You can also win prizes for practicing sgood financial habits.
+        </p>
+        <p className="">
+          The more you save, the the higher your chances of winning! Save money,
+          win prizes and get rewards from partner protocols.
+          <br />
+          <span className="font-bold">It's a win/win/win.</span>
+        </p>
       </div>
     </div>
-  );
-};
+    <div className="col-span-7">
+      <div className="" style={{ width: "130%" }}>
+        <img className="max-w-screen-xs" src="/img/ios-screens.png" alt="" />
+      </div>
+    </div>
+  </div>
+);
 
 export default SectionGettingStarted;

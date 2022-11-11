@@ -1,6 +1,7 @@
 import * as React from "react";
-import classNames from "classnames";
+
 import { ModalInjectIFrame } from "@web3-savings-cards/framework-react";
+import classNames from "classnames";
 
 interface SectionSalesCopyeditProps {
   className?: string;
@@ -13,13 +14,13 @@ export const SectionSalesCopyedit = ({
 
   return (
     <section className={containerClassName}>
-      <div className="container mx-auto max-w-screen-xl grid grid-cols-12 lg:gap-x-10">
+      <div className="container mx-auto grid max-w-screen-xl grid-cols-12 lg:gap-x-10">
         <div className="col-span-12 text-center">
-          <span className="text-6xl lg:text-8xl block">💳</span>
-          <span className="font-normal lg:font-light text-2xl lg:text-5xl hidden lg:inline-block">
+          <span className="block text-6xl lg:text-8xl">💳</span>
+          <span className="hidden text-2xl font-normal lg:inline-block lg:text-5xl lg:font-light">
             A Web3 Savings Protocol for Everyone
           </span>
-          <span className="font-bold text-3xl lg:text-7xl inline-block">
+          <span className="inline-block text-3xl font-bold lg:text-7xl">
             Unlock the Power of
             <br className="hidden lg:inline-block" /> DeFi Together
           </span>
@@ -30,27 +31,27 @@ export const SectionSalesCopyedit = ({
         </div>
       </div>
       <div className="my-20" />
-      <div className="container mx-auto max-w-screen-xl grid grid-cols-12 lg:gap-x-10 gap-y-10">
+      <div className="container mx-auto grid max-w-screen-xl grid-cols-12 gap-y-10 lg:gap-x-10">
         <Feature
           emoji="🏦"
-          className="col-span-12 lg:col-span-4 text-center"
+          className="col-span-12 text-center lg:col-span-4"
           title="Savings"
           description="Deposit USDC, and other tokens, into an easy to use and secure Web3 savings network."
         />
         <Feature
           emoji="💸"
-          className="col-span-12 lg:col-span-4 text-center"
+          className="col-span-12 text-center lg:col-span-4"
           title="Prizes"
           description="Win prizes for having good financial habits. More deposits means higher prizes!"
         />
         <Feature
           emoji="💰"
-          className="col-span-12 lg:col-span-4 text-center"
+          className="col-span-12 text-center lg:col-span-4"
           title="Rewards"
           description="Get rewarded by partners simply for trying new protocols and saving cryptocurrencies."
         />
       </div>
-      <div className="container mx-auto flex flex-col items-center justify-center w-42 text-center pt-32">
+      <div className="w-42 container mx-auto flex flex-col items-center justify-center pt-32 text-center">
         <ModalInjectIFrame
           href="https://app.pooltogether.com"
           name="PoolTogether"
@@ -65,6 +66,7 @@ export const SectionSalesCopyedit = ({
             className="link"
             target={"_blank"}
             href="https://friendsofpooly.com"
+            rel="noreferrer"
           >
             #DefendingDeFi with Friends of Pooly
           </a>{" "}
