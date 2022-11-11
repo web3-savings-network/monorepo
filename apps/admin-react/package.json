@@ -1,6 +1,7 @@
 {
   "name": "@web3-savings-cards/admin-react",
   "version": "0.0.0-beta.0",
+  "private": true,
   "scripts": {
     "dev": "next dev --port 3002",
     "dev:fork": "NEXT_PUBLIC_FORKING_ENABLED=true next dev",
