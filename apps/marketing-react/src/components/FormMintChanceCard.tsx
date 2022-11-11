@@ -3,12 +3,11 @@ import { useForm, Controller } from "react-hook-form";
 import classNames from "classnames";
 import { useAccount, useContractRead } from "wagmi";
 import { BigNumber, utils } from "ethers";
-import Select from "react-select";
 
 import { useNetworkContract } from "@web3-savings-cards/deployments";
-import FieldSelect from "./Fields/FieldSelect";
-import FieldToggle from "./Fields/FieldToggle";
+import { FieldSelect, FieldToggle } from "@web3-savings-cards/framework-react";
 import ModalAlphaModeInformation from "./ModalAlphaModeInformation";
+import ERC721KPreview from "./ERC721K/ERC721KPreview";
 
 interface FormMintChanceCardProps {
   className?: string;
@@ -17,7 +16,7 @@ interface FormMintChanceCardProps {
 }
 
 export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
-  const contract = useNetworkContract("localhost", "ChanceCard");
+  const contract = useNetworkContract("localhost", "Web3Card");
 
   const {
     control,
@@ -40,8 +39,8 @@ export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
   const { data, error, isLoading } = useContractRead({
     addressOrName: contract?.address || "",
     contractInterface: contract?.abi || "",
-    functionName: "tokenURI",
-    args: [BigNumber.from("0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31")],
+    functionName: "preview",
+    args: ["0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31"],
   });
 
   const onSubmit = async (_data: any) => {
@@ -107,6 +106,10 @@ export const FormMintChanceCard = ({ className }: FormMintChanceCardProps) => {
           </div>
           <div className="my-6" />
           <div className="text-center z-5 relative col-span-8">
+            <ERC721KPreview
+              contractAddress={contract?.address || ""}
+              args={["0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31"]}
+            />
             <img className="rounded-xl shadow-lg mx-auto w-full" src={data} />
           </div>
           <div className="my-4" />

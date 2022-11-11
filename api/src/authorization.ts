@@ -9,7 +9,7 @@ export function generateAccessToken(username: any) {
   return jwt.sign(username, TOKEN_SECRET, { expiresIn: '1800s' });
 }
 
-export function authenticateToken(req: any, res: any, next: any) {
+export function authenticateToken(req: any, res: any, next: any): null {
   const { IS_OFFLINE } = process.env;
   if (IS_OFFLINE) {
     req.user = { address: '0x0000000000000000000000000000000000000000' };

@@ -6,8 +6,6 @@ interface ERC721Metadata {
   name: string;
   description: string;
   image: string;
-  externalLink: string;
-  feeRecipient: string;
   attributes: {
     trait_type: string;
     value: string;
@@ -15,8 +13,9 @@ interface ERC721Metadata {
 }
 
 // @ts-ignore
-export function useERC721ContractMetadata({
+export function useERC721Metadata({
   contractAddress,
+  tokenId,
 }: {
   contractAddress: string;
   tokenId: string;
@@ -25,8 +24,8 @@ export function useERC721ContractMetadata({
   const txRead = useContractRead({
     addressOrName: contractAddress,
     contractInterface: Web3Card,
-    functionName: "contractURI",
-    args: [],
+    functionName: "tokenURI",
+    args: [tokenId],
   });
 
   useEffect(() => {
@@ -42,4 +41,4 @@ export function useERC721ContractMetadata({
   return tokenData;
 }
 
-export default useERC721ContractMetadata;
+export default useERC721Metadata;

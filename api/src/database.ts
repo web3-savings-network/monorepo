@@ -1,38 +1,38 @@
-import mongoose, { Schema } from 'mongoose'
+import mongoose, { Schema } from 'mongoose';
 
 import { handleError, logError } from './errors';
 
-const  {
-  MONGODB_CONNECTION
-} = process.env
+const { MONGODB_CONNECTION } = process.env;
 
-
-const UserSchema = new Schema({ 
+const UserSchema = new Schema({
   _id: {
     type: String,
     unique: true,
   },
-  name: String, 
+  name: String,
   email: String || undefined,
   twitter: String || undefined,
-  telegram: String || undefined
-})
+  telegram: String || undefined,
+});
 
-const SubmissionSchema = new Schema({ 
+const SubmissionSchema = new Schema({
   address: {
     type: String,
-    unique : true,
-  }, name: String, email: String, type: String 
-})
+    unique: true,
+  },
+  name: String,
+  email: String,
+  type: String,
+});
 
 const User = mongoose.model('User', UserSchema);
 const Submission = mongoose.model('Submission', SubmissionSchema);
 
-mongoose.connection.on('error', err => {
+mongoose.connection.on('error', (err) => {
   logError(err);
 });
 
-mongoose.connection.on('onMessage', err => {
+mongoose.connection.on('onMessage', (err) => {
   logError(err);
 });
 
@@ -47,18 +47,14 @@ async function main() {
     };
 
     mongoose.connect(MONGODB_CONNECTION as string, options);
-    await User.createCollection()
-    await Submission.createCollection()
+    await User.createCollection();
+    await Submission.createCollection();
   } catch (error: any) {
     handleError(error);
   }
-  return mongoose
+  return mongoose;
 }
 
-export {
-  User,
-  Submission
-}
+export { Submission, User };
 
-
-export default main()
+export default main();

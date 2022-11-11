@@ -43,19 +43,19 @@
       "dependsOn": [
         "^watch",
         "^chain",
-        "@chance-cards/marketing-app#dev",
-        "@chance-cards/admin-app#dev",
-        "@chance-cards/savings-app#dev"
+        "@web3-savings-cards/marketing-react#dev",
+        "@web3-savings-cards/admin-react#dev",
+        "@web3-savings-cards/app-react#dev"
       ],
       "outputs": [""]
     },
     "lab:fork": {
       "dependsOn": [
         "^watch",
-        "@chance-cards/core-sol#chain:fork",
-        "@chance-cards/marketing-app#dev",
-        "@chance-cards/admin-app#dev",
-        "@chance-cards/savings-app#dev"
+        "@web3-savings-cards/core-sol#chain:fork",
+        "@web3-savings-cards/marketing-react#dev",
+        "@web3-savings-cards/admin-react#dev",
+        "@web3-savings-cards/app-react#dev"
       ]
     }
   }

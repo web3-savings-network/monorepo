@@ -1,6 +1,6 @@
-import Web3CardMainnet from '@chance-cards/core-sol/deployments/localhost/Web3Card.json';
-import Web3CardTestnet from '@chance-cards/core-sol/deployments/localhost/Web3Card.json';
-import Web3CardLocalhost from '@chance-cards/core-sol/deployments/localhost/Web3Card.json';
+import Web3CardMainnet from '@web3-savings-cards/core-sol/deployments/localhost/Web3Card.json';
+import Web3CardTestnet from '@web3-savings-cards/core-sol/deployments/localhost/Web3Card.json';
+import Web3CardLocalhost from '@web3-savings-cards/core-sol/deployments/localhost/Web3Card.json';
 import TWABDelegatorABI from './abi/TWABDelegator.json';
 import PoolTogetherContractAddresses from './PoolTogetherContractAddresses'
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useContractRead } from "wagmi";
-import { Web3CardABI as Web3Card } from "@chance-cards/deployments";
+import { Web3CardABI as Web3Card } from "@web3-savings-cards/deployments";
 import { BigNumber } from "ethers";
 
 interface ERC721TotalSupplyProps {
