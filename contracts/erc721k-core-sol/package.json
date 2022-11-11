@@ -19,8 +19,6 @@
     "coverage": "HIDE_DEPLOY_LOG=true OPTIMIZER_DISABLED=true hardhat coverage",
     "coverage:file": "HIDE_DEPLOY_LOG=true OPTIMIZER_DISABLED=true hardhat coverage --testfiles",
     "deploy": "hardhat deploy --write true --network localhost",
-    "deploy:wolf": "DEPLOY=wolf hardhat deploy --write true",
-    "deploy:nounders": "DEPLOY=nounders hardhat deploy --write true",
     "deploy:mainnet": "DEPLOY=mainnet hardhat deploy --write true --network mainnet",
     "deploy:ethereum:mainnet": "hardhat deploy --write true --network mainnet",
     "deploy:ethereum:testnet": "hardhat deploy --write true --network ethereumTestnet",
@@ -37,9 +35,7 @@
     "fork:setup": "hardhat fork:setup",
     "remove-logs": "hardhat remove-logs",
     "test": "yarn cleanup && HIDE_DEPLOY_LOG=true OPTIMIZER_DISABLED=true hardhat test",
-    "typechain": "typechain --target=ethers-v5 \"./abis/*.json\" --out-dir \"./types\"",
-    "prepack": "yarn compile",
-    "prepare": "hardhat --show-stack-traces --max-memory 8192 compile"
+    "typechain": "typechain --target=ethers-v5 \"./abis/*.json\" --out-dir \"./types\""
   },
   "devDependencies": {
     "@ethersproject/abi": "5.6.1",
