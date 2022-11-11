@@ -23,12 +23,6 @@ module.exports = withBundleAnalyzer({
         port: '3000',
         pathname: '/**',
       },
-      {
-        protocol: 'https',
-        hostname: 'web3savings.network',
-        port: '',
-        pathname: '/**',
-      },
     ],
   },
   async headers() {
