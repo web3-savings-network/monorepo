@@ -1,0 +1,2106 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721K.sol": {
+      "lastModificationDate": 1667832331754,
+      "contentHash": "42509002250fd803aafda4446bb3fb10",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721K.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/core-sol/contracts/ERC721K.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/ERC721K.sol": {
+      "lastModificationDate": 1667771332939,
+      "contentHash": "00aecae6344e24c4da5d801adadffe58",
+      "sourceName": "@erc721k/core-sol/contracts/ERC721K.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@turbo-eth/solbase-sol/src/tokens/ERC721/ERC721.sol",
+        "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
+        "./ERC721Storage.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ERC721K"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/solbase/src/tokens/ERC721/ERC721.sol": {
+      "lastModificationDate": 1667721299219,
+      "contentHash": "29b63c48a35728eba599c9332f86b617",
+      "sourceName": "@turbo-eth/solbase-sol/src/tokens/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "ERC721",
+        "ERC721TokenReceiver"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/solbase/src/auth/OwnedThreeStep.sol": {
+      "lastModificationDate": 1667721299218,
+      "contentHash": "6b98eecc14595b4b44220904f8f27202",
+      "sourceName": "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "OwnedThreeStep"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/ERC721Storage.sol": {
+      "lastModificationDate": 1667771332939,
+      "contentHash": "dc408f5c7a65b28263560df3d4464fe9",
+      "sourceName": "@erc721k/core-sol/contracts/ERC721Storage.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "base64-sol/base64.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./interfaces/IERC721KImage.sol",
+        "./interfaces/IERC721KTraits.sol",
+        "@openzeppelin/contracts/utils/Strings.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ERC721Storage"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/base64-sol@1.1.0/node_modules/base64-sol/base64.sol": {
+      "lastModificationDate": 1667721619673,
+      "contentHash": "0d54cb6a748ddde95d92ed7802c9248d",
+      "sourceName": "base64-sol/base64.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "Base64"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1667721623053,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IERC721KImage.sol": {
+      "lastModificationDate": 1667721299195,
+      "contentHash": "d8f72d0d646302132c6505999fee9e80",
+      "sourceName": "@erc721k/core-sol/contracts/interfaces/IERC721KImage.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "IERC721KImage"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IERC721KTraits.sol": {
+      "lastModificationDate": 1667721299195,
+      "contentHash": "970d1f7f0fcdb0b2cde7e6ce8851b132",
+      "sourceName": "@erc721k/core-sol/contracts/interfaces/IERC721KTraits.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "IERC721KTraits"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1667721623054,
+      "contentHash": "cf46906c4035f51639a22265066a9e78",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1667721623038,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPooly.sol": {
+      "lastModificationDate": 1667826583452,
+      "contentHash": "8cb2e838160592c6573d84e643dcdc2c",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPooly.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/core-sol/contracts/ERC721K.sol",
+        "@erc721k/core-sol/contracts/ERC721Storage.sol",
+        "@openzeppelin/contracts/access/AccessControl.sol",
+        "@a16z/contracts/licenses/CantBeEvil.sol",
+        "@erc721k/periphery-sol/contracts/interfaces/ISVGRender.sol",
+        "./interfaces/IPixelCharacter.sol",
+        "./PixelPoolyStorage.sol",
+        "./PixelStore.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "IERC721StorageSync",
+        "PixelPooly"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1667721623037,
+      "contentHash": "e6ef731d275b1e7b2995f00fa56d9dab",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/Strings.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@a16z+contracts@0.0.8/node_modules/@a16z/contracts/licenses/CantBeEvil.sol": {
+      "lastModificationDate": 1667741700604,
+      "contentHash": "f7fa2c51ebe3c4ccd8ba8b2bf523b747",
+      "sourceName": "@a16z/contracts/licenses/CantBeEvil.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+        "./ICantBeEvil.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "CantBeEvil"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/interfaces/IPixelCharacter.sol": {
+      "lastModificationDate": 1667741375755,
+      "contentHash": "18d79867212282732c9fca9f20c0b78b",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/interfaces/IPixelCharacter.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "IPixelCharacter"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyStorage.sol": {
+      "lastModificationDate": 1667773319232,
+      "contentHash": "68b8ea824d2f0e2d30546893dc9935c4",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "base64-sol/base64.sol",
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@erc721k/core-sol/contracts/ERC721Storage.sol",
+        "@erc721k/core-sol/contracts/interfaces/IERC721KImage.sol",
+        "@erc721k/core-sol/contracts/interfaces/IERC721KTraits.sol",
+        "./interfaces/IPixelCharacter.sol",
+        "./PixelStore.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "PixelPoolyStorage"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1667721623045,
+      "contentHash": "57c84298234411cea19c7c284d86be8b",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1667721623041,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1667721623048,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@a16z+contracts@0.0.8/node_modules/@a16z/contracts/licenses/ICantBeEvil.sol": {
+      "lastModificationDate": 1667741700604,
+      "contentHash": "66cead8a931bd6ba22c3b239f65c9259",
+      "sourceName": "@a16z/contracts/licenses/ICantBeEvil.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ICantBeEvil"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1667721623050,
+      "contentHash": "ec99d946db3685a3630554aa6055bd7f",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol": {
+      "lastModificationDate": 1667832331754,
+      "contentHash": "1d35d8724a8ae020a8f10bdcb385cd58",
+      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721Storage.sol": {
+      "lastModificationDate": 1667832331755,
+      "contentHash": "5b9abf3ca0d8d9d35625fe4ce690617b",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721Storage.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/core-sol/contracts/ERC721Storage.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyTraits.sol": {
+      "lastModificationDate": 1667771352765,
+      "contentHash": "33e7646e2d3a3613389e49bb5014156b",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@erc721k/core-sol/contracts/interfaces/IStream.sol",
+        "@erc721k/periphery-sol/contracts/interfaces/ITraitsFetch.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "PixelPoolyTraits"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IStream.sol": {
+      "lastModificationDate": 1667721299195,
+      "contentHash": "0b337f947e50391375a046b305baaa9a",
+      "sourceName": "@erc721k/core-sol/contracts/interfaces/IStream.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "IStream"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ITraitsFetch.sol": {
+      "lastModificationDate": 1667721299198,
+      "contentHash": "2d3451a1e7015058b2068f1deff9bfe6",
+      "sourceName": "@erc721k/periphery-sol/contracts/interfaces/ITraitsFetch.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ITraitsFetch"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyRender.sol": {
+      "lastModificationDate": 1667771352765,
+      "contentHash": "9e032aa2458e99a51d22b62dce274e3a",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@erc721k/periphery-sol/contracts/svg/svg.sol",
+        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
+        "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
+        "base64-sol/base64.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "PixelPoolyRender"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/svg.sol": {
+      "lastModificationDate": 1667735909978,
+      "contentHash": "e670b42909af839a30ed6a69ebbf9f45",
+      "sourceName": "@erc721k/periphery-sol/contracts/svg/svg.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "./svgUtils.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.15"
+      ],
+      "artifacts": [
+        "svg"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGLibrary.sol": {
+      "lastModificationDate": 1667721299198,
+      "contentHash": "cab271c386c03ba3027add546bf38a38",
+      "sourceName": "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./svg.sol",
+        "./svgUtils.sol",
+        "./SVGColor.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "SVGLibrary"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGRegistry.sol": {
+      "lastModificationDate": 1667746753407,
+      "contentHash": "eea2c5707ffa02ba133966fa603a9bad",
+      "sourceName": "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "../interfaces/ISVGModule.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "SVGRegistry"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/svgUtils.sol": {
+      "lastModificationDate": 1667735909978,
+      "contentHash": "29645f891fded4caeddb95878e78325f",
+      "sourceName": "@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.15"
+      ],
+      "artifacts": [
+        "svgUtils"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGColor.sol": {
+      "lastModificationDate": 1667735909977,
+      "contentHash": "6bad9a821613af5c391da9672d33cdf3",
+      "sourceName": "@erc721k/periphery-sol/contracts/svg/SVGColor.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.15"
+      ],
+      "artifacts": [
+        "SVGColor"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ISVGModule.sol": {
+      "lastModificationDate": 1667721299198,
+      "contentHash": "5e3bb37967335dc87967b82faa3a1192",
+      "sourceName": "@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ISVGModule"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyAssets.sol": {
+      "lastModificationDate": 1667771331252,
+      "contentHash": "81b8d15c9fb7261faa4d2fe74e43dfc9",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@erc721k/periphery-sol/contracts/svg/svg.sol",
+        "@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
+        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
+        "@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "PixelPoolyAssets"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGColor.sol": {
+      "lastModificationDate": 1667832331755,
+      "contentHash": "ad3729ad5e9ee3411ecb5b6906d7f288",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGColor.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/SVGColor.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svgUtils.sol": {
+      "lastModificationDate": 1667832331755,
+      "contentHash": "94c660907687f0461f8b17c0d61f5107",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/svgUtils.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svg.sol": {
+      "lastModificationDate": 1667832331755,
+      "contentHash": "8286a6adafc951b97cfbd62e8af45b94",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svg.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/svg.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol": {
+      "lastModificationDate": 1667832331755,
+      "contentHash": "212b3fafd46fb1463fa8fd456582976c",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol": {
+      "lastModificationDate": 1667832331754,
+      "contentHash": "61db61e4399334ba0c3baf4ab90bb3ec",
+      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol": {
+      "lastModificationDate": 1667832331755,
+      "contentHash": "ab9adb224fba9c04758d154d4fd62731",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol": {
+      "lastModificationDate": 1667832331753,
+      "contentHash": "1aec7cde1d19df4e4a751190b6305caa",
+      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol": {
+      "lastModificationDate": 1667832331754,
+      "contentHash": "77d061e5dfa5101baa7a3ed9d98a4177",
+      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPooly.sol": {
+      "lastModificationDate": 1667832331753,
+      "contentHash": "44433040ed448e9247750342e6431073",
+      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPooly.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@pixel-pals/pooly-sol/contracts/PixelPooly.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ISVGRender.sol": {
+      "lastModificationDate": 1667721299198,
+      "contentHash": "7bced4fbeb241764bccfd0dda34bcf07",
+      "sourceName": "@erc721k/periphery-sol/contracts/interfaces/ISVGRender.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ISVGRender"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/hardhat@2.10.1_6oasmw356qmm23djlsjgkwvrtm/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1667721623467,
+      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelStore.sol": {
+      "lastModificationDate": 1667826136257,
+      "contentHash": "8ebc8ca2234765182dd1448a1e0bcb99",
+      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelStore.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "PixelStore"
+      ]
+    },
+    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/solbase/src/auth/OwnedRoles.sol": {
+      "lastModificationDate": 1667770691585,
+      "contentHash": "b8cb9abae7e216b2947f6a85c004cb8a",
+      "sourceName": "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "OwnedRoles"
+      ]
+    }
+  }
+}
