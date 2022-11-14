@@ -40,7 +40,7 @@ const networks: HardhatUserConfig["networks"] = {
 /* ===================================================================================== */
 if (ARCHIVE_NODE_RPC_URL && FORK_ENABLED) {
   networks.hardhat = {
-    chainId: 10,
+    chainId: 31337,
     hardfork: "arrowGlacier",
     accounts: { mnemonic: MNEMONIC },
     allowUnlimitedContractSize: true,

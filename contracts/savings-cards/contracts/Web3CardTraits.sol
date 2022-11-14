@@ -19,13 +19,15 @@ contract Web3CardTraits is ITraitsFetch, Ownable {
 
   function fetch(bytes memory input) external view returns (string memory) {
     (
-      address account,
+      address owner,
       uint256 balance,
+      uint256 chance,
       uint256 avgBalance2Weeks,
       uint256 avgBalance8Weeks,
       uint256 avgBalance26Weeks,
+      uint256 avgBalance52Weeks,
       string memory emoji
-    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, string));
+    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, uint256, uint256, string));
     string memory _address = Strings.toHexString(uint256(uint160(account)), 20);
     return
       string.concat(
@@ -35,11 +37,15 @@ contract Web3CardTraits is ITraitsFetch, Ownable {
         ",",
         _generateTrait("balance", Strings.toString(balance)),
         ",",
+        _generateTrait("chance", Strings.toString(chance)),
+        ",",
         _generateTrait("avgBalance2Weeks", Strings.toString(avgBalance2Weeks)),
         ",",
         _generateTrait("avgBalance8Weeks", Strings.toString(avgBalance8Weeks)),
         ",",
-        _generateTrait("avgBalance26Weeks", Strings.toString(avgBalance26Weeks))
+        _generateTrait("avgBalance26Weeks", Strings.toString(avgBalance26Weeks)),
+        ",",
+        _generateTrait("avgBalance52Weeks", Strings.toString(avgBalance26Weeks))
       );
   }
 

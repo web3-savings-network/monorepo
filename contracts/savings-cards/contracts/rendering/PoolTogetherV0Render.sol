@@ -54,11 +54,13 @@ contract PoolTogetherV0Render is Ownable {
     (
       address owner,
       uint256 balance,
+      uint256 chance,
       uint256 avgBalance2Weeks,
       uint256 avgBalance8Weeks,
       uint256 avgBalance26Weeks,
+      uint256 avgBalance52Weeks,
       string memory emoji
-    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, string));
+    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, uint256, uint256, string));
 
     // string memory emoji = unicode"text";
     string memory tagline = "Web3 Savings Network";
@@ -75,15 +77,10 @@ contract PoolTogetherV0Render is Ownable {
           )
         ),
         svg.rect(
-          string.concat(
-            svg.prop("x", "0"),
-            svg.prop("width", "500"),
-            svg.prop("height", "500")
-            // svg.prop("fill", string(svgUtils.getRgba(_colorFill)))
-          )
+          string.concat(svg.prop("x", "0"), svg.prop("width", "500"), svg.prop("height", "500"))
         ),
         '<g mask="url(#mask0_213_860)"> <ellipse opacity="0.1" cx="93" cy="300" rx="230" ry="145" fill="black"/> <ellipse opacity="0.08" cx="550" cy="-119" rx="450" ry="247" fill="black"/> </g>',
-        renderHeader(balance),
+        renderHeader(chance),
         renderFooter(owner, avgBalance8Weeks, emoji, tagline),
         '<defs><style>.cls-1{fill:#FFF;}.text-shadow-md {text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);}</style><linearGradient id="myGradient" gradientTransform="rotate(90)"> <stop offset="5%" stop-color="gold" /> <stop offset="95%" stop-color="red" /> </linearGradient></defs>',
         "</svg>"
@@ -107,10 +104,6 @@ contract PoolTogetherV0Render is Ownable {
   function chanceDetails(uint256 balance) internal view returns (string memory) {
     return
       string.concat(
-        // svg.g(
-        //   string.concat(svg.prop("transform", "translate(40,50)")),
-        //   _registry(BYTES32_WEB3_ASSETS, abi.encode(BYTES32_TOKEN_USDC))
-        // ),
         svg.text(
           string.concat(
             svg.prop("x", "7.5%"),
@@ -148,7 +141,7 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "end"),
             svg.prop("fill", "white")
           ),
-          "Avg 60 Day Balance"
+          "60 Day Avg."
         ),
         svg.text(
           string.concat(

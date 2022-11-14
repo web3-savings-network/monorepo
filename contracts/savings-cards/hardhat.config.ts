@@ -71,7 +71,7 @@ const config: HardhatUserConfig = {
       10: '0xF9646b896b600D6faB5A4B1e35b4ab9E5E78a566',
     },
     erc20TWAB: {
-      default: constants.AddressZero,
+      default: constants .AddressZero,
       1: '0xdd4d117723C257CEe402285D3aCF218E9A8236E1', // PoolTogether USDC Ticket
       10: '0x62BB4fc73094c83B5e952C2180B23fA7054954c4', // PoolTogether USDC Ticket
     },

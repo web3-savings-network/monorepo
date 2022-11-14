@@ -1,9 +1,10 @@
 pragma solidity 0.8.15;
 
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
-import { ERC20TWAB } from "./ERC20TWAB.sol";
 import { ERC721Storage } from "@erc721k/core-sol/contracts/ERC721Storage.sol";
 import { IERC721 } from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import { TwabLib } from "./twab/TwabLib.sol";
+import { ERC20TWAB } from "./ERC20TWAB.sol";
 
 /**
  * @title Web3CardStorage
@@ -12,14 +13,20 @@ import { IERC721 } from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 contract Web3CardStorage is ERC721Storage {
   address public erc20TWABInstance;
   address public erc721KInstance;
+  address public assetUnderlying;
+
   mapping(uint256 => string) private _name;
   mapping(uint256 => string) private _emojiMap;
 
   constructor(
     address _svgRender_,
     address _traitsFetch_,
-    ContractURI memory _contractURI_
-  ) ERC721Storage(_svgRender_, _traitsFetch_, _contractURI_) {}
+    ContractURI memory _contractURI_,
+    address _pferInstance_,
+    address _poolyInstance_
+  ) ERC721Storage(_svgRender_, _traitsFetch_, _contractURI_) {
+    pferInstance = _pferInstance_;
+  }
 
   /* ===================================================================================== */
   /* Override Functions                                                                    */
@@ -77,9 +84,11 @@ contract Web3CardStorage is ERC721Storage {
     returns (bytes memory bytesData)
   {
     uint256 balance;
+    TwabLib.AccountDetails memory accountDetails;
     uint256 avgBalance2Weeks;
     uint256 avgBalance8Weeks;
     uint256 avgBalance26Weeks;
+    uint256 avgBalance52Weeks;
     string memory emojiFetch = _emojiMap[_tokenId];
 
     if (bytes(emojiFetch).length == 0) {
@@ -88,11 +97,16 @@ contract Web3CardStorage is ERC721Storage {
 
     if (erc20TWABInstance != address(0)) {
       balance = ERC20TWAB(erc20TWABInstance).balanceOf(account);
+
+      accountDetails = ERC20TWAB(erc20TWABInstance).getAccountDetails(account);
+
       // Average Balances
+      uint64 end = uint64(block.timestamp);
       uint64 start2Weeks = uint64(block.timestamp - 2 weeks);
       uint64 start8Weeks = uint64(block.timestamp - 8 weeks);
       uint64 start26Weeks = uint64(block.timestamp - 26 weeks);
-      uint64 end = uint64(block.timestamp);
+      uint64 start52Weeks = uint64(block.timestamp - 52 weeks);
+
       avgBalance2Weeks = ERC20TWAB(erc20TWABInstance).getAverageBalanceBetween(
         account,
         start2Weeks,
@@ -108,15 +122,22 @@ contract Web3CardStorage is ERC721Storage {
         start26Weeks,
         end
       );
+      avgBalance52Weeks = ERC20TWAB(erc20TWABInstance).getAverageBalanceBetween(
+        account,
+        start52Weeks,
+        end
+      );
     }
 
     bytesData = bytes(
       abi.encode(
         account,
-        balance,
+        balance, // Balance
+        accountDetails.balance, // Balance + Delegations
         avgBalance2Weeks,
         avgBalance8Weeks,
         avgBalance26Weeks,
+        avgBalance52Weeks,
         emojiFetch
       )
     );
