@@ -49,7 +49,7 @@ abstract contract OwnedRoles {
     /// -----------------------------------------------------------------------
 
     /// @dev The caller is not authorized to call the function.
-    error Unauthorized();
+    // error Unauthorized();
 
     /// @dev The `newOwner` cannot be the zero address.
     error NewOwnerIsZeroAddress();

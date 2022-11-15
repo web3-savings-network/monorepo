@@ -1,8 +1,13 @@
-import Web3CardMainnet from '@web3-savings-cards/core-sol/deployments/localhost/Web3Card.json';
-import Web3CardTestnet from '@web3-savings-cards/core-sol/deployments/localhost/Web3Card.json';
-import Web3CardLocalhost from '@web3-savings-cards/core-sol/deployments/localhost/Web3Card.json';
+import Web3CardMainnet from '../deployments/localhost/Web3Card.json';
+import Web3CardTestnet from '../deployments/localhost/Web3Card.json';
+import Web3CardLocalhost from '../deployments/localhost/Web3Card.json';
+
 import TWABDelegatorABI from './abi/TWABDelegator.json';
 import PoolTogetherContractAddresses from './PoolTogetherContractAddresses'
+
+
+// @ts-ignore
+const Web3CardActivator = require('../deployments/localhost/Web3CardActivator.json');
 
 interface ContractMetadata {
     abi: any;
@@ -13,11 +18,18 @@ export function useNetworkContract(network: string, contract: string): ContractM
 
     switch (network) {
         case 'mainnet':
+        case 'testnet':
+        case 'localhost':
             switch (contract) {
                 case 'Web3Card':
                     return {
                         address: Web3CardMainnet.address,
                         abi: Web3CardMainnet.abi,
+                    }
+                case 'Web3CardActivator':
+                    return {
+                        address: Web3CardActivator.address,
+                        abi: Web3CardActivator.abi,
                     }
                 case 'TWABDelegator':
                     return {

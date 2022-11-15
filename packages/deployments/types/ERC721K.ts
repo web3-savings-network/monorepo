@@ -23,15 +23,27 @@ export interface ERC721KInterface extends utils.Interface {
   functions: {
     "approve(address,uint256)": FunctionFragment;
     "balanceOf(address)": FunctionFragment;
-    "confirmOwner()": FunctionFragment;
+    "cancelOwnershipHandover()": FunctionFragment;
+    "completeOwnershipHandover(address)": FunctionFragment;
     "contractURI()": FunctionFragment;
     "getApproved(uint256)": FunctionFragment;
     "getERC721Storage()": FunctionFragment;
+    "grantRoles(address,uint256)": FunctionFragment;
+    "hasAllRoles(address,uint256)": FunctionFragment;
+    "hasAnyRole(address,uint256)": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
     "name()": FunctionFragment;
+    "ordinalsFromRoles(uint256)": FunctionFragment;
     "owner()": FunctionFragment;
     "ownerOf(uint256)": FunctionFragment;
-    "renounceOwner()": FunctionFragment;
+    "ownershipHandoverExpiresAt(address)": FunctionFragment;
+    "ownershipHandoverValidFor()": FunctionFragment;
+    "renounceOwnership()": FunctionFragment;
+    "renounceRoles(uint256)": FunctionFragment;
+    "requestOwnershipHandover()": FunctionFragment;
+    "revokeRoles(address,uint256)": FunctionFragment;
+    "rolesFromOrdinals(uint8[])": FunctionFragment;
+    "rolesOf(address)": FunctionFragment;
     "safeTransferFrom(address,address,uint256)": FunctionFragment;
     "setApprovalForAll(address,bool)": FunctionFragment;
     "setStorage(address)": FunctionFragment;
@@ -49,8 +61,12 @@ export interface ERC721KInterface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "balanceOf", values: [string]): string;
   encodeFunctionData(
-    functionFragment: "confirmOwner",
+    functionFragment: "cancelOwnershipHandover",
     values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "completeOwnershipHandover",
+    values: [string]
   ): string;
   encodeFunctionData(
     functionFragment: "contractURI",
@@ -65,19 +81,60 @@ export interface ERC721KInterface extends utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(
+    functionFragment: "grantRoles",
+    values: [string, BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "hasAllRoles",
+    values: [string, BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "hasAnyRole",
+    values: [string, BigNumberish]
+  ): string;
+  encodeFunctionData(
     functionFragment: "isApprovedForAll",
     values: [string, string]
   ): string;
   encodeFunctionData(functionFragment: "name", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "ordinalsFromRoles",
+    values: [BigNumberish]
+  ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "ownerOf",
     values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: "renounceOwner",
+    functionFragment: "ownershipHandoverExpiresAt",
+    values: [string]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "ownershipHandoverValidFor",
     values?: undefined
   ): string;
+  encodeFunctionData(
+    functionFragment: "renounceOwnership",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "renounceRoles",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "requestOwnershipHandover",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "revokeRoles",
+    values: [string, BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "rolesFromOrdinals",
+    values: [BigNumberish[]]
+  ): string;
+  encodeFunctionData(functionFragment: "rolesOf", values: [string]): string;
   encodeFunctionData(
     functionFragment: "safeTransferFrom",
     values: [string, string, BigNumberish]
@@ -112,7 +169,11 @@ export interface ERC721KInterface extends utils.Interface {
   decodeFunctionResult(functionFragment: "approve", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "confirmOwner",
+    functionFragment: "cancelOwnershipHandover",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "completeOwnershipHandover",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -127,17 +188,52 @@ export interface ERC721KInterface extends utils.Interface {
     functionFragment: "getERC721Storage",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "grantRoles", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "hasAllRoles",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "hasAnyRole", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "isApprovedForAll",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "ordinalsFromRoles",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "ownerOf", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "renounceOwner",
+    functionFragment: "ownershipHandoverExpiresAt",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(
+    functionFragment: "ownershipHandoverValidFor",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "renounceOwnership",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "renounceRoles",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "requestOwnershipHandover",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "revokeRoles",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "rolesFromOrdinals",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "rolesOf", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "safeTransferFrom",
     data: BytesLike
@@ -170,16 +266,20 @@ export interface ERC721KInterface extends utils.Interface {
     "Approval(address,address,uint256)": EventFragment;
     "ApprovalForAll(address,address,bool)": EventFragment;
     "ERC721StorageUpdated(address)": EventFragment;
-    "OwnerUpdateInitiated(address,address)": EventFragment;
+    "OwnershipHandoverCanceled(address)": EventFragment;
+    "OwnershipHandoverRequested(address)": EventFragment;
     "OwnershipTransferred(address,address)": EventFragment;
+    "RolesUpdated(address,uint256)": EventFragment;
     "Transfer(address,address,uint256)": EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: "Approval"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "ApprovalForAll"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "ERC721StorageUpdated"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "OwnerUpdateInitiated"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "OwnershipHandoverCanceled"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "OwnershipHandoverRequested"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "RolesUpdated"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "Transfer"): EventFragment;
 }
 
@@ -205,21 +305,36 @@ export type ERC721StorageUpdatedEvent = TypedEvent<
 export type ERC721StorageUpdatedEventFilter =
   TypedEventFilter<ERC721StorageUpdatedEvent>;
 
-export type OwnerUpdateInitiatedEvent = TypedEvent<
-  [string, string],
-  { user: string; ownerCandidate: string }
+export type OwnershipHandoverCanceledEvent = TypedEvent<
+  [string],
+  { pendingOwner: string }
 >;
 
-export type OwnerUpdateInitiatedEventFilter =
-  TypedEventFilter<OwnerUpdateInitiatedEvent>;
+export type OwnershipHandoverCanceledEventFilter =
+  TypedEventFilter<OwnershipHandoverCanceledEvent>;
+
+export type OwnershipHandoverRequestedEvent = TypedEvent<
+  [string],
+  { pendingOwner: string }
+>;
+
+export type OwnershipHandoverRequestedEventFilter =
+  TypedEventFilter<OwnershipHandoverRequestedEvent>;
 
 export type OwnershipTransferredEvent = TypedEvent<
   [string, string],
-  { user: string; newOwner: string }
+  { oldOwner: string; newOwner: string }
 >;
 
 export type OwnershipTransferredEventFilter =
   TypedEventFilter<OwnershipTransferredEvent>;
+
+export type RolesUpdatedEvent = TypedEvent<
+  [string, BigNumber],
+  { user: string; roles: BigNumber }
+>;
+
+export type RolesUpdatedEventFilter = TypedEventFilter<RolesUpdatedEvent>;
 
 export type TransferEvent = TypedEvent<
   [string, string, BigNumber],
@@ -264,7 +379,12 @@ export interface ERC721K extends BaseContract {
 
     balanceOf(owner: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    confirmOwner(
+    cancelOwnershipHandover(
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    completeOwnershipHandover(
+      pendingOwner: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -277,6 +397,24 @@ export interface ERC721K extends BaseContract {
 
     getERC721Storage(overrides?: CallOverrides): Promise<[string]>;
 
+    grantRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    hasAllRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[boolean] & { result: boolean }>;
+
+    hasAnyRole(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[boolean] & { result: boolean }>;
+
     isApprovedForAll(
       arg0: string,
       arg1: string,
@@ -285,16 +423,53 @@ export interface ERC721K extends BaseContract {
 
     name(overrides?: CallOverrides): Promise<[string]>;
 
-    owner(overrides?: CallOverrides): Promise<[string]>;
+    ordinalsFromRoles(
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[number[]] & { ordinals: number[] }>;
+
+    owner(overrides?: CallOverrides): Promise<[string] & { result: string }>;
 
     ownerOf(
       id: BigNumberish,
       overrides?: CallOverrides
     ): Promise<[string] & { owner: string }>;
 
-    renounceOwner(
+    ownershipHandoverExpiresAt(
+      pendingOwner: string,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber] & { result: BigNumber }>;
+
+    ownershipHandoverValidFor(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    renounceOwnership(
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    renounceRoles(
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    requestOwnershipHandover(
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    revokeRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    rolesFromOrdinals(
+      ordinals: BigNumberish[],
+      overrides?: CallOverrides
+    ): Promise<[BigNumber] & { roles: BigNumber }>;
+
+    rolesOf(
+      user: string,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber] & { roles: BigNumber }>;
 
     "safeTransferFrom(address,address,uint256)"(
       from: string,
@@ -357,7 +532,12 @@ export interface ERC721K extends BaseContract {
 
   balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-  confirmOwner(
+  cancelOwnershipHandover(
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  completeOwnershipHandover(
+    pendingOwner: string,
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -367,6 +547,24 @@ export interface ERC721K extends BaseContract {
 
   getERC721Storage(overrides?: CallOverrides): Promise<string>;
 
+  grantRoles(
+    user: string,
+    roles: BigNumberish,
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  hasAllRoles(
+    user: string,
+    roles: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<boolean>;
+
+  hasAnyRole(
+    user: string,
+    roles: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<boolean>;
+
   isApprovedForAll(
     arg0: string,
     arg1: string,
@@ -375,13 +573,47 @@ export interface ERC721K extends BaseContract {
 
   name(overrides?: CallOverrides): Promise<string>;
 
+  ordinalsFromRoles(
+    roles: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<number[]>;
+
   owner(overrides?: CallOverrides): Promise<string>;
 
   ownerOf(id: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
-  renounceOwner(
+  ownershipHandoverExpiresAt(
+    pendingOwner: string,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  ownershipHandoverValidFor(overrides?: CallOverrides): Promise<BigNumber>;
+
+  renounceOwnership(
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
+
+  renounceRoles(
+    roles: BigNumberish,
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  requestOwnershipHandover(
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  revokeRoles(
+    user: string,
+    roles: BigNumberish,
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  rolesFromOrdinals(
+    ordinals: BigNumberish[],
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  rolesOf(user: string, overrides?: CallOverrides): Promise<BigNumber>;
 
   "safeTransferFrom(address,address,uint256)"(
     from: string,
@@ -441,13 +673,36 @@ export interface ERC721K extends BaseContract {
 
     balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    confirmOwner(overrides?: CallOverrides): Promise<void>;
+    cancelOwnershipHandover(overrides?: CallOverrides): Promise<void>;
+
+    completeOwnershipHandover(
+      pendingOwner: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     contractURI(overrides?: CallOverrides): Promise<string>;
 
     getApproved(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
     getERC721Storage(overrides?: CallOverrides): Promise<string>;
+
+    grantRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    hasAllRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<boolean>;
+
+    hasAnyRole(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<boolean>;
 
     isApprovedForAll(
       arg0: string,
@@ -457,11 +712,43 @@ export interface ERC721K extends BaseContract {
 
     name(overrides?: CallOverrides): Promise<string>;
 
+    ordinalsFromRoles(
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<number[]>;
+
     owner(overrides?: CallOverrides): Promise<string>;
 
     ownerOf(id: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
-    renounceOwner(overrides?: CallOverrides): Promise<void>;
+    ownershipHandoverExpiresAt(
+      pendingOwner: string,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    ownershipHandoverValidFor(overrides?: CallOverrides): Promise<BigNumber>;
+
+    renounceOwnership(overrides?: CallOverrides): Promise<void>;
+
+    renounceRoles(
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    requestOwnershipHandover(overrides?: CallOverrides): Promise<void>;
+
+    revokeRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    rolesFromOrdinals(
+      ordinals: BigNumberish[],
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    rolesOf(user: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     "safeTransferFrom(address,address,uint256)"(
       from: string,
@@ -538,23 +825,37 @@ export interface ERC721K extends BaseContract {
     ): ERC721StorageUpdatedEventFilter;
     ERC721StorageUpdated(erc721Storage?: null): ERC721StorageUpdatedEventFilter;
 
-    "OwnerUpdateInitiated(address,address)"(
-      user?: string | null,
-      ownerCandidate?: string | null
-    ): OwnerUpdateInitiatedEventFilter;
-    OwnerUpdateInitiated(
-      user?: string | null,
-      ownerCandidate?: string | null
-    ): OwnerUpdateInitiatedEventFilter;
+    "OwnershipHandoverCanceled(address)"(
+      pendingOwner?: string | null
+    ): OwnershipHandoverCanceledEventFilter;
+    OwnershipHandoverCanceled(
+      pendingOwner?: string | null
+    ): OwnershipHandoverCanceledEventFilter;
+
+    "OwnershipHandoverRequested(address)"(
+      pendingOwner?: string | null
+    ): OwnershipHandoverRequestedEventFilter;
+    OwnershipHandoverRequested(
+      pendingOwner?: string | null
+    ): OwnershipHandoverRequestedEventFilter;
 
     "OwnershipTransferred(address,address)"(
-      user?: string | null,
+      oldOwner?: string | null,
       newOwner?: string | null
     ): OwnershipTransferredEventFilter;
     OwnershipTransferred(
-      user?: string | null,
+      oldOwner?: string | null,
       newOwner?: string | null
     ): OwnershipTransferredEventFilter;
+
+    "RolesUpdated(address,uint256)"(
+      user?: string | null,
+      roles?: BigNumberish | null
+    ): RolesUpdatedEventFilter;
+    RolesUpdated(
+      user?: string | null,
+      roles?: BigNumberish | null
+    ): RolesUpdatedEventFilter;
 
     "Transfer(address,address,uint256)"(
       from?: string | null,
@@ -577,7 +878,12 @@ export interface ERC721K extends BaseContract {
 
     balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    confirmOwner(
+    cancelOwnershipHandover(
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    completeOwnershipHandover(
+      pendingOwner: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -590,6 +896,24 @@ export interface ERC721K extends BaseContract {
 
     getERC721Storage(overrides?: CallOverrides): Promise<BigNumber>;
 
+    grantRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    hasAllRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    hasAnyRole(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
     isApprovedForAll(
       arg0: string,
       arg1: string,
@@ -598,13 +922,47 @@ export interface ERC721K extends BaseContract {
 
     name(overrides?: CallOverrides): Promise<BigNumber>;
 
+    ordinalsFromRoles(
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
     ownerOf(id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    renounceOwner(
+    ownershipHandoverExpiresAt(
+      pendingOwner: string,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    ownershipHandoverValidFor(overrides?: CallOverrides): Promise<BigNumber>;
+
+    renounceOwnership(
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
+
+    renounceRoles(
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    requestOwnershipHandover(
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    revokeRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    rolesFromOrdinals(
+      ordinals: BigNumberish[],
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    rolesOf(user: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     "safeTransferFrom(address,address,uint256)"(
       from: string,
@@ -671,7 +1029,12 @@ export interface ERC721K extends BaseContract {
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    confirmOwner(
+    cancelOwnershipHandover(
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    completeOwnershipHandover(
+      pendingOwner: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -684,6 +1047,24 @@ export interface ERC721K extends BaseContract {
 
     getERC721Storage(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    grantRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    hasAllRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    hasAnyRole(
+      user: string,
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
     isApprovedForAll(
       arg0: string,
       arg1: string,
@@ -692,6 +1073,11 @@ export interface ERC721K extends BaseContract {
 
     name(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    ordinalsFromRoles(
+      roles: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     ownerOf(
@@ -699,8 +1085,42 @@ export interface ERC721K extends BaseContract {
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    renounceOwner(
+    ownershipHandoverExpiresAt(
+      pendingOwner: string,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    ownershipHandoverValidFor(
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    renounceOwnership(
       overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    renounceRoles(
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    requestOwnershipHandover(
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    revokeRoles(
+      user: string,
+      roles: BigNumberish,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    rolesFromOrdinals(
+      ordinals: BigNumberish[],
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    rolesOf(
+      user: string,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     "safeTransferFrom(address,address,uint256)"(

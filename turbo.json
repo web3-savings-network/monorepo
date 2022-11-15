@@ -47,7 +47,7 @@
       "outputs": [".next", "out", "dist"]
     },
     "build:package": {
-      "dependsOn": ["^build:package", "^build:marketing"],
+      "dependsOn": ["^build:package"],
       "outputs": [".next", "out", "dist"]
     },
     "clean": {
@@ -68,7 +68,6 @@
       "dependsOn": [
         "^build:package",
         "^watch",
-        "@web3-savings-cards/core-sol#chain:fork",
         "@web3-savings-cards/marketing-react#dev",
         "@web3-savings-cards/admin-react#dev",
         "@web3-savings-cards/app-react#dev"

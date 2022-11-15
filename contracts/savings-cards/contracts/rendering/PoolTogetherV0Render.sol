@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.15;
 
+import "hardhat/console.sol";
 // Global
 import { Base64 } from "base64-sol/base64.sol";
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
@@ -52,38 +53,68 @@ contract PoolTogetherV0Render is Ownable {
   /* ===================================================================================== */
   function _construct(bytes memory input) internal view returns (string memory) {
     (
-      address owner,
+      address account,
+      address asset,
       uint256 balance,
       uint256 chance,
       uint256 avgBalance2Weeks,
       uint256 avgBalance8Weeks,
       uint256 avgBalance26Weeks,
       uint256 avgBalance52Weeks,
-      string memory emoji
-    ) = abi.decode(input, (address, uint256, uint256, uint256, uint256, uint256, uint256, string));
+      string memory emoji,
+      bytes memory color
+    ) = abi.decode(
+        input,
+        (address, address, uint256, uint256, uint256, uint256, uint256, uint256, string, bytes)
+      );
 
-    // string memory emoji = unicode"text";
     string memory tagline = "Web3 Savings Network";
 
     return
       string.concat(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300" fill="#633EF7" style="font-family: sans-serif;" >',
-        svg.rect(
+        // '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300" fill="#633EF7" style="font-family: sans-serif;" >',
+        svg.start(
+          "svg",
           string.concat(
+            svg.prop("xmlns", "http://www.w3.org/2000/svg"),
+            svg.prop("font-family", "sans-serif"),
             svg.prop("x", "0.00195312"),
-            svg.prop("width", "500"),
             svg.prop("height", "300"),
-            svg.prop("fill", "url(#paint0_linear_213_860)")
+            svg.prop("width", "500"),
+            svg.prop("viewbox", "0 0 500 300"),
+            svg.prop("style", "border-radius: 10px;"),
+            svg.prop("fill", string(svgUtils.getRgba(color)))
           )
         ),
+        renderDesign(color),
+        renderHeader(chance),
+        renderFooter(account, avgBalance8Weeks, emoji, tagline),
+        "<defs><style>.text-shadow-md {text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);}</style></defs>",
+        svg.end("svg")
+      );
+  }
+
+  function renderDesign(bytes memory color) internal view returns (string memory) {
+    return
+      string.concat(
+        // svg.rect(
+        //   string.concat(
+        //     svg.prop("x", "0.00195312"),
+        //     svg.prop("width", "500"),
+        //     svg.prop("height", "300"),
+        //     // svg.prop("fill", string(svgUtils.getRgba(color)))
+        //   )
+        // ),
         svg.rect(
           string.concat(svg.prop("x", "0"), svg.prop("width", "500"), svg.prop("height", "500"))
         ),
-        '<g mask="url(#mask0_213_860)"> <ellipse opacity="0.1" cx="93" cy="300" rx="230" ry="145" fill="black"/> <ellipse opacity="0.08" cx="550" cy="-119" rx="450" ry="247" fill="black"/> </g>',
-        renderHeader(chance),
-        renderFooter(owner, avgBalance8Weeks, emoji, tagline),
-        '<defs><style>.cls-1{fill:#FFF;}.text-shadow-md {text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);}</style><linearGradient id="myGradient" gradientTransform="rotate(90)"> <stop offset="5%" stop-color="gold" /> <stop offset="95%" stop-color="red" /> </linearGradient></defs>',
-        "</svg>"
+        svg.g(
+          "",
+          string.concat(
+            '<ellipse opacity="0.1" cx="93" cy="300" rx="230" ry="145" fill="black"/>',
+            '<ellipse opacity="0.08" cx="550" cy="-119" rx="450" ry="247" fill="black"/>'
+          )
+        )
       );
   }
 
@@ -113,7 +144,7 @@ contract PoolTogetherV0Render is Ownable {
             svg.prop("text-anchor", "start"),
             svg.prop("fill", "white")
           ),
-          string.concat(unicode"🏆", " Chance")
+          string.concat(unicode"🏆", " Total Chance")
         ),
         svg.text(
           string.concat(

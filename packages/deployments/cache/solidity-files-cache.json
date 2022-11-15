@@ -1,15 +1,15 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721K.sol": {
-      "lastModificationDate": 1667832331754,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721K.sol": {
+      "lastModificationDate": 1668426944495,
       "contentHash": "42509002250fd803aafda4446bb3fb10",
       "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721K.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -44,15 +44,15 @@
       ],
       "artifacts": []
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/ERC721K.sol": {
-      "lastModificationDate": 1667771332939,
-      "contentHash": "00aecae6344e24c4da5d801adadffe58",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-core-sol/contracts/ERC721K.sol": {
+      "lastModificationDate": 1668188575182,
+      "contentHash": "edde43053041e601ae42f42eab6b0389",
       "sourceName": "@erc721k/core-sol/contracts/ERC721K.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -81,7 +81,7 @@
       },
       "imports": [
         "@turbo-eth/solbase-sol/src/tokens/ERC721/ERC721.sol",
-        "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
+        "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol",
         "./ERC721Storage.sol"
       ],
       "versionPragmas": [
@@ -91,102 +91,15 @@
         "ERC721K"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/solbase/src/tokens/ERC721/ERC721.sol": {
-      "lastModificationDate": 1667721299219,
-      "contentHash": "29b63c48a35728eba599c9332f86b617",
-      "sourceName": "@turbo-eth/solbase-sol/src/tokens/ERC721/ERC721.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "ERC721",
-        "ERC721TokenReceiver"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/solbase/src/auth/OwnedThreeStep.sol": {
-      "lastModificationDate": 1667721299218,
-      "contentHash": "6b98eecc14595b4b44220904f8f27202",
-      "sourceName": "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "OwnedThreeStep"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/ERC721Storage.sol": {
-      "lastModificationDate": 1667771332939,
-      "contentHash": "dc408f5c7a65b28263560df3d4464fe9",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-core-sol/contracts/ERC721Storage.sol": {
+      "lastModificationDate": 1666866108492,
+      "contentHash": "9a44bdc38a679b8943ba6de34b6e9667",
       "sourceName": "@erc721k/core-sol/contracts/ERC721Storage.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -227,7 +140,94 @@
         "ERC721Storage"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/base64-sol@1.1.0/node_modules/base64-sol/base64.sol": {
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/solbase/src/auth/OwnedRoles.sol": {
+      "lastModificationDate": 1668188445124,
+      "contentHash": "cffdb83cebe30d9c13eff735ec31f6af",
+      "sourceName": "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "OwnedRoles"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/solbase/src/tokens/ERC721/ERC721.sol": {
+      "lastModificationDate": 1667578854969,
+      "contentHash": "29b63c48a35728eba599c9332f86b617",
+      "sourceName": "@turbo-eth/solbase-sol/src/tokens/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "ERC721",
+        "ERC721TokenReceiver"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/base64-sol@1.1.0/node_modules/base64-sol/base64.sol": {
       "lastModificationDate": 1667721619673,
       "contentHash": "0d54cb6a748ddde95d92ed7802c9248d",
       "sourceName": "base64-sol/base64.sol",
@@ -235,7 +235,7 @@
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -270,7 +270,50 @@
         "Base64"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1667721623054,
+      "contentHash": "cf46906c4035f51639a22265066a9e78",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1667721623053,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
@@ -278,7 +321,7 @@
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -315,15 +358,15 @@
         "Ownable"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IERC721KImage.sol": {
-      "lastModificationDate": 1667721299195,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IERC721KImage.sol": {
+      "lastModificationDate": 1666866108501,
       "contentHash": "d8f72d0d646302132c6505999fee9e80",
       "sourceName": "@erc721k/core-sol/contracts/interfaces/IERC721KImage.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -358,15 +401,15 @@
         "IERC721KImage"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IERC721KTraits.sol": {
-      "lastModificationDate": 1667721299195,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IERC721KTraits.sol": {
+      "lastModificationDate": 1666866108501,
       "contentHash": "970d1f7f0fcdb0b2cde7e6ce8851b132",
       "sourceName": "@erc721k/core-sol/contracts/interfaces/IERC721KTraits.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -401,50 +444,7 @@
         "IERC721KTraits"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1667721623054,
-      "contentHash": "cf46906c4035f51639a22265066a9e78",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1667721623038,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
@@ -452,7 +452,7 @@
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -487,15 +487,15 @@
         "Context"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPooly.sol": {
-      "lastModificationDate": 1667826583452,
-      "contentHash": "8cb2e838160592c6573d84e643dcdc2c",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPooly.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/Web3Card.sol": {
+      "lastModificationDate": 1668459635565,
+      "contentHash": "220f32168a08e42dc1723cdc2e083788",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/Web3Card.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -525,30 +525,26 @@
       "imports": [
         "@erc721k/core-sol/contracts/ERC721K.sol",
         "@erc721k/core-sol/contracts/ERC721Storage.sol",
-        "@openzeppelin/contracts/access/AccessControl.sol",
-        "@a16z/contracts/licenses/CantBeEvil.sol",
-        "@erc721k/periphery-sol/contracts/interfaces/ISVGRender.sol",
-        "./interfaces/IPixelCharacter.sol",
-        "./PixelPoolyStorage.sol",
-        "./PixelStore.sol"
+        "./interfaces/ISVGRender.sol",
+        "./ERC20TWAB.sol",
+        "./Web3CardStorage.sol"
       ],
       "versionPragmas": [
         "0.8.15"
       ],
       "artifacts": [
-        "IERC721StorageSync",
-        "PixelPooly"
+        "Web3Card"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
-      "lastModificationDate": 1667721623037,
-      "contentHash": "e6ef731d275b1e7b2995f00fa56d9dab",
-      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/Web3CardStorage.sol": {
+      "lastModificationDate": 1668460982362,
+      "contentHash": "9ed1113c343b88a63726e01c25e84c1d",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/Web3CardStorage.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -576,212 +572,29 @@
         }
       },
       "imports": [
-        "./IAccessControl.sol",
-        "../utils/Context.sol",
-        "../utils/Strings.sol",
-        "../utils/introspection/ERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControl"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@a16z+contracts@0.0.8/node_modules/@a16z/contracts/licenses/CantBeEvil.sol": {
-      "lastModificationDate": 1667741700604,
-      "contentHash": "f7fa2c51ebe3c4ccd8ba8b2bf523b747",
-      "sourceName": "@a16z/contracts/licenses/CantBeEvil.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/utils/Strings.sol",
-        "@openzeppelin/contracts/utils/introspection/ERC165.sol",
-        "./ICantBeEvil.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "CantBeEvil"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/interfaces/IPixelCharacter.sol": {
-      "lastModificationDate": 1667741375755,
-      "contentHash": "18d79867212282732c9fca9f20c0b78b",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/interfaces/IPixelCharacter.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.8.15"
-      ],
-      "artifacts": [
-        "IPixelCharacter"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyStorage.sol": {
-      "lastModificationDate": 1667773319232,
-      "contentHash": "68b8ea824d2f0e2d30546893dc9935c4",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "base64-sol/base64.sol",
-        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
         "@openzeppelin/contracts/utils/Strings.sol",
         "@erc721k/core-sol/contracts/ERC721Storage.sol",
-        "@erc721k/core-sol/contracts/interfaces/IERC721KImage.sol",
-        "@erc721k/core-sol/contracts/interfaces/IERC721KTraits.sol",
-        "./interfaces/IPixelCharacter.sol",
-        "./PixelStore.sol"
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "./twab/TwabLib.sol",
+        "./ERC20TWAB.sol",
+        "./Web3CardDesign.sol"
       ],
       "versionPragmas": [
         "0.8.15"
       ],
       "artifacts": [
-        "PixelPoolyStorage"
+        "Web3CardStorage"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
-      "lastModificationDate": 1667721623045,
-      "contentHash": "57c84298234411cea19c7c284d86be8b",
-      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/ERC20TWAB.sol": {
+      "lastModificationDate": 1668422055402,
+      "contentHash": "522efd4d42a5f5128c10886e4defd790",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/ERC20TWAB.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControl"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1667721623041,
-      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -809,24 +622,29 @@
         }
       },
       "imports": [
-        "./IERC165.sol"
+        "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "./twab/ObservationLib.sol",
+        "./twab/TwabLib.sol",
+        "./twab/ExtendedSafeCastLib.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "0.8.15"
       ],
       "artifacts": [
-        "ERC165"
+        "ERC20TWAB"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1667721623048,
-      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/interfaces/ISVGRender.sol": {
+      "lastModificationDate": 1668165134698,
+      "contentHash": "7bced4fbeb241764bccfd0dda34bcf07",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/interfaces/ISVGRender.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -855,21 +673,21 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "0.8.15"
       ],
       "artifacts": [
-        "IERC165"
+        "ISVGRender"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@a16z+contracts@0.0.8/node_modules/@a16z/contracts/licenses/ICantBeEvil.sol": {
-      "lastModificationDate": 1667741700604,
-      "contentHash": "66cead8a931bd6ba22c3b239f65c9259",
-      "sourceName": "@a16z/contracts/licenses/ICantBeEvil.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/Web3CardDesign.sol": {
+      "lastModificationDate": 1668521008233,
+      "contentHash": "7c353359706a97472d605c3ebcdcbca0",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/Web3CardDesign.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -896,15 +714,66 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol"
+      ],
       "versionPragmas": [
-        "^0.8.13"
+        "0.8.15"
       ],
       "artifacts": [
-        "ICantBeEvil"
+        "Web3CardDesign"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/twab/TwabLib.sol": {
+      "lastModificationDate": 1668165134700,
+      "contentHash": "0daadfc3fe0afe3ef0356840f398098d",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/twab/TwabLib.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ExtendedSafeCastLib.sol",
+        "./OverflowSafeComparatorLib.sol",
+        "./RingBufferLib.sol",
+        "./ObservationLib.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "TwabLib"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
       "lastModificationDate": 1667721623050,
       "contentHash": "ec99d946db3685a3630554aa6055bd7f",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
@@ -912,7 +781,7 @@
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -949,15 +818,58 @@
         "IERC721"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol": {
-      "lastModificationDate": 1667832331754,
-      "contentHash": "1d35d8724a8ae020a8f10bdcb385cd58",
-      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/twab/ExtendedSafeCastLib.sol": {
+      "lastModificationDate": 1668165134699,
+      "contentHash": "70b215fdb14873bdd5a5efe15d6ad526",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/twab/ExtendedSafeCastLib.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ExtendedSafeCastLib"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/twab/ObservationLib.sol": {
+      "lastModificationDate": 1668165134699,
+      "contentHash": "0289653411ea415f2b06897976db321e",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/twab/ObservationLib.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -985,22 +897,777 @@
         }
       },
       "imports": [
-        "@pixel-pals/pooly-sol/contracts/PixelPoolyStorage.sol"
+        "@openzeppelin/contracts/utils/math/SafeCast.sol",
+        "./OverflowSafeComparatorLib.sol",
+        "./RingBufferLib.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "ObservationLib"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1667721623042,
+      "contentHash": "af7bd64e1cfefbf6cb07f2adc1a25392",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol": {
+      "lastModificationDate": 1667721623039,
+      "contentHash": "3c98f8ccc741d97ece615ce32d638d4c",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./draft-IERC20Permit.sol",
+        "../ERC20.sol",
+        "../../../utils/cryptography/draft-EIP712.sol",
+        "../../../utils/cryptography/ECDSA.sol",
+        "../../../utils/Counters.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Permit"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1667721623053,
+      "contentHash": "3a843b05b85a270e9455e3d2e804e633",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/draft-IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/twab/OverflowSafeComparatorLib.sol": {
+      "lastModificationDate": 1668165134699,
+      "contentHash": "b62072e3c3f496bf3a1572a433b7a893",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/twab/OverflowSafeComparatorLib.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "OverflowSafeComparatorLib"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/twab/RingBufferLib.sol": {
+      "lastModificationDate": 1668165134700,
+      "contentHash": "57c080166a65f3a2ca97e6fe9cc3a836",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/twab/RingBufferLib.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "RingBufferLib"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1667721623053,
+      "contentHash": "64e3f111253497ba40c2ad9bdf48a191",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1667721623049,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1667721623049,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1667721623038,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1667721623040,
+      "contentHash": "e240957102529c3ccf73bcf4527bcddc",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ECDSA"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol": {
+      "lastModificationDate": 1667721623039,
+      "contentHash": "161aae4dc1450371d0f324488f66a9cf",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "EIP712"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "lastModificationDate": 1667721623040,
+      "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1667721623037,
+      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/solbase/src/auth/OwnedThreeStep.sol": {
+      "lastModificationDate": 1668188446741,
+      "contentHash": "6b98eecc14595b4b44220904f8f27202",
+      "sourceName": "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "OwnedThreeStep"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/@openzeppelin+contracts@4.7.3/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1667721623048,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/solbase/src/auth/Owned.sol": {
+      "lastModificationDate": 1667578854968,
+      "contentHash": "187b9c97bd6f9728dd1eb30bbca1894f",
+      "sourceName": "@turbo-eth/solbase-sol/src/auth/Owned.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "Owned"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3CardActivator.sol": {
+      "lastModificationDate": 1668522610095,
+      "contentHash": "8f447b8887759a82af47c9f1ebf29313",
+      "sourceName": "contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3CardActivator.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@web3-savings-cards/core-sol/contracts/Web3CardActivator.sol"
       ],
       "versionPragmas": [
         ">0.0.0"
       ],
       "artifacts": []
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721Storage.sol": {
-      "lastModificationDate": 1667832331755,
-      "contentHash": "5b9abf3ca0d8d9d35625fe4ce690617b",
-      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721Storage.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/svg/svgUtils.sol": {
+      "lastModificationDate": 1668168112650,
+      "contentHash": "a2f2e02810e4b808c24080de0648df7a",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/svg/svgUtils.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1028,70 +1695,25 @@
         }
       },
       "imports": [
-        "@erc721k/core-sol/contracts/ERC721Storage.sol"
-      ],
-      "versionPragmas": [
-        ">0.0.0"
-      ],
-      "artifacts": []
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyTraits.sol": {
-      "lastModificationDate": 1667771352765,
-      "contentHash": "33e7646e2d3a3613389e49bb5014156b",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
         "@openzeppelin/contracts/utils/Strings.sol",
-        "@erc721k/core-sol/contracts/interfaces/IStream.sol",
-        "@erc721k/periphery-sol/contracts/interfaces/ITraitsFetch.sol"
+        "../libraries/BytesLib.sol"
       ],
       "versionPragmas": [
-        "0.8.15"
+        "^0.8.15"
       ],
       "artifacts": [
-        "PixelPoolyTraits"
+        "svgUtils"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-core-sol/contracts/interfaces/IStream.sol": {
-      "lastModificationDate": 1667721299195,
-      "contentHash": "0b337f947e50391375a046b305baaa9a",
-      "sourceName": "@erc721k/core-sol/contracts/interfaces/IStream.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/libraries/BytesLib.sol": {
+      "lastModificationDate": 1668165134698,
+      "contentHash": "86f7ec54d9c992135c7a2a5286434dee",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/libraries/BytesLib.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1120,114 +1742,21 @@
       },
       "imports": [],
       "versionPragmas": [
-        "0.8.15"
+        ">=0.8.0 <0.9.0"
       ],
       "artifacts": [
-        "IStream"
+        "BytesLib"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ITraitsFetch.sol": {
-      "lastModificationDate": 1667721299198,
-      "contentHash": "2d3451a1e7015058b2068f1deff9bfe6",
-      "sourceName": "@erc721k/periphery-sol/contracts/interfaces/ITraitsFetch.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/svg/svg.sol": {
+      "lastModificationDate": 1668458490013,
+      "contentHash": "6f1310f8ec3114df09dffe0112dfcba2",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/svg/svg.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.8.15"
-      ],
-      "artifacts": [
-        "ITraitsFetch"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyRender.sol": {
-      "lastModificationDate": 1667771352765,
-      "contentHash": "9e032aa2458e99a51d22b62dce274e3a",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "hardhat/console.sol",
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@erc721k/periphery-sol/contracts/svg/svg.sol",
-        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
-        "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
-        "base64-sol/base64.sol"
-      ],
-      "versionPragmas": [
-        "0.8.15"
-      ],
-      "artifacts": [
-        "PixelPoolyRender"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/svg.sol": {
-      "lastModificationDate": 1667735909978,
-      "contentHash": "e670b42909af839a30ed6a69ebbf9f45",
-      "sourceName": "@erc721k/periphery-sol/contracts/svg/svg.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1265,15 +1794,66 @@
         "svg"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGLibrary.sol": {
-      "lastModificationDate": 1667721299198,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/rendering/PoolTogetherV0Render.sol": {
+      "lastModificationDate": 1668461283478,
+      "contentHash": "9dd9a25996baa405dff34b3f8d1ee380",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/rendering/PoolTogetherV0Render.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol",
+        "base64-sol/base64.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
+        "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
+        "../svg/svg.sol",
+        "../svg/svgUtils.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "PoolTogetherV0Render"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGLibrary.sol": {
+      "lastModificationDate": 1666866108505,
       "contentHash": "cab271c386c03ba3027add546bf38a38",
       "sourceName": "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1313,15 +1893,15 @@
         "SVGLibrary"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGRegistry.sol": {
-      "lastModificationDate": 1667746753407,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGRegistry.sol": {
+      "lastModificationDate": 1667650211262,
       "contentHash": "eea2c5707ffa02ba133966fa603a9bad",
       "sourceName": "@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1359,15 +1939,15 @@
         "SVGRegistry"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/svgUtils.sol": {
-      "lastModificationDate": 1667735909978,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/svgUtils.sol": {
+      "lastModificationDate": 1668168112650,
       "contentHash": "29645f891fded4caeddb95878e78325f",
       "sourceName": "@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1404,15 +1984,15 @@
         "svgUtils"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGColor.sol": {
-      "lastModificationDate": 1667735909977,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/SVGColor.sol": {
+      "lastModificationDate": 1668168112669,
       "contentHash": "6bad9a821613af5c391da9672d33cdf3",
       "sourceName": "@erc721k/periphery-sol/contracts/svg/SVGColor.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1449,15 +2029,61 @@
         "SVGColor"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ISVGModule.sol": {
-      "lastModificationDate": 1667721299198,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-periphery-sol/contracts/svg/svg.sol": {
+      "lastModificationDate": 1668168112668,
+      "contentHash": "e670b42909af839a30ed6a69ebbf9f45",
+      "sourceName": "@erc721k/periphery-sol/contracts/svg/svg.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "./svgUtils.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.15"
+      ],
+      "artifacts": [
+        "svg"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ISVGModule.sol": {
+      "lastModificationDate": 1666866108504,
       "contentHash": "5e3bb37967335dc87967b82faa3a1192",
       "sourceName": "@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1492,15 +2118,15 @@
         "ISVGModule"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelPoolyAssets.sol": {
-      "lastModificationDate": 1667771331252,
-      "contentHash": "81b8d15c9fb7261faa4d2fe74e43dfc9",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/Web3Assets.sol": {
+      "lastModificationDate": 1668165134696,
+      "contentHash": "53baaa4841308df2f1ecf69510ff9531",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/Web3Assets.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1528,8 +2154,8 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
         "@erc721k/periphery-sol/contracts/svg/svg.sol",
+        "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
         "@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
         "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
         "@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol"
@@ -1538,233 +2164,18 @@
         "0.8.15"
       ],
       "artifacts": [
-        "PixelPoolyAssets"
+        "Web3Assets"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGColor.sol": {
-      "lastModificationDate": 1667832331755,
-      "contentHash": "ad3729ad5e9ee3411ecb5b6906d7f288",
-      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGColor.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@erc721k/periphery-sol/contracts/svg/SVGColor.sol"
-      ],
-      "versionPragmas": [
-        ">0.0.0"
-      ],
-      "artifacts": []
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svgUtils.sol": {
-      "lastModificationDate": 1667832331755,
-      "contentHash": "94c660907687f0461f8b17c0d61f5107",
-      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@erc721k/periphery-sol/contracts/svg/svgUtils.sol"
-      ],
-      "versionPragmas": [
-        ">0.0.0"
-      ],
-      "artifacts": []
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svg.sol": {
-      "lastModificationDate": 1667832331755,
-      "contentHash": "8286a6adafc951b97cfbd62e8af45b94",
-      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svg.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@erc721k/periphery-sol/contracts/svg/svg.sol"
-      ],
-      "versionPragmas": [
-        ">0.0.0"
-      ],
-      "artifacts": []
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol": {
-      "lastModificationDate": 1667832331755,
-      "contentHash": "212b3fafd46fb1463fa8fd456582976c",
-      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol"
-      ],
-      "versionPragmas": [
-        ">0.0.0"
-      ],
-      "artifacts": []
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol": {
-      "lastModificationDate": 1667832331754,
-      "contentHash": "61db61e4399334ba0c3baf4ab90bb3ec",
-      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@pixel-pals/pooly-sol/contracts/PixelPoolyAssets.sol"
-      ],
-      "versionPragmas": [
-        ">0.0.0"
-      ],
-      "artifacts": []
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol": {
-      "lastModificationDate": 1667832331755,
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol": {
+      "lastModificationDate": 1668426944496,
       "contentHash": "ab9adb224fba9c04758d154d4fd62731",
       "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1799,15 +2210,15 @@
       ],
       "artifacts": []
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol": {
-      "lastModificationDate": 1667832331753,
-      "contentHash": "1aec7cde1d19df4e4a751190b6305caa",
-      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721Storage.sol": {
+      "lastModificationDate": 1668426944495,
+      "contentHash": "5b9abf3ca0d8d9d35625fe4ce690617b",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/core-sol/contracts/ERC721Storage.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1835,22 +2246,22 @@
         }
       },
       "imports": [
-        "@pixel-pals/pooly-sol/contracts/PixelPoolyRender.sol"
+        "@erc721k/core-sol/contracts/ERC721Storage.sol"
       ],
       "versionPragmas": [
         ">0.0.0"
       ],
       "artifacts": []
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol": {
-      "lastModificationDate": 1667832331754,
-      "contentHash": "77d061e5dfa5101baa7a3ed9d98a4177",
-      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3CardStorage.sol": {
+      "lastModificationDate": 1668521853208,
+      "contentHash": "45b6c04eb8338132c52cd8dbc45dc32e",
+      "sourceName": "contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3CardStorage.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1878,22 +2289,22 @@
         }
       },
       "imports": [
-        "@pixel-pals/pooly-sol/contracts/PixelPoolyTraits.sol"
+        "@web3-savings-cards/core-sol/contracts/Web3CardStorage.sol"
       ],
       "versionPragmas": [
         ">0.0.0"
       ],
       "artifacts": []
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPooly.sol": {
-      "lastModificationDate": 1667832331753,
-      "contentHash": "44433040ed448e9247750342e6431073",
-      "sourceName": "contracts/hardhat-dependency-compiler/@pixel-pals/pooly-sol/contracts/PixelPooly.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol": {
+      "lastModificationDate": 1668426944496,
+      "contentHash": "e9ec62a28f4a4a5f685dcba7dba0e3e2",
+      "sourceName": "contracts/hardhat-dependency-compiler/@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1921,22 +2332,285 @@
         }
       },
       "imports": [
-        "@pixel-pals/pooly-sol/contracts/PixelPooly.sol"
+        "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol"
       ],
       "versionPragmas": [
         ">0.0.0"
       ],
       "artifacts": []
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/erc721k-periphery-sol/contracts/interfaces/ISVGRender.sol": {
-      "lastModificationDate": 1667721299198,
-      "contentHash": "7bced4fbeb241764bccfd0dda34bcf07",
-      "sourceName": "@erc721k/periphery-sol/contracts/interfaces/ISVGRender.sol",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3Assets.sol": {
+      "lastModificationDate": 1668426944495,
+      "contentHash": "fea78f699694c7bc98a722d1098d3089",
+      "sourceName": "contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3Assets.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@web3-savings-cards/core-sol/contracts/Web3Assets.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svgUtils.sol": {
+      "lastModificationDate": 1668426944495,
+      "contentHash": "94c660907687f0461f8b17c0d61f5107",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svgUtils.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/svgUtils.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svg.sol": {
+      "lastModificationDate": 1668426944495,
+      "contentHash": "8286a6adafc951b97cfbd62e8af45b94",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/svg.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/svg.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGColor.sol": {
+      "lastModificationDate": 1668426944495,
+      "contentHash": "ad3729ad5e9ee3411ecb5b6906d7f288",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGColor.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/SVGColor.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol": {
+      "lastModificationDate": 1668426944496,
+      "contentHash": "212b3fafd46fb1463fa8fd456582976c",
+      "sourceName": "contracts/hardhat-dependency-compiler/@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/Web3CardTraits.sol": {
+      "lastModificationDate": 1668429476159,
+      "contentHash": "b83444d689d3697c52530b3c57917dfc",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/Web3CardTraits.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "./interfaces/IStream.sol",
+        "./interfaces/ITraitsFetch.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "Web3CardTraits"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/interfaces/ITraitsFetch.sol": {
+      "lastModificationDate": 1668165134698,
+      "contentHash": "2d3451a1e7015058b2068f1deff9bfe6",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/interfaces/ITraitsFetch.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -1968,18 +2642,237 @@
         "0.8.15"
       ],
       "artifacts": [
-        "ISVGRender"
+        "ITraitsFetch"
       ]
     },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/node_modules/.pnpm/hardhat@2.10.1_6oasmw356qmm23djlsjgkwvrtm/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1667721623467,
-      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/interfaces/IStream.sol": {
+      "lastModificationDate": 1668165134698,
+      "contentHash": "0b337f947e50391375a046b305baaa9a",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/interfaces/IStream.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "IStream"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3CardTraits.sol": {
+      "lastModificationDate": 1668429535107,
+      "contentHash": "312f11e713dc19625b8444bf48a800d2",
+      "sourceName": "contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3CardTraits.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@web3-savings-cards/core-sol/contracts/Web3CardTraits.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/rendering/PoolTogetherV0Render.sol": {
+      "lastModificationDate": 1668461314118,
+      "contentHash": "71373d4f31c73aed860ea4f5ed497b32",
+      "sourceName": "contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/rendering/PoolTogetherV0Render.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@web3-savings-cards/core-sol/contracts/rendering/PoolTogetherV0Render.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/packages/deployments/contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3Card.sol": {
+      "lastModificationDate": 1668521853208,
+      "contentHash": "74473f20b0e366284a42ea5c7b69d0ab",
+      "sourceName": "contracts/hardhat-dependency-compiler/@web3-savings-cards/core-sol/contracts/Web3Card.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@web3-savings-cards/core-sol/contracts/Web3Card.sol"
+      ],
+      "versionPragmas": [
+        ">0.0.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/contracts/savings-cards/contracts/Web3CardActivator.sol": {
+      "lastModificationDate": 1668522541818,
+      "contentHash": "436c5f07d45e180056095f3c6b4ff330",
+      "sourceName": "@web3-savings-cards/core-sol/contracts/Web3CardActivator.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@turbo-eth/solbase-sol/src/auth/Owned.sol",
+        "./Web3Card.sol",
+        "./Web3CardDesign.sol"
+      ],
+      "versionPragmas": [
+        "0.8.15"
+      ],
+      "artifacts": [
+        "Web3CardActivator"
+      ]
+    },
+    "/Users/kames/workspace/web3savings-cards/code/monorepo/node_modules/.pnpm/hardhat@2.12.2_6oasmw356qmm23djlsjgkwvrtm/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1668193636553,
+      "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
         "version": "0.8.15",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "evmVersion": "istanbul",
@@ -2008,98 +2901,10 @@
       },
       "imports": [],
       "versionPragmas": [
-        ">=0.4.22 <0.9.0"
+        ">= 0.4.22 <0.9.0"
       ],
       "artifacts": [
         "console"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/pixel-pooly/contracts/PixelStore.sol": {
-      "lastModificationDate": 1667826136257,
-      "contentHash": "8ebc8ca2234765182dd1448a1e0bcb99",
-      "sourceName": "@pixel-pals/pooly-sol/contracts/PixelStore.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol"
-      ],
-      "versionPragmas": [
-        "0.8.15"
-      ],
-      "artifacts": [
-        "PixelStore"
-      ]
-    },
-    "/Users/kames/workspace/pixel-pals/code/monorepo/contracts/solbase/src/auth/OwnedRoles.sol": {
-      "lastModificationDate": 1667770691585,
-      "contentHash": "b8cb9abae7e216b2947f6a85c004cb8a",
-      "sourceName": "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol",
-      "solcConfig": {
-        "version": "0.8.15",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "istanbul",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "OwnedRoles"
       ]
     }
   }

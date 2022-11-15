@@ -1,23 +1,32 @@
 import * as React from "react";
-import classNames from "classnames";
+
 import { useNetworkContract } from "@web3-savings-cards/deployments";
-import { ERC721KPreview } from "./ERC721K/ERC721KPreview";
+import classNames from "classnames";
+import { constants } from "ethers";
 import { useAccount } from "wagmi";
+
+import { ERC721KPreviewWithStyle } from "./ERC721K/ERC721KPreviewWithStyle";
 
 interface Web3CardPreviewProps {
   className?: string;
+  color: number | string;
+  emoji: number | string;
 }
 
-export const Web3CardPreview = ({ className }: Web3CardPreviewProps) => {
+export const Web3CardPreview = ({
+  className,
+  color,
+  emoji,
+}: Web3CardPreviewProps) => {
   const contract = useNetworkContract("localhost", "Web3Card");
   const account = useAccount();
-  const containerClassName = classNames(className, "Web3CardPreview");
+  const classes = classNames(className, "Web3CardPreview");
   return (
-    <div className={containerClassName}>
-      <ERC721KPreview
-        className="rounded-xl w-full"
+    <div className={classes}>
+      <ERC721KPreviewWithStyle
+        className={classes}
         contractAddress={contract?.address || ""}
-        args={["0x761d584f1C2d43cBc3F42ECd739701a36dFFAa31"]}
+        args={[account.address || constants.AddressZero, color, emoji]}
       />
     </div>
   );

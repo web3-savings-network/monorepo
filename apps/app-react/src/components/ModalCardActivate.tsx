@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 import { useModal } from "react-modal-hook";
 import { ModalFullScreen } from "./Modal/ModalFullScreen";
-import FormMintChanceCard from "./FormMintSavingsCard";
+import FormMintChanceCard from "./FormMintWeb3Card";
 
 interface ModalCardActivateProps {
   className?: string;

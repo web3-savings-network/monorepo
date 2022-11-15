@@ -18,11 +18,6 @@ const _abi = [
     type: "error",
   },
   {
-    inputs: [],
-    name: "Unauthorized",
-    type: "error",
-  },
-  {
     anonymous: false,
     inputs: [
       {

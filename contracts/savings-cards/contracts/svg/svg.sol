@@ -129,26 +129,6 @@ library svg {
     return el("image", string.concat(prop("href", _href), " ", _props));
   }
 
-  function start(string memory width, string memory height) internal pure returns (string memory) {
-    return
-      string.concat(
-        '<svg width="',
-        width,
-        '" ',
-        'height="',
-        height,
-        '" ',
-        'style="background:#FFF" ',
-        'viewBox="0 0 320 190" ',
-        'xmlns="http://www.w3.org/2000/svg" ',
-        ">"
-      );
-  }
-
-  function end() internal pure returns (bytes memory) {
-    return ("</svg>");
-  }
-
   /* COMMON */
   // A generic element, can be used to construct any SVG (or HTML) element
   function el(
@@ -162,6 +142,14 @@ library svg {
   // A generic element, can be used to construct any SVG (or HTML) element without children
   function el(string memory _tag, string memory _props) internal pure returns (string memory) {
     return string.concat("<", _tag, " ", _props, "/>");
+  }
+
+  function start(string memory _tag, string memory _props) internal pure returns (string memory) {
+    return string.concat("<", _tag, " ", _props, ">");
+  }
+
+  function end(string memory _tag) internal pure returns (string memory) {
+    return string.concat("</", _tag, ">");
   }
 
   // an SVG attribute

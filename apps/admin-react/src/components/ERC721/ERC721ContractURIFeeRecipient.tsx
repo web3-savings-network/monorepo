@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import * as React from "react";
 // import Address from "../Wallet/Address";
-import useERC721ContractMetadata from "./useERC721ContractMetadata";
+import useERC721ContractMetadata from "../hooks/useERC721ContractMetadata";
 
 interface ERC721ContractURIFeeRecipientProps {
   className?: string;

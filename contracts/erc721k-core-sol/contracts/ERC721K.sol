@@ -2,14 +2,14 @@
 pragma solidity 0.8.15;
 
 import { ERC721 } from "@turbo-eth/solbase-sol/src/tokens/ERC721/ERC721.sol";
-import { OwnedThreeStep } from "@turbo-eth/solbase-sol/src/auth/OwnedThreeStep.sol";
+import { OwnedRoles } from "@turbo-eth/solbase-sol/src/auth/OwnedRoles.sol";
 import { ERC721Storage } from "./ERC721Storage.sol";
 
 /**
  * @title ERC721K
  * @author Kames Geraghty
  */
-abstract contract ERC721K is ERC721, OwnedThreeStep {
+abstract contract ERC721K is ERC721, OwnedRoles {
   /// @notice ID counter for ERC721 tokens
   uint256 internal _idCounter;
 
@@ -28,8 +28,9 @@ abstract contract ERC721K is ERC721, OwnedThreeStep {
     string memory name_,
     string memory symbol_,
     address _erc721Storage_
-  ) ERC721(name_, symbol_) OwnedThreeStep(msg.sender) {
+  ) ERC721(name_, symbol_) {
     _erc721Storage = _erc721Storage_;
+    _initializeOwner(msg.sender);
   }
 
   /* ===================================================================================== */

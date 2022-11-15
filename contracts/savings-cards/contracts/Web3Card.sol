@@ -1,7 +1,6 @@
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import "hardhat/console.sol";
 import { ERC721K } from "@erc721k/core-sol/contracts/ERC721K.sol";
 import { ERC721Storage } from "@erc721k/core-sol/contracts/ERC721Storage.sol";
 
@@ -11,7 +10,6 @@ import { Web3CardStorage } from "./Web3CardStorage.sol";
 
 contract Web3Card is ERC721K {
   uint256 private immutable MINTER_ROLE = 1e18;
-  bytes32 public constant MINTER_BURNER_ROLE = keccak256("MINTER_BURNER_ROLE");
 
   mapping(address => uint256) private _belongsTo;
 
@@ -58,7 +56,20 @@ contract Web3Card is ERC721K {
   // --------------------------------------
 
   function preview(address account) external view returns (string memory) {
-    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getPreview(0, account);
+    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getPreview(account);
+    return ISVGRender(ERC721Storage(_erc721Storage).getSvgRender()).render(imageBytes);
+  }
+
+  function previewWithStyle(
+    address account,
+    uint8 color,
+    uint8 emoji
+  ) external view returns (string memory) {
+    bytes memory imageBytes = Web3CardStorage(_erc721Storage).getPreviewWithStyle(
+      account,
+      color,
+      emoji
+    );
     return ISVGRender(ERC721Storage(_erc721Storage).getSvgRender()).render(imageBytes);
   }
 
@@ -70,14 +81,16 @@ contract Web3Card is ERC721K {
    * @notice Mints a new token to the given address
    * @param to address - Address to mint to`
    */
-  function mint(address to) external {
+  function mint(address to) external returns (uint256) {
     require(hasAllRoles(msg.sender, MINTER_ROLE), "Web3Card:unauthorized");
     require(_belongsTo[to] == 0, "Web3Card:activated");
+    uint256 nextId;
     unchecked {
-      uint256 nextId = _idCounter++;
+      nextId = _idCounter++;
       _belongsTo[to] = nextId;
       _mint(to, nextId);
     }
+    return nextId;
   }
 
   /**

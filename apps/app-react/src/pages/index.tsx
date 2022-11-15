@@ -1,99 +1,153 @@
-import AccountTotalPrizes from "@/components/AccountTotalPrizes";
-import CardStackSetGlobalFocus from "@/components/Card/CardStackSetGlobalFocus";
-import CardTotalPrizes from "@/components/CardTotalPrizes";
-import { ModalCardAddToGlobalState } from "@/components/ModalCardAddToGlobalState";
+import {
+  ERC721Attributes,
+  ERC721Description,
+  ERC721Name,
+} from "@turbo-eth/erc721-wagmi";
+import { useNetworkContract } from "@web3-savings-cards/deployments";
+import { ResponsiveMobileAndDesktop } from "@web3-savings-cards/framework-react";
+import classNames from "classnames";
+import Link from "next/link";
+import { useAccount } from "wagmi";
+
+import { FormMintWeb3Card } from "@/components/FormMintWeb3Card";
+import { IsERC721KMinted } from "@/components/IsERC721KMinted";
+import { SelectBlockchainNetwork } from "@/components/Web3/SelectBlockchainNetwork";
+import { Web3CardRender } from "@/components/Web3CardRender";
+import { useWeb3CardRead } from "@/hooks/useWeb3CardRead";
 import { Main } from "@/templates/Main";
 import { Meta } from "@/templates/Meta";
 import { AppConfig } from "@/utils/AppConfig";
-import classNames from "classnames";
-import { ERC721TokenURI } from "@turbo-eth/erc721-wagmi";
 
-import { ResponsiveMobileAndDesktop } from "@web3-savings-cards/framework-react";
-import Web3CardPreview from "@/components/Web3CardPreview";
-import { useNetworkContract } from "@web3-savings-cards/deployments";
-
-const Card = () => {
-  const classes = classNames("py-32");
+const IsMinted = (props) => {
+  const contract = useNetworkContract("localhost", "Web3Card");
+  const account = useAccount();
+  const txRead = useWeb3CardRead(contract?.address, "belongsTo", [
+    account.address,
+  ]);
 
   return (
-    <Main
-      meta={
-        <Meta
-          title={`${AppConfig.title} | ${AppConfig.description}`}
-          description={AppConfig.description}
-        />
-      }
-    >
-      <ResponsiveMobileAndDesktop>
-        <SectionMobile />
-        <SectionDesktop />
-      </ResponsiveMobileAndDesktop>
-    </Main>
-  );
-};
-
-const SectionMobile = () => {
-  return (
-    <section className="py-32">
-      <div className="flex flex-center flex-col">
-        <h3 className="font-normal text-3xl">Coming Soon</h3>
-        <p className="">Are ypu ready to start winning!?</p>
-        <div className="my-4" />
-        <img src="/img/card-stack.png" className="w-2/3 max-auto blur-md" />
+    <>
+      <div className="flex h-[100%] items-center">
+        <div className="container mx-auto grid max-w-screen-xl grid-cols-12 lg:gap-x-10">
+          <div className="col-span-4 ">
+            <div className="">
+              <ERC721Name
+                className="text-4xl font-bold"
+                contractAddress={contract.address}
+                tokenId={txRead.data}
+              />
+              <ERC721Description
+                className="text-xl font-bold"
+                contractAddress={contract.address}
+                tokenId={txRead.data}
+              />
+            </div>
+            <div className="my-4" />
+            <ERC721Attributes
+              classNameLabel="text-xs my-1"
+              classNameValue="tag tag-cloud text-xs my-1"
+              contractAddress={contract.address}
+              tokenId={txRead.data}
+            />
+          </div>
+          <div className="flex-center col-span-8 flex flex-col items-center justify-center border-l-2">
+            <Web3CardRender className="rounded-lg shadow-md hover:shadow-lg" />
+          </div>
+        </div>
       </div>
-    </section>
+    </>
   );
 };
+
+const SectionMobile = () => (
+  <section className="py-32">
+    <div className="flex-center flex flex-col">
+      <h3 className="text-3xl font-normal">Coming Soon</h3>
+      <p className="">Are ypu ready to start winning!?</p>
+      <div className="my-4" />
+      <img src="/img/card-stack.png" className="max-auto w-2/3 blur-md" />
+    </div>
+  </section>
+);
 
 const SectionDesktop = () => {
-  const classes = classNames("py-32");
+  const classes = classNames("py-32 content");
   const contract = useNetworkContract("localhost", "Web3Card");
+
   return (
     <div className={classes}>
-      <div className="container mx-auto max-w-screen-xl grid grid-cols-12">
-        <div className="col-span-5 text-left">
-          <h3 className="font-normal text-xl">Savings Account</h3>
-        </div>
-        <div className="col-span-7 text-right">
-          <ModalCardAddToGlobalState>
-            <button className="btn btn-blue">Add Savings Card +</button>
-          </ModalCardAddToGlobalState>
-        </div>
-      </div>
-
-      <div className="my-10" />
-
-      <div className="container mx-auto max-w-screen-xl grid grid-cols-12 lg:gap-x-28">
-        <div className="lg:col-span-6">
-          <div className="flex justify-between">
-            <AccountTotalPrizes />
-            <span className="tag tag-green tag-sm">All Prizes & Rewards</span>
+      <IsERC721KMinted contractAddress={contract?.address}>
+        <>
+          <div className="my-12" />
+          <div className="container mx-auto grid max-w-screen-xl grid-cols-12 lg:gap-x-10">
+            <div className="col-span-4 ">
+              <h3 className="text-4xl font-bold">Web3 Savings Cards</h3>
+              <div className="my-6" />
+              <h3 className="text-xl font-bold">
+                What is a Web3 Savings Card?
+              </h3>
+              <p className="">
+                A Web3 Savings Card is a digital collectible connected to a Web3
+                Savings protocol. Save money with PoolTogether and unlock the
+                power of DeFi. Safe, secure, and easy to use.{" "}
+                <span className="font-bold">It's what you deserve.</span>
+              </p>
+              <ul className="list list-disc pl-8">
+                <li>Save money with PoolTogether</li>
+                <li>Unlock the power of DeFi</li>
+                <li>Safe, secure, and easy to use</li>
+              </ul>
+              <div className="my-6" />
+              <h3 className="text-xl font-bold">The Key To Web3</h3>
+              <p className="">
+                Web3 Savings Cards are designed to help you get started with
+                with cryptocurrency the right way: self-custody, easy-to-use,
+                and a time-tested money management strategy.{" "}
+                <span className="font-bold">Saving with friends</span>.
+              </p>
+            </div>
+            <div className="flex-center col-span-8 flex flex-col items-center justify-center border-l-2">
+              <>
+                <div className="max-w-xl">
+                  <FormMintWeb3Card />
+                  <div className="my-6" />
+                  <p className="text-center text-xs">
+                    By connecting a wallet and activating a Web3 Savings Card,
+                    <br />
+                    you agree to the{" "}
+                    <Link href={"/terms-of-service"}>Terms of Service</Link> and
+                    the <Link href={"/privacy-policy"}>Privacy Policy</Link>.
+                  </p>
+                </div>
+              </>
+            </div>
           </div>
-          <div className="my-6" />
-          <div className="card1 h-full flex flex-center flex-col">
-            <span className=" text-center">Partnership Cards Coming Soon</span>
-            <div className="my-3" />
-          </div>
-          <CardStackSetGlobalFocus />
-        </div>
-        <div className="lg:col-span-6">
-          <div className="flex justify-between">
-            <CardTotalPrizes />
-            <span className="tag tag-green tag-sm">Card Prizes</span>
-          </div>
-          <div className="mt-20" />
-          <div className="flex flex-center">
-            <Web3CardPreview />
-            <ERC721TokenURI
-              tokenId={1}
-              contractAddress={"0xE7e558Bced1dee713aA337b78EB81e5E6b1658Ef"}
-            />
-            {/* <img src="/img/card-stack.png" className="w-2/3 max-auto blur-md" /> */}
-          </div>
-        </div>
-      </div>
+          <div className="my-20" />
+          <p className="text-center">
+            Web3 Savings Cards are currently available on Optimism and Polygon
+            blockchain networks.
+          </p>
+        </>
+        <IsMinted />
+      </IsERC721KMinted>
     </div>
   );
 };
 
-export default Card;
+const Index = () => (
+  <Main
+    meta={
+      <Meta
+        title={`${AppConfig.title} | ${AppConfig.description}`}
+        description={AppConfig.description}
+      />
+    }
+  >
+    <ResponsiveMobileAndDesktop>
+      <SectionMobile />
+      <SectionDesktop />
+    </ResponsiveMobileAndDesktop>
+  </Main>
+);
+
+export default Index;

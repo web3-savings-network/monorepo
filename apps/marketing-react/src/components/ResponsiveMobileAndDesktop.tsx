@@ -1,8 +1,9 @@
 import React from "react";
+
 import { useMediaQuery } from "react-responsive";
 
 interface ResponsiveMobileAndDesktopProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode[];
   className?: string;
   mobile?: React.ReactNode;
   desktop?: React.ReactNode;

@@ -24,12 +24,17 @@ const _abi = [
   },
   {
     inputs: [],
-    name: "NotMinted",
+    name: "NewOwnerIsZeroAddress",
     type: "error",
   },
   {
     inputs: [],
-    name: "Unauthorized",
+    name: "NoHandoverRequest",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "NotMinted",
     type: "error",
   },
   {
@@ -116,17 +121,43 @@ const _abi = [
       {
         indexed: true,
         internalType: "address",
-        name: "user",
+        name: "pendingOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipHandoverCanceled",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "pendingOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipHandoverRequested",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "oldOwner",
         type: "address",
       },
       {
         indexed: true,
         internalType: "address",
-        name: "ownerCandidate",
+        name: "newOwner",
         type: "address",
       },
     ],
-    name: "OwnerUpdateInitiated",
+    name: "OwnershipTransferred",
     type: "event",
   },
   {
@@ -140,12 +171,12 @@ const _abi = [
       },
       {
         indexed: true,
-        internalType: "address",
-        name: "newOwner",
-        type: "address",
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
       },
     ],
-    name: "OwnershipTransferred",
+    name: "RolesUpdated",
     type: "event",
   },
   {
@@ -212,7 +243,20 @@ const _abi = [
   },
   {
     inputs: [],
-    name: "confirmOwner",
+    name: "cancelOwnershipHandover",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "pendingOwner",
+        type: "address",
+      },
+    ],
+    name: "completeOwnershipHandover",
     outputs: [],
     stateMutability: "payable",
     type: "function",
@@ -266,6 +310,72 @@ const _abi = [
     inputs: [
       {
         internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    name: "grantRoles",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    name: "hasAllRoles",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "result",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    name: "hasAnyRole",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "result",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
         name: "",
         type: "address",
       },
@@ -300,12 +410,31 @@ const _abi = [
     type: "function",
   },
   {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    name: "ordinalsFromRoles",
+    outputs: [
+      {
+        internalType: "uint8[]",
+        name: "ordinals",
+        type: "uint8[]",
+      },
+    ],
+    stateMutability: "pure",
+    type: "function",
+  },
+  {
     inputs: [],
     name: "owner",
     outputs: [
       {
         internalType: "address",
-        name: "",
+        name: "result",
         type: "address",
       },
     ],
@@ -332,10 +461,118 @@ const _abi = [
     type: "function",
   },
   {
+    inputs: [
+      {
+        internalType: "address",
+        name: "pendingOwner",
+        type: "address",
+      },
+    ],
+    name: "ownershipHandoverExpiresAt",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "result",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [],
-    name: "renounceOwner",
+    name: "ownershipHandoverValidFor",
+    outputs: [
+      {
+        internalType: "uint64",
+        name: "",
+        type: "uint64",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
     outputs: [],
     stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    name: "renounceRoles",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "requestOwnershipHandover",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    name: "revokeRoles",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint8[]",
+        name: "ordinals",
+        type: "uint8[]",
+      },
+    ],
+    name: "rolesFromOrdinals",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "pure",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+    ],
+    name: "rolesOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "roles",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
     type: "function",
   },
   {
