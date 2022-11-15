@@ -1,6 +1,5 @@
-import { Web3CardABI as Web3Card } from "@web3-savings-cards/deployments";
 import { useState, useEffect } from "react";
-import { useContractRead } from "wagmi";
+import { useContractRead, erc721ABI } from "wagmi";
 
 interface ERC721Metadata {
   name: string;
@@ -24,7 +23,7 @@ export function useERC721ContractMetadata({
   const [tokenData, setTokenData] = useState<ERC721Metadata | undefined>();
   const txRead = useContractRead({
     addressOrName: contractAddress,
-    contractInterface: Web3Card,
+    contractInterface: erc721ABI,
     functionName: "contractURI",
     args: [],
   });
@@ -32,7 +31,7 @@ export function useERC721ContractMetadata({
   useEffect(() => {
     if (txRead.data) {
       (async () => {
-        const data = await fetch(txRead?.data as unknown as URL);
+        const data = await fetch(txRead?.data as unknown as string);
         setTokenData(await data.json());
       })();
       async () => {};

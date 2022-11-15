@@ -7,10 +7,10 @@ interface ERC721Metadata {
   name: string;
   description: string;
   image: string;
-  attributes: {
+  attributes: Array<{
     trait_type: string;
     value: string;
-  };
+  }>;
 }
 
 // @ts-ignore

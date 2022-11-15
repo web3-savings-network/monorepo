@@ -7,14 +7,14 @@ interface ERC721NameProps {
   tokenId: string;
 }
 
-export const ERC721Name = ({ contractAddress, tokenId }: ERC721NameProps) => {
+export const ERC721Name = ({ className, contractAddress, tokenId }: ERC721NameProps) => {
   const tokenData = useERC721Metadata({
     contractAddress,
     tokenId,
   });
 
   if (!tokenData) return null;
-  return <p className="">{tokenData?.name}</p>;
+  return <h3 className={className}>{tokenData?.name}</h3>;
 };
 
 export default ERC721Name;

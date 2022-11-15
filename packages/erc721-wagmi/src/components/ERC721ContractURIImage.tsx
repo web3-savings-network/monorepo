@@ -2,17 +2,18 @@ import classNames from "classnames";
 import * as React from "react";
 import useERC721ContractMetadata from "../hooks/useERC721ContractMetadata";
 
-interface ERC721ContractURIExternalLinkProps {
+
+interface ERC721ContractURIImageProps {
   className?: string;
   contractAddress: string;
   tokenId: string;
 }
 
-export const ERC721ContractURIExternalLink = ({
+export const ERC721ContractURIImage = ({
   className,
   contractAddress,
   tokenId,
-}: ERC721ContractURIExternalLinkProps) => {
+}: ERC721ContractURIImageProps) => {
   const contractData = useERC721ContractMetadata({
     contractAddress,
     tokenId,
@@ -20,11 +21,7 @@ export const ERC721ContractURIExternalLink = ({
 
   if (!contractData) return null;
   const classes = classNames(className);
-  return (
-    <a href={contractData?.externalLink} className={classes}>
-      {contractData?.externalLink}
-    </a>
-  );
+  return <span className={classes}>{contractData?.name}</span>;
 };
 
-export default ERC721ContractURIExternalLink;
+export default ERC721ContractURIImage;

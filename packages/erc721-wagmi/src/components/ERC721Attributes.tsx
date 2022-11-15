@@ -3,11 +3,15 @@ import { useERC721Metadata } from "../hooks/useERC721Metadata";
 
 interface ERC721AttributesProps {
   className?: string;
+  classNameLabel?: string;
+  classNameValue?: string;
   contractAddress: string;
   tokenId: string;
 }
 
 export const ERC721Attributes = ({
+  classNameLabel,
+  classNameValue,
   contractAddress,
   tokenId,
 }: ERC721AttributesProps) => {
@@ -18,15 +22,15 @@ export const ERC721Attributes = ({
 
   if (!tokenData) return null;
   return tokenData?.attributes?.map((attribute) => (
-    <Attribute name={attribute?.trait_type} value={attribute?.value} />
+    <Attribute classNameLabel={classNameLabel} classNameValue={classNameValue}  name={attribute?.trait_type} value={attribute?.value} />
   ));
 };
 
-function Attribute({ name, value }) {
+function Attribute({ name, value, classNameLabel, classNameValue}: any) {
   return (
     <div className="flex justify-between">
-      <span className="">{name}</span>
-      <span className="">{value}</span>
+      <span className={classNameLabel}>{name}</span>
+      <span className={classNameValue}>{value}</span>
     </div>
   );
 }

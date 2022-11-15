@@ -9,6 +9,7 @@ interface ERC721ImageBase64Props {
 }
 
 export const ERC721ImageBase64 = ({
+  className,
   contractAddress,
   tokenId,
 }: ERC721ImageBase64Props) => {
@@ -23,16 +24,18 @@ export const ERC721ImageBase64 = ({
   React.useEffect(() => {
     if (txRead.data) {
       (async () => {
-        const data = await fetch(txRead.data);
-        console.log(await data.json(), "txRead.data");
-        setImgSrc(await data.json());
+        if(txRead.data) {
+        const data = await fetch(txRead.data as unknown as string);
+        const json = await data.json();
+        setImgSrc(json.image);
+        }
       })();
       async () => {};
     }
   }, [txRead.data]);
 
   if (!txRead.data || !txRead.isSuccess) return null;
-  return <img className="" src={imgSrc} />;
+  return <img className={className} src={imgSrc} />;
 };
 
 export default ERC721ImageBase64;

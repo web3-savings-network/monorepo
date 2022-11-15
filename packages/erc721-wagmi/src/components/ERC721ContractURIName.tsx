@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import * as React from "react";
-import useERC721ContractMetadata from "./useERC721ContractMetadata";
+import useERC721ContractMetadata from "../hooks/useERC721ContractMetadata";
 
 interface ERC721ContractURINameProps {
   className?: string;

@@ -8,6 +8,7 @@ interface ERC721DescriptionProps {
 }
 
 export const ERC721Description = ({
+  className,
   contractAddress,
   tokenId,
 }: ERC721DescriptionProps) => {
@@ -17,7 +18,7 @@ export const ERC721Description = ({
   });
 
   if (!tokenData) return null;
-  return <p className="">{tokenData?.description}</p>;
+  return <p className={className}>{tokenData?.description}</p>;
 };
 
 export default ERC721Description;
