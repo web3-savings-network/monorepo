@@ -39,7 +39,7 @@
       "outputs": [".next", "out", "dist"]
     },
     "build:app": {
-      "dependsOn": ["^build:package", "^build:app`"],
+      "dependsOn": ["^build:package", "^build:app"],
       "outputs": [".next", "out", "dist"]
     },
     "build:admin": {
