@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import classNames from "classnames";
+import Link from "next/link";
 import src from "react-select/dist/declarations/src";
 
 import ModalCardActivate from "../ModalCardActivate";
@@ -41,12 +42,14 @@ export const SectionDeployedOnComingSoon = ({
             imgSrc="/img/network/Ethereum.svg"
           />
           <Network
+            enabled={true}
             className="col-span-6 lg:col-span-4"
             title="Optimism"
             description="L2"
             imgSrc="/img/network/Optimism.svg"
           />
           <Network
+            enabled={true}
             className="col-span-6 lg:col-span-4"
             title="Polygon"
             description="L1/L2"
@@ -77,6 +80,7 @@ const Network = ({
   className,
   title = "Ethereum",
   imgSrc = "/img/network/Ethereum.svg",
+  enabled = false,
 }: any) => {
   const classes = classNames(className, "Icon");
   const iconStyle = classNames("Icon", "w-16 h-16 mx-auto");
@@ -87,7 +91,19 @@ const Network = ({
       <div className="my-4" />
       <span className={titleStyle}>{title}</span>
       <div className="mt-6 flex items-center justify-center">
-        <button className="btn btn-light">Coming Soon</button>
+        {enabled ? (
+          <a
+            target={"_blank"}
+            href="https://app.web3savings.network/"
+            rel="noreferrer"
+          >
+            <button className="btn btn-green">Activate</button>
+          </a>
+        ) : (
+          <button className="btn btn-primary" disabled>
+            Coming Soon
+          </button>
+        )}
       </div>
     </div>
   );
