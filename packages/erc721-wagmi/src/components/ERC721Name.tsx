@@ -13,6 +13,8 @@ export const ERC721Name = ({ className, contractAddress, tokenId }: ERC721NamePr
     tokenId,
   });
 
+  console.log(tokenData, 'tokenData')
+
   if (!tokenData) return null;
   return <h3 className={className}>{tokenData?.name}</h3>;
 };

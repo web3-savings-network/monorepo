@@ -27,11 +27,14 @@
     "deploy": "hardhat deploy --write true",
     "deploy:mainnet": "hardhat deploy --write true --network mainnet",
     "deploy:testnet": "hardhat deploy --write true --network testnet",
-    "deploy:polygon:mainnet": "hardhat deploy --write true --network polygonMainnet",
+    "deploy:polygon:mainnet": "hardhat deploy --write true --network polygon",
     "deploy:polygon:testnet": "hardhat deploy --write true --network polygonTestnet",
+    "deploy:optimism:mainnet": "hardhat deploy --write true --network optimism",
+    "deploy:optimism:testnet": "hardhat deploy --write true --network optimismTestnet",
     "deploy:fork": "DEPLOY=wolf FORK_ENABLED=true hardhat deploy --write true --network hardhat",
     "chain": "hardhat node --network hardhat",
-    "chain:deployment": "DEPLOY=fork FORK_ENABLED=true hardhat node"
+    "chain:deployment": "DEPLOY=fork FORK_ENABLED=true hardhat node",
+    "verify": "hardhat etherscan-verify --license MIT --solc-input --network"
   },
   "husky": {
     "hooks": {

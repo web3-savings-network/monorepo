@@ -9,6 +9,7 @@ import {
   CallOverrides,
   ContractTransaction,
   Overrides,
+  PayableOverrides,
   PopulatedTransaction,
   Signer,
   utils,
@@ -62,7 +63,6 @@ export interface Web3CardStorageInterface extends utils.Interface {
     "getTraitsFetch()": FunctionFragment;
     "owner()": FunctionFragment;
     "render(bytes)": FunctionFragment;
-    "renounceOwnership()": FunctionFragment;
     "setContractURI((string,string,string,string,string,string))": FunctionFragment;
     "setERC20TWABInstance(address)": FunctionFragment;
     "setERC721KDesignInstance(address)": FunctionFragment;
@@ -123,10 +123,6 @@ export interface Web3CardStorageInterface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(functionFragment: "render", values: [BytesLike]): string;
-  encodeFunctionData(
-    functionFragment: "renounceOwnership",
-    values?: undefined
-  ): string;
   encodeFunctionData(
     functionFragment: "setContractURI",
     values: [ERC721Storage.ContractURIStruct]
@@ -208,10 +204,6 @@ export interface Web3CardStorageInterface extends utils.Interface {
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "render", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "renounceOwnership",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
     functionFragment: "setContractURI",
     data: BytesLike
   ): Result;
@@ -263,7 +255,7 @@ export type ContractURIUpdatedEventFilter =
 
 export type OwnershipTransferredEvent = TypedEvent<
   [string, string],
-  { previousOwner: string; newOwner: string }
+  { user: string; newOwner: string }
 >;
 
 export type OwnershipTransferredEventFilter =
@@ -363,10 +355,6 @@ export interface Web3CardStorage extends BaseContract {
 
     render(input: BytesLike, overrides?: CallOverrides): Promise<[string]>;
 
-    renounceOwnership(
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
     setContractURI(
       contractURI: ERC721Storage.ContractURIStruct,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -399,7 +387,7 @@ export interface Web3CardStorage extends BaseContract {
 
     transferOwnership(
       newOwner: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
 
@@ -451,10 +439,6 @@ export interface Web3CardStorage extends BaseContract {
 
   render(input: BytesLike, overrides?: CallOverrides): Promise<string>;
 
-  renounceOwnership(
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   setContractURI(
     contractURI: ERC721Storage.ContractURIStruct,
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -487,7 +471,7 @@ export interface Web3CardStorage extends BaseContract {
 
   transferOwnership(
     newOwner: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   callStatic: {
@@ -539,8 +523,6 @@ export interface Web3CardStorage extends BaseContract {
 
     render(input: BytesLike, overrides?: CallOverrides): Promise<string>;
 
-    renounceOwnership(overrides?: CallOverrides): Promise<void>;
-
     setContractURI(
       contractURI: ERC721Storage.ContractURIStruct,
       overrides?: CallOverrides
@@ -581,11 +563,11 @@ export interface Web3CardStorage extends BaseContract {
     ContractURIUpdated(contractURI?: null): ContractURIUpdatedEventFilter;
 
     "OwnershipTransferred(address,address)"(
-      previousOwner?: string | null,
+      user?: string | null,
       newOwner?: string | null
     ): OwnershipTransferredEventFilter;
     OwnershipTransferred(
-      previousOwner?: string | null,
+      user?: string | null,
       newOwner?: string | null
     ): OwnershipTransferredEventFilter;
 
@@ -645,10 +627,6 @@ export interface Web3CardStorage extends BaseContract {
 
     render(input: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
-    renounceOwnership(
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     setContractURI(
       contractURI: ERC721Storage.ContractURIStruct,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -681,7 +659,7 @@ export interface Web3CardStorage extends BaseContract {
 
     transferOwnership(
       newOwner: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
   };
 
@@ -744,10 +722,6 @@ export interface Web3CardStorage extends BaseContract {
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    renounceOwnership(
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     setContractURI(
       contractURI: ERC721Storage.ContractURIStruct,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -780,7 +754,7 @@ export interface Web3CardStorage extends BaseContract {
 
     transferOwnership(
       newOwner: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
   };
 }

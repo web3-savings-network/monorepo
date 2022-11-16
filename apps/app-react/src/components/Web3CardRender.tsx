@@ -2,10 +2,10 @@
 import * as React from "react";
 
 import { ERC721ImageBase64 } from "@turbo-eth/erc721-wagmi";
-import { useNetworkContract } from "@web3-savings-cards/deployments";
+import { useNetworkContractByChainId } from "@web3-savings-cards/deployments";
 import classNames from "classnames";
 import { constants } from "ethers";
-import { useAccount } from "wagmi";
+import { useAccount, useNetwork } from "wagmi";
 
 import { useWeb3CardRead } from "@/hooks/useWeb3CardRead";
 
@@ -14,14 +14,14 @@ interface Web3CardRenderProps {
 }
 
 export const Web3CardRender = ({ className }: Web3CardRenderProps) => {
-  const contract = useNetworkContract("localhost", "Web3Card");
+  const { chain } = useNetwork();
+  const contract = useNetworkContractByChainId(chain?.id, "Web3Card");
   const account = useAccount();
   const classes = classNames(className, "Web3CardRender");
 
   const UPDATE = ({ x, y }) => {
     const CARD = document.querySelector(".Web3CardRender");
     if (CARD && CARD.getBoundingClientRect) {
-      console.log(CARD, "CARD");
       // Calculate the range between the center and the pointer position.
       const BOUNDS = CARD.getBoundingClientRect();
       const posX = x - BOUNDS.x;

@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import { useNetworkContract } from "@web3-savings-cards/deployments";
+import { useNetworkContractByChainId } from "@web3-savings-cards/deployments";
 import classNames from "classnames";
 import { constants } from "ethers";
-import { useAccount } from "wagmi";
+import { useAccount, useNetwork } from "wagmi";
 
 import { ERC721KPreviewWithStyle } from "./ERC721K/ERC721KPreviewWithStyle";
 
@@ -18,7 +18,8 @@ export const Web3CardPreview = ({
   color,
   emoji,
 }: Web3CardPreviewProps) => {
-  const contract = useNetworkContract("localhost", "Web3Card");
+  const { chain } = useNetwork();
+  const contract = useNetworkContractByChainId(chain?.id, "Web3Card");
   const account = useAccount();
   const classes = classNames(className, "Web3CardPreview");
   return (

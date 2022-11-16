@@ -9,7 +9,7 @@ import { ERC20TWAB } from "./ERC20TWAB.sol";
 import { Web3CardStorage } from "./Web3CardStorage.sol";
 
 contract Web3Card is ERC721K {
-  uint256 private immutable MINTER_ROLE = 1e18;
+  uint256 private immutable CONTROLLER_ROLE = 1e18;
 
   mapping(address => uint256) private _belongsTo;
 
@@ -82,7 +82,7 @@ contract Web3Card is ERC721K {
    * @param to address - Address to mint to`
    */
   function mint(address to) external returns (uint256) {
-    require(hasAllRoles(msg.sender, MINTER_ROLE), "Web3Card:unauthorized");
+    require(hasAllRoles(msg.sender, CONTROLLER_ROLE), "Web3Card:unauthorized");
     require(_belongsTo[to] == 0, "Web3Card:activated");
     uint256 nextId;
     unchecked {
@@ -98,7 +98,7 @@ contract Web3Card is ERC721K {
    * @param tokenId uint256 - Token ID to burn
    */
   function burn(uint256 tokenId) external {
-    require(hasAllRoles(msg.sender, MINTER_ROLE), "Web3Card:unauthorized");
+    require(hasAllRoles(msg.sender, CONTROLLER_ROLE), "Web3Card:unauthorized");
     address owner = ownerOf(tokenId);
     _belongsTo[owner] = 0;
     _burn(tokenId);
@@ -109,8 +109,30 @@ contract Web3Card is ERC721K {
     address to,
     uint256 tokenId
   ) public virtual override {
+    _belongsTo[from] = 0;
     _belongsTo[to] = tokenId;
     super.transferFrom(from, to, tokenId);
+  }
+
+  function safeTransferFrom(
+    address from,
+    address to,
+    uint256 tokenId
+  ) public virtual override {
+    _belongsTo[from] = 0;
+    _belongsTo[to] = tokenId;
+    super.safeTransferFrom(from, to, tokenId);
+  }
+
+  function safeTransferFrom(
+    address from,
+    address to,
+    uint256 tokenId,
+    bytes calldata data
+  ) public virtual override {
+    _belongsTo[from] = 0;
+    _belongsTo[to] = tokenId;
+    super.safeTransferFrom(from, to, tokenId, data);
   }
 
   /* ===================================================================================== */

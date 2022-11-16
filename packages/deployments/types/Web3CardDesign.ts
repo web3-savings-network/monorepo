@@ -22,7 +22,7 @@ export interface Web3CardDesignInterface extends utils.Interface {
   contractName: "Web3CardDesign";
   functions: {
     "confirmOwner()": FunctionFragment;
-    "erc721KMinterInstance()": FunctionFragment;
+    "erc721KActivatorInstance()": FunctionFragment;
     "getColor(uint256)": FunctionFragment;
     "getColorFromMap(uint8)": FunctionFragment;
     "getEmoji(uint256)": FunctionFragment;
@@ -31,7 +31,7 @@ export interface Web3CardDesignInterface extends utils.Interface {
     "renounceOwner()": FunctionFragment;
     "setColor(uint256,uint8)": FunctionFragment;
     "setDuringMint(uint256,uint8,uint8)": FunctionFragment;
-    "setERC721KMinterInstance(address)": FunctionFragment;
+    "setERC721KActivatorInstance(address)": FunctionFragment;
     "setEmoji(uint256,uint8)": FunctionFragment;
     "setStyleUpgradeCost(uint256)": FunctionFragment;
     "transferOwnership(address)": FunctionFragment;
@@ -42,7 +42,7 @@ export interface Web3CardDesignInterface extends utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: "erc721KMinterInstance",
+    functionFragment: "erc721KActivatorInstance",
     values?: undefined
   ): string;
   encodeFunctionData(
@@ -75,7 +75,7 @@ export interface Web3CardDesignInterface extends utils.Interface {
     values: [BigNumberish, BigNumberish, BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: "setERC721KMinterInstance",
+    functionFragment: "setERC721KActivatorInstance",
     values: [string]
   ): string;
   encodeFunctionData(
@@ -96,7 +96,7 @@ export interface Web3CardDesignInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: "erc721KMinterInstance",
+    functionFragment: "erc721KActivatorInstance",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "getColor", data: BytesLike): Result;
@@ -120,7 +120,7 @@ export interface Web3CardDesignInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: "setERC721KMinterInstance",
+    functionFragment: "setERC721KActivatorInstance",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "setEmoji", data: BytesLike): Result;
@@ -190,7 +190,7 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    erc721KMinterInstance(overrides?: CallOverrides): Promise<[string]>;
+    erc721KActivatorInstance(overrides?: CallOverrides): Promise<[string]>;
 
     getColor(
       tokenId: BigNumberish,
@@ -231,8 +231,8 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    setERC721KMinterInstance(
-      _erc721KMinterInstance: string,
+    setERC721KActivatorInstance(
+      _erc721KActivatorInstance: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -257,7 +257,7 @@ export interface Web3CardDesign extends BaseContract {
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  erc721KMinterInstance(overrides?: CallOverrides): Promise<string>;
+  erc721KActivatorInstance(overrides?: CallOverrides): Promise<string>;
 
   getColor(tokenId: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
@@ -292,8 +292,8 @@ export interface Web3CardDesign extends BaseContract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  setERC721KMinterInstance(
-    _erc721KMinterInstance: string,
+  setERC721KActivatorInstance(
+    _erc721KActivatorInstance: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -316,7 +316,7 @@ export interface Web3CardDesign extends BaseContract {
   callStatic: {
     confirmOwner(overrides?: CallOverrides): Promise<void>;
 
-    erc721KMinterInstance(overrides?: CallOverrides): Promise<string>;
+    erc721KActivatorInstance(overrides?: CallOverrides): Promise<string>;
 
     getColor(tokenId: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
@@ -349,8 +349,8 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    setERC721KMinterInstance(
-      _erc721KMinterInstance: string,
+    setERC721KActivatorInstance(
+      _erc721KActivatorInstance: string,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -396,7 +396,7 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    erc721KMinterInstance(overrides?: CallOverrides): Promise<BigNumber>;
+    erc721KActivatorInstance(overrides?: CallOverrides): Promise<BigNumber>;
 
     getColor(
       tokenId: BigNumberish,
@@ -437,8 +437,8 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    setERC721KMinterInstance(
-      _erc721KMinterInstance: string,
+    setERC721KActivatorInstance(
+      _erc721KActivatorInstance: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -464,7 +464,7 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    erc721KMinterInstance(
+    erc721KActivatorInstance(
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
@@ -507,8 +507,8 @@ export interface Web3CardDesign extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    setERC721KMinterInstance(
-      _erc721KMinterInstance: string,
+    setERC721KActivatorInstance(
+      _erc721KActivatorInstance: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

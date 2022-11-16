@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { HardhatUserConfig } from "hardhat/config";
 import { HardhatNetworkAccountUserConfig } from "hardhat/types";
 
@@ -16,6 +17,7 @@ const OPTIMISM_TESTNET_RPC_URL = process.env.OPTIMISM_TESTNET_RPC_URL;
 
 // Forking
 const FORK_ENABLED = process.env.FORK_ENABLED;
+const FORK_CHAIN_ID = process.env.FORK_CHAIN_ID;
 const FORK_BLOCK_NUMBER = process.env.FORK_BLOCK_NUMBER;
 
 const MNEMONIC = "test test test test test test test test test test test junk";
@@ -40,7 +42,7 @@ const networks: HardhatUserConfig["networks"] = {
 /* ===================================================================================== */
 if (ARCHIVE_NODE_RPC_URL && FORK_ENABLED) {
   networks.hardhat = {
-    chainId: 31337,
+    chainId: Number(FORK_CHAIN_ID || "31337"),
     hardfork: "arrowGlacier",
     accounts: { mnemonic: MNEMONIC },
     allowUnlimitedContractSize: true,
@@ -88,7 +90,10 @@ if (MAINNET_PK_DEPLOYER && OPTIMISM_MAINNET_RPC_URL) {
   networks.optimism = {
     url: OPTIMISM_MAINNET_RPC_URL,
     chainId: 10,
+    gasLimit: 6500000,
+    gasPrice: 2000000,
     accounts: [
+      // @ts-ignore
       MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig,
     ],
   };

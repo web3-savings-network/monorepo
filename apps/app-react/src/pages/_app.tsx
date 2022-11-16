@@ -38,22 +38,60 @@ const { chains, provider, webSocketProvider } = configureChains(
   ],
   FORKING_ENABLED
     ? [
+        // jsonRpcProvider({
+        //   priority: 0,
+        //   rpc: () => ({
+        //     http: "http://127.0.0.1:8545",
+        //   }),
+        // }),
+        // alchemyProvider({
+        //   apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
+        //   priority: 1,
+        // }),
         jsonRpcProvider({
-          priority: 0,
           rpc: () => ({
-            http: "http://127.0.0.1:8545",
+            http: "https://eth-mainnet.g.alchemy.com/v2/5oRK-2Gt3A6sKHfISqsC15ozeRyyXjU5",
           }),
         }),
-        // alchemyProvider({ apiKey: ALCHEMY_ID, priority: 1 }),
+        jsonRpcProvider({
+          rpc: () => ({
+            http: "https://opt-mainnet.g.alchemy.com/v2/PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
+          }),
+        }),
+        jsonRpcProvider({
+          rpc: () => ({
+            http: "https://polygon-mainnet.g.alchemy.com/v2/2diTMz1D4GTasTYOiBnErNhZqyXcCOA0",
+          }),
+        }),
+        alchemyProvider({
+          apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
+          priority: 1,
+        }),
+        publicProvider(),
       ]
     : [
         jsonRpcProvider({
           priority: 0,
           rpc: () => ({
-            http: "http://127.0.0.1:8545",
+            http: "https://polygon-mainnet.g.alchemy.com/v2/2diTMz1D4GTasTYOiBnErNhZqyXcCOA0",
           }),
         }),
-        // alchemyProvider({ apiKey: ALCHEMY_ID, priority: 1 }),
+        jsonRpcProvider({
+          rpc: () => ({
+            http: "https://eth-mainnet.g.alchemy.com/v2/5oRK-2Gt3A6sKHfISqsC15ozeRyyXjU5",
+          }),
+        }),
+        jsonRpcProvider({
+          priority: 0,
+          rpc: () => ({
+            http: "https://opt-mainnet.g.alchemy.com/v2/PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
+          }),
+        }),
+        // alchemyProvider({
+        //   apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
+        //   // priority: 1,
+        // }),
+        publicProvider(),
       ]
 );
 

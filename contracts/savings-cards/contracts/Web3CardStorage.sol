@@ -20,7 +20,7 @@ contract Web3CardStorage is ERC721Storage {
   address public erc721KInstance;
   address public erc721KDesignInstance;
 
-  bytes private DEFAULT_COLOR = hex"28236E";
+  bytes private DEFAULT_COLOR = hex"6236C5";
 
   mapping(uint256 => string) private _name;
   mapping(uint256 => string) private _emojiMap;
@@ -57,7 +57,7 @@ contract Web3CardStorage is ERC721Storage {
   }
 
   function _parseDescription(uint256 _tokenId) internal view override returns (string memory) {
-    return string.concat("Member of the Web3 Savings Network:");
+    return "Member of the Web3 Savings Network";
   }
 
   /// =====================================================================================

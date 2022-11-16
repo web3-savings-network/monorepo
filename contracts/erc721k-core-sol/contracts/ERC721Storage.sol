@@ -1,17 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.15;
 
-import { Base64 } from "base64-sol/base64.sol";
-import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
+import { Base64 } from "@turbo-eth/solbase-sol/src/utils/Base64.sol";
+import { Owned } from "@turbo-eth/solbase-sol/src/auth/Owned.sol";
 import { IERC721KImage } from "./interfaces/IERC721KImage.sol";
 import { IERC721KTraits } from "./interfaces/IERC721KTraits.sol";
-import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
 
 /**
  * @title ERC721Storage
  * @author Kames Geraghty
  */
-abstract contract ERC721Storage is Ownable {
+abstract contract ERC721Storage is Owned {
   address internal _svgRender;
   address internal _traitsFetch;
   ContractURI internal _contractURI;
@@ -35,7 +34,7 @@ abstract contract ERC721Storage is Ownable {
     address _svgRender_,
     address _traitsFetch_,
     ContractURI memory _contractURI_
-  ) {
+  ) Owned(msg.sender) {
     _svgRender = _svgRender_;
     _traitsFetch = _traitsFetch_;
     _contractURI = _contractURI_;

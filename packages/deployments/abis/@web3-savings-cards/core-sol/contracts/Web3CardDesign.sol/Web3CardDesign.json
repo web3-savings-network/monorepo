@@ -62,7 +62,7 @@
   },
   {
     "inputs": [],
-    "name": "erc721KMinterInstance",
+    "name": "erc721KActivatorInstance",
     "outputs": [
       {
         "internalType": "address",
@@ -214,11 +214,11 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_erc721KMinterInstance",
+        "name": "_erc721KActivatorInstance",
         "type": "address"
       }
     ],
-    "name": "setERC721KMinterInstance",
+    "name": "setERC721KActivatorInstance",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

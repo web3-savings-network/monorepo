@@ -22,8 +22,6 @@ export const IsERC721KMinted = ({
     args: [account.address],
   });
 
-  console.log(txRead, "txRead");
-
   if (!txRead.data || !txRead.isSuccess) return children[0];
   if (BigNumber.from(txRead.data).eq(constants.Zero)) {
     return children[0];

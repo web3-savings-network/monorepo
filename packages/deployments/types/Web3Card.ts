@@ -516,14 +516,14 @@ export interface Web3Card extends BaseContract {
     "safeTransferFrom(address,address,uint256)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     "safeTransferFrom(address,address,uint256,bytes)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       data: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
@@ -681,14 +681,14 @@ export interface Web3Card extends BaseContract {
   "safeTransferFrom(address,address,uint256)"(
     from: string,
     to: string,
-    id: BigNumberish,
+    tokenId: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   "safeTransferFrom(address,address,uint256,bytes)"(
     from: string,
     to: string,
-    id: BigNumberish,
+    tokenId: BigNumberish,
     data: BytesLike,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
@@ -831,14 +831,14 @@ export interface Web3Card extends BaseContract {
     "safeTransferFrom(address,address,uint256)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
 
     "safeTransferFrom(address,address,uint256,bytes)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       data: BytesLike,
       overrides?: CallOverrides
     ): Promise<void>;
@@ -1069,14 +1069,14 @@ export interface Web3Card extends BaseContract {
     "safeTransferFrom(address,address,uint256)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     "safeTransferFrom(address,address,uint256,bytes)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       data: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
@@ -1255,14 +1255,14 @@ export interface Web3Card extends BaseContract {
     "safeTransferFrom(address,address,uint256)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     "safeTransferFrom(address,address,uint256,bytes)"(
       from: string,
       to: string,
-      id: BigNumberish,
+      tokenId: BigNumberish,
       data: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;

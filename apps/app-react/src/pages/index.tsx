@@ -3,15 +3,14 @@ import {
   ERC721Description,
   ERC721Name,
 } from "@turbo-eth/erc721-wagmi";
-import { useNetworkContract } from "@web3-savings-cards/deployments";
+import { useNetworkContractByChainId } from "@web3-savings-cards/deployments";
 import { ResponsiveMobileAndDesktop } from "@web3-savings-cards/framework-react";
 import classNames from "classnames";
 import Link from "next/link";
-import { useAccount } from "wagmi";
+import { useAccount, useNetwork } from "wagmi";
 
 import { FormMintWeb3Card } from "@/components/FormMintWeb3Card";
 import { IsERC721KMinted } from "@/components/IsERC721KMinted";
-import { SelectBlockchainNetwork } from "@/components/Web3/SelectBlockchainNetwork";
 import { Web3CardRender } from "@/components/Web3CardRender";
 import { useWeb3CardRead } from "@/hooks/useWeb3CardRead";
 import { Main } from "@/templates/Main";
@@ -19,7 +18,8 @@ import { Meta } from "@/templates/Meta";
 import { AppConfig } from "@/utils/AppConfig";
 
 const IsMinted = (props) => {
-  const contract = useNetworkContract("localhost", "Web3Card");
+  const { chain } = useNetwork();
+  const contract = useNetworkContractByChainId(chain?.id, "Web3Card");
   const account = useAccount();
   const txRead = useWeb3CardRead(contract?.address, "belongsTo", [
     account.address,
@@ -72,7 +72,8 @@ const SectionMobile = () => (
 
 const SectionDesktop = () => {
   const classes = classNames("py-32 content");
-  const contract = useNetworkContract("localhost", "Web3Card");
+  const { chain } = useNetwork();
+  const contract = useNetworkContractByChainId(chain?.id, "Web3Card");
 
   return (
     <div className={classes}>

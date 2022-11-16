@@ -72,13 +72,11 @@ contract PoolTogetherV0Render is Ownable {
 
     return
       string.concat(
-        // '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300" fill="#633EF7" style="font-family: sans-serif;" >',
         svg.start(
           "svg",
           string.concat(
             svg.prop("xmlns", "http://www.w3.org/2000/svg"),
-            svg.prop("font-family", "sans-serif"),
-            svg.prop("x", "0.00195312"),
+            svg.prop("font-family", "Roboto, sans-serif"),
             svg.prop("height", "300"),
             svg.prop("width", "500"),
             svg.prop("viewbox", "0 0 500 300"),

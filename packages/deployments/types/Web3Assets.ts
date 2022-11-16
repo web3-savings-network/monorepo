@@ -23,7 +23,6 @@ export interface Web3AssetsInterface extends utils.Interface {
     "confirmOwner()": FunctionFragment;
     "decode(bytes)": FunctionFragment;
     "get(bytes32)": FunctionFragment;
-    "getEncoding()": FunctionFragment;
     "owner()": FunctionFragment;
     "renounceOwner()": FunctionFragment;
     "set(bytes32,string)": FunctionFragment;
@@ -36,10 +35,6 @@ export interface Web3AssetsInterface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "decode", values: [BytesLike]): string;
   encodeFunctionData(functionFragment: "get", values: [BytesLike]): string;
-  encodeFunctionData(
-    functionFragment: "getEncoding",
-    values?: undefined
-  ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "renounceOwner",
@@ -60,10 +55,6 @@ export interface Web3AssetsInterface extends utils.Interface {
   ): Result;
   decodeFunctionResult(functionFragment: "decode", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "getEncoding",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "renounceOwner",
@@ -136,8 +127,6 @@ export interface Web3Assets extends BaseContract {
 
     get(position: BytesLike, overrides?: CallOverrides): Promise<[string]>;
 
-    getEncoding(overrides?: CallOverrides): Promise<[string]>;
-
     owner(overrides?: CallOverrides): Promise<[string]>;
 
     renounceOwner(
@@ -164,8 +153,6 @@ export interface Web3Assets extends BaseContract {
 
   get(position: BytesLike, overrides?: CallOverrides): Promise<string>;
 
-  getEncoding(overrides?: CallOverrides): Promise<string>;
-
   owner(overrides?: CallOverrides): Promise<string>;
 
   renounceOwner(
@@ -189,8 +176,6 @@ export interface Web3Assets extends BaseContract {
     decode(input: BytesLike, overrides?: CallOverrides): Promise<string>;
 
     get(position: BytesLike, overrides?: CallOverrides): Promise<string>;
-
-    getEncoding(overrides?: CallOverrides): Promise<string>;
 
     owner(overrides?: CallOverrides): Promise<string>;
 
@@ -237,8 +222,6 @@ export interface Web3Assets extends BaseContract {
 
     get(position: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
-    getEncoding(overrides?: CallOverrides): Promise<BigNumber>;
-
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
     renounceOwner(
@@ -271,8 +254,6 @@ export interface Web3Assets extends BaseContract {
       position: BytesLike,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
-
-    getEncoding(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

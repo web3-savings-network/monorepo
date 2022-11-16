@@ -5,5 +5,6 @@ import TwabRewardsABI from './abi/TwabRewards.json'
 import TWABDelegatorABI from './abi/TWABDelegator.json'
 import PrizeTierHistoryABI from './abi/PrizeTierHistory.json'
 import {useNetworkContract} from './useNetworkContract'
+import {useNetworkContractByChainId} from './useNetworkContractByChainId'
 
-export { Web3CardABI, Web3CardStorageABI, TwabRewardsABI, TWABDelegatorABI, PrizeTierHistoryABI, useNetworkContract }
+export { Web3CardABI, Web3CardStorageABI, TwabRewardsABI, TWABDelegatorABI, PrizeTierHistoryABI, useNetworkContract, useNetworkContractByChainId }

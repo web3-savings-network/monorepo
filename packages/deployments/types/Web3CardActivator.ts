@@ -27,6 +27,7 @@ export interface Web3CardActivatorInterface extends utils.Interface {
     "erc721KInstance()": FunctionFragment;
     "owner()": FunctionFragment;
     "release(uint256)": FunctionFragment;
+    "setStyleUpgradeCost(uint256)": FunctionFragment;
     "transferOwnership(address)": FunctionFragment;
   };
 
@@ -49,6 +50,10 @@ export interface Web3CardActivatorInterface extends utils.Interface {
     values: [BigNumberish]
   ): string;
   encodeFunctionData(
+    functionFragment: "setStyleUpgradeCost",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
     functionFragment: "transferOwnership",
     values: [string]
   ): string;
@@ -68,6 +73,10 @@ export interface Web3CardActivatorInterface extends utils.Interface {
   ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "release", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "setStyleUpgradeCost",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "transferOwnership",
     data: BytesLike
@@ -135,7 +144,12 @@ export interface Web3CardActivator extends BaseContract {
     owner(overrides?: CallOverrides): Promise<[string]>;
 
     release(
-      amount: BigNumberish,
+      value: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setStyleUpgradeCost(
+      value: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -164,7 +178,12 @@ export interface Web3CardActivator extends BaseContract {
   owner(overrides?: CallOverrides): Promise<string>;
 
   release(
-    amount: BigNumberish,
+    value: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setStyleUpgradeCost(
+    value: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -189,7 +208,12 @@ export interface Web3CardActivator extends BaseContract {
 
     owner(overrides?: CallOverrides): Promise<string>;
 
-    release(amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    release(value: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    setStyleUpgradeCost(
+      value: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     transferOwnership(
       newOwner: string,
@@ -228,7 +252,12 @@ export interface Web3CardActivator extends BaseContract {
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
     release(
-      amount: BigNumberish,
+      value: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setStyleUpgradeCost(
+      value: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -260,7 +289,12 @@ export interface Web3CardActivator extends BaseContract {
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     release(
-      amount: BigNumberish,
+      value: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setStyleUpgradeCost(
+      value: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

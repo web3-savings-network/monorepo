@@ -29,6 +29,8 @@ export function useERC721Metadata({
     args: [tokenId],
   });
 
+  console.log(txRead, tokenId, 'HELLO')
+
   useEffect(() => {
     if (txRead.data) {
       (async () => {

@@ -8,6 +8,11 @@ import type { ERC721Storage, ERC721StorageInterface } from "../ERC721Storage";
 
 const _abi = [
   {
+    inputs: [],
+    name: "Unauthorized",
+    type: "error",
+  },
+  {
     anonymous: false,
     inputs: [
       {
@@ -58,7 +63,7 @@ const _abi = [
       {
         indexed: true,
         internalType: "address",
-        name: "previousOwner",
+        name: "user",
         type: "address",
       },
       {
@@ -243,13 +248,6 @@ const _abi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "renounceOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [
       {
         components: [
@@ -330,7 +328,7 @@ const _abi = [
     ],
     name: "transferOwnership",
     outputs: [],
-    stateMutability: "nonpayable",
+    stateMutability: "payable",
     type: "function",
   },
 ];

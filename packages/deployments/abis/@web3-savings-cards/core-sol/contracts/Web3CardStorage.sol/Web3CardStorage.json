@@ -68,6 +68,11 @@
     "type": "constructor"
   },
   {
+    "inputs": [],
+    "name": "Unauthorized",
+    "type": "error"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -118,7 +123,7 @@
       {
         "indexed": true,
         "internalType": "address",
-        "name": "previousOwner",
+        "name": "user",
         "type": "address"
       },
       {
@@ -441,13 +446,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "renounceOwnership",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "components": [
@@ -567,7 +565,7 @@
     ],
     "name": "transferOwnership",
     "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "payable",
     "type": "function"
   }
 ]

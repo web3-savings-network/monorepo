@@ -13,7 +13,7 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
     contract: "PoolTogetherV0Render",
     from: deployer,
     args: [SVGLibrary.address, SVGRegistry.address],
-    skipIfAlreadyDeployed: false,
+    skipIfAlreadyDeployed: true,
     log: true,
   });
 
@@ -21,14 +21,16 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
     contract: "Web3CardTraits",
     from: deployer,
     args: [],
-    skipIfAlreadyDeployed: false,
+    skipIfAlreadyDeployed: true,
     log: true,
+    gasLimit: 6500000,
+    // gasPrice: '45000000000',
   });
 
   const contactInformation = {
     name: "Web3 Savings Cards",
-    description: "Saving Cards for Web3",
-    image: "",
+    description: "Powered by a Web3 Savings Protocol",
+    image: "https://cloudflare-ipfs.com/ipfs/QmXP6TRR8UDi7vQ5gxF4AhxHoRwQuj3Ku3AuDggjZMyXGo",
     externalLink: "https://web3savings.network",
     sellerFeeBasisPoints: "0",
     feeRecipient: "0x0000000000000000000000000000000000000000",
@@ -38,24 +40,27 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
     contract: "Web3CardDesign",
     from: deployer,
     args: [deployer],
-    skipIfAlreadyDeployed: false,
+    skipIfAlreadyDeployed: true,
     log: true,
+    // gasPrice: '45000000000',
   });
 
   const Web3CardStorage = await deploy("Web3CardStorage", {
     contract: "Web3CardStorage",
     from: deployer,
     args: [PoolTogetherV0Render.address, Web3CardTraits.address, contactInformation, erc20TWAB, Web3CardDesign.address, underlyingAsset ],
-    skipIfAlreadyDeployed: false,
+    skipIfAlreadyDeployed: true,
     log: true,
+    // gasPrice: '45000000000',
   });
 
   const Web3Card = await deploy("Web3Card", {
     contract: "Web3Card",
     from: deployer,
     args: ["Web3 Savings Card", "SAVE", Web3CardStorage.address],
-    skipIfAlreadyDeployed: false,
+    skipIfAlreadyDeployed: true,
     log: true,
+    // gasPrice: '45000000000',
   });
   
   
@@ -63,8 +68,9 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
     contract: "Web3CardActivator",
     from: deployer,
     args: [admin, Web3Card.address, Web3CardDesign.address],
-    skipIfAlreadyDeployed: false,
+    skipIfAlreadyDeployed: true,
     log: true,
+    // gasPrice: '45000000000',
   });
 
   const card = await ethers.getContractAt("Web3Card", Web3Card.address);
@@ -74,9 +80,25 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
     Web3CardStorage.address
     );
     
-  await card.grantRoles(Web3CardActivator.address, ethers.utils.parseEther('1'));
-  await cardDesign.setERC721KMinterInstance(Web3CardActivator.address);
-  await cardDesign.transferOwnership(admin);
-  await cardStorage.setERC721KInstance(Web3Card.address);
+  // const tx = await card.grantRoles(Web3CardActivator.address, ethers.utils.parseEther('1'), {
+  //   // gasPrice: '45000000000',
+  // });
+  // await tx.wait();
   
+  // const tx2=  await cardDesign.setERC721KActivatorInstance(Web3CardActivator.address, {
+  //   // gasPrice: '45000000000',
+  // });
+  // await tx2.wait();
+  // const tx3 = await cardDesign.transferOwnership(admin,{
+  //   // gasPrice: '45000000000',
+  // });
+  // await tx3.wait();
+  const tx4 = await cardStorage.setERC721KInstance(Web3Card.address, {
+    
+  });
+  await tx4.wait();
+  const tx5 =await cardStorage.transferOwnership(admin, {
+
+  });
+  await tx5.wait();
 }

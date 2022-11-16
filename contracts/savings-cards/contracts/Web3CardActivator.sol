@@ -9,6 +9,8 @@ contract Web3CardActivator is Owned {
   address public erc721KInstance;
   address public erc721KDesignInstance;
 
+  uint256 private STYLE_UPGRADE_VALUE = 0.01 ether;
+
   constructor(
     address admin,
     address _erc721KInstance,
@@ -27,13 +29,18 @@ contract Web3CardActivator is Owned {
     uint8 color,
     uint8 emoji
   ) external payable {
-    if (color + emoji >= 1) require(msg.value >= 0.01 ether, "Web3CardActivator:insufficient-eth");
+    if (color + emoji >= 1)
+      require(msg.value >= STYLE_UPGRADE_VALUE, "Web3CardActivator:insufficient-eth");
     uint256 tokenId_ = Web3Card(erc721KInstance).mint(to);
     Web3CardDesign(erc721KDesignInstance).setDuringMint(tokenId_, color, emoji);
   }
 
-  function release(uint256 amount) external onlyOwner {
-    (bool _success, ) = msg.sender.call{ value: amount }("");
+  function release(uint256 value) external onlyOwner {
+    (bool _success, ) = msg.sender.call{ value: value }("");
     require(_success, "Web3CardActivator:eth-release-failed");
+  }
+
+  function setStyleUpgradeCost(uint256 value) external onlyOwner {
+    STYLE_UPGRADE_VALUE = value;
   }
 }
