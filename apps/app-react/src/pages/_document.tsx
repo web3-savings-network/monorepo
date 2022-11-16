@@ -8,6 +8,20 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            // crossorigin={true}
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
           <meta property="og:title" content={AppConfig.title} />
           <meta property="twitter:title" content={AppConfig.title} />
           <meta property="og:type" content="website" />
