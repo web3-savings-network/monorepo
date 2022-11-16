@@ -13,6 +13,7 @@ import {
 import { ChanceCardsProvider } from "@web3-savings-cards/framework-react";
 import type { AppProps } from "next/app";
 import { ModalProvider } from "react-modal-hook";
+import type { Chain } from "wagmi";
 import { WagmiConfig, chain, configureChains, createClient } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
@@ -26,6 +27,11 @@ import {
   FORKING_ENABLED,
 } from "@/utils/constants";
 
+chain.optimism.rpcUrls = {
+  default:
+    "https://opt-mainnet.g.alchemy.com/v2/PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
+};
+
 const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
@@ -38,59 +44,21 @@ const { chains, provider, webSocketProvider } = configureChains(
   ],
   FORKING_ENABLED
     ? [
-        // jsonRpcProvider({
-        //   priority: 0,
-        //   rpc: () => ({
-        //     http: "http://127.0.0.1:8545",
-        //   }),
-        // }),
-        // alchemyProvider({
-        //   apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
-        //   priority: 1,
-        // }),
         jsonRpcProvider({
+          priority: 0,
           rpc: () => ({
-            http: "https://eth-mainnet.g.alchemy.com/v2/5oRK-2Gt3A6sKHfISqsC15ozeRyyXjU5",
-          }),
-        }),
-        jsonRpcProvider({
-          rpc: () => ({
-            http: "https://opt-mainnet.g.alchemy.com/v2/PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
-          }),
-        }),
-        jsonRpcProvider({
-          rpc: () => ({
-            http: "https://polygon-mainnet.g.alchemy.com/v2/2diTMz1D4GTasTYOiBnErNhZqyXcCOA0",
+            http: "http://127.0.0.1:8545",
           }),
         }),
         alchemyProvider({
           apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
-          priority: 1,
         }),
         publicProvider(),
       ]
     : [
-        jsonRpcProvider({
-          priority: 0,
-          rpc: () => ({
-            http: "https://polygon-mainnet.g.alchemy.com/v2/2diTMz1D4GTasTYOiBnErNhZqyXcCOA0",
-          }),
+        alchemyProvider({
+          apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
         }),
-        jsonRpcProvider({
-          rpc: () => ({
-            http: "https://eth-mainnet.g.alchemy.com/v2/5oRK-2Gt3A6sKHfISqsC15ozeRyyXjU5",
-          }),
-        }),
-        jsonRpcProvider({
-          priority: 0,
-          rpc: () => ({
-            http: "https://opt-mainnet.g.alchemy.com/v2/PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
-          }),
-        }),
-        // alchemyProvider({
-        //   apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
-        //   // priority: 1,
-        // }),
         publicProvider(),
       ]
 );
