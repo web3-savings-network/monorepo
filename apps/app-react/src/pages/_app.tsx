@@ -37,19 +37,18 @@ const { chains, provider, webSocketProvider } = configureChains(
     chain.mainnet,
     chain.optimism,
     chain.polygon,
-    chain.arbitrum,
     ...(ENABLE_TESTNETS === "true"
       ? [chain.hardhat, chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
       : []),
   ],
   FORKING_ENABLED
     ? [
-        jsonRpcProvider({
-          priority: 0,
-          rpc: () => ({
-            http: "http://127.0.0.1:8545",
-          }),
-        }),
+        // jsonRpcProvider({
+        //   priority: 0,
+        //   rpc: () => ({
+        //     http: "http://127.0.0.1:8545",
+        //   }),
+        // }),
         alchemyProvider({
           apiKey: "PNrcp92HqtUIfo4SEQGG38gkGzHUglS5",
         }),
