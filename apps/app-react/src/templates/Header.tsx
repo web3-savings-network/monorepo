@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { ResponsiveMobileAndDesktop } from "@web3-savings-cards/framework-react";
 import classNames from "classnames";
 
 import { AppColorMode } from "@/components/App/AppColorMode";
@@ -19,13 +20,16 @@ export const Header = ({ className }: HeaderProps) => {
   );
   return (
     <div className={containerClassName}>
-      <div className=" align-center flex w-1/3 items-center justify-between">
+      <div className=" align-center flex w-1/2 items-center justify-between lg:w-1/3">
         <AppLogo />
       </div>
       <div className="w-1/3">
-        <Web3CardChainSelection />
+        <ResponsiveMobileAndDesktop>
+          <></>
+          <Web3CardChainSelection />
+        </ResponsiveMobileAndDesktop>
       </div>
-      <div className="flex w-1/3 items-center justify-end">
+      <div className="flex items-center justify-end lg:w-1/3">
         <ConnectButton
           showBalance={false}
           accountStatus={{ smallScreen: "avatar", largeScreen: "avatar" }}

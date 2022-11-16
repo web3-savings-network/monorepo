@@ -28,8 +28,8 @@ const IsMinted = (props) => {
   return (
     <>
       <div className="flex h-[100%] items-center">
-        <div className="container mx-auto grid max-w-screen-xl grid-cols-12 lg:gap-x-10">
-          <div className="col-span-4 ">
+        <div className="container mx-auto grid max-w-screen-xl grid-cols-12 gap-y-10 lg:gap-x-10">
+          <div className="col-span-12 lg:col-span-4 ">
             <div className="">
               <ERC721Name
                 className="text-4xl font-bold"
@@ -50,7 +50,7 @@ const IsMinted = (props) => {
               tokenId={txRead.data}
             />
           </div>
-          <div className="flex-center col-span-8 flex flex-col items-center justify-center border-l-2">
+          <div className="flex-center col-span-12 flex flex-col items-center justify-center border-l-2 lg:col-span-8">
             <Web3CardRender className="rounded-lg shadow-md hover:shadow-lg" />
           </div>
         </div>
@@ -80,8 +80,8 @@ const SectionDesktop = () => {
       <IsERC721KMinted contractAddress={contract?.address}>
         <>
           <div className="my-12" />
-          <div className="container mx-auto grid max-w-screen-xl grid-cols-12 lg:gap-x-10">
-            <div className="col-span-4 ">
+          <div className="container mx-auto grid max-w-screen-xl grid-cols-12 gap-y-10 lg:gap-x-10">
+            <div className="order-2 col-span-12 p-10 lg:order-1 lg:col-span-4 lg:p-0">
               <h3 className="text-4xl font-bold">Web3 Savings Cards</h3>
               <div className="my-6" />
               <h3 className="text-xl font-bold">
@@ -107,7 +107,7 @@ const SectionDesktop = () => {
                 <span className="font-bold">Saving with friends</span>.
               </p>
             </div>
-            <div className="flex-center col-span-8 flex flex-col items-center justify-center border-l-2">
+            <div className="flex-center order-1 col-span-12 flex flex-col items-center justify-center border-l-2 lg:order-2 lg:col-span-8">
               <>
                 <div className="max-w-xl">
                   <FormMintWeb3Card />
@@ -145,7 +145,7 @@ const Index = () => (
     }
   >
     <ResponsiveMobileAndDesktop>
-      <SectionMobile />
+      <SectionDesktop />
       <SectionDesktop />
     </ResponsiveMobileAndDesktop>
   </Main>
