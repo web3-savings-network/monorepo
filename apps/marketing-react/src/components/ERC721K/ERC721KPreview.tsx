@@ -1,5 +1,7 @@
 import * as React from "react";
+
 import { useContractRead } from "wagmi";
+
 import ERC721K_ABI from "./ERC721K.json";
 
 interface ERC721KPreviewProps {
@@ -16,10 +18,8 @@ export const ERC721KPreview = ({
     addressOrName: contractAddress,
     contractInterface: ERC721K_ABI,
     functionName: "preview",
-    args: args,
+    args,
   });
-
-  console.log(txRead, "txRead");
 
   if (!txRead.data || !txRead.isSuccess) return null;
   return <img src={String(txRead.data)} />;

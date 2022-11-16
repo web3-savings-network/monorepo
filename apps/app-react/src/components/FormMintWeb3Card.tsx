@@ -85,18 +85,8 @@ export const FormMintWeb3Card = ({ className }: FormMintWeb3CardProps) => {
       gasLimit: 177713,
       value: valueAmount,
     },
-    onSuccess(data) {
-      console.log("Settled", { data });
-      // showModal();
-    },
   });
   const writing = useContractWrite(config);
-
-  console.log(writing, "writing");
-
-  // const { data, isError, isLoading } = useWaitForTransaction({
-  //   hash: writing.h
-  // })
 
   React.useEffect(() => {
     try {

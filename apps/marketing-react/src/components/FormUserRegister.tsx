@@ -1,14 +1,17 @@
 import * as React from "react";
-import classNames from "classnames";
-import { Input, IsWalletConnected } from "@web3-savings-cards/framework-react";
-import { useForm } from "react-hook-form";
-import SignInWithEthereum from "./SignInWithEthereum";
-import useBackendAPI from "@/hooks/useBackendAPI";
-import { useAccount } from "wagmi";
-import IsSignedIn from "./IsSignedIn";
-import { useModal } from "react-modal-hook";
-import ModalAnimateSmall from "./Modal/ModalAnimateSmall";
+
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { Input, IsWalletConnected } from "@web3-savings-cards/framework-react";
+import classNames from "classnames";
+import { useForm } from "react-hook-form";
+import { useModal } from "react-modal-hook";
+import { useAccount } from "wagmi";
+
+import useBackendAPI from "@/hooks/useBackendAPI";
+
+import IsSignedIn from "./IsSignedIn";
+import ModalAnimateSmall from "./Modal/ModalAnimateSmall";
+import SignInWithEthereum from "./SignInWithEthereum";
 
 interface FormUserRegisterProps {
   className?: string;
@@ -45,7 +48,7 @@ export const FormUserRegister = ({ className }: FormUserRegisterProps) => {
   const [showModal, hideModal] = useModal(() => (
     <ModalAnimateSmall hideModal={hideModal}>
       <div className="content px-10">
-        <h3 className="font-bold text-5xl">You're Registered</h3>
+        <h3 className="text-5xl font-bold">You're Registered</h3>
         <hr className="my-3" />
         <p className="">All financial journeys start with a savings account.</p>
         <p className="">
@@ -54,7 +57,7 @@ export const FormUserRegister = ({ className }: FormUserRegisterProps) => {
           program.{" "}
           <span className="font-bold">Encouraging everyone to save.</span>
         </p>
-        <h3 className="font-bold text-3xl">What's next?</h3>
+        <h3 className="text-3xl font-bold">What's next?</h3>
         <p className="">We will reach out to you shortly.</p>
         <p className="">
           The Web3 Savings Cards Alpha release will be limited to 100 savings
@@ -76,7 +79,6 @@ export const FormUserRegister = ({ className }: FormUserRegisterProps) => {
   const onButtonClick = async () => {
     // `current` points to the mounted text input element
     // inputEl?.current?.focus();
-    console.log("WRTF", data);
 
     const res = await postRegisterRequest(data);
     if (res?.status === 200) {
@@ -110,7 +112,7 @@ export const FormUserRegister = ({ className }: FormUserRegisterProps) => {
       <div className={classes}>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="z-0 relative col-span-4"
+          className="relative z-0 col-span-4"
         >
           <Input
             hidden
@@ -140,7 +142,7 @@ export const FormUserRegister = ({ className }: FormUserRegisterProps) => {
           <div className="my-6" />
           <IsWalletConnected
             loading={
-              <div className="text-center w-full flex flex-center my-3">
+              <div className="flex-center my-3 flex w-full text-center">
                 <ConnectButton className="w-full" />
               </div>
             }

@@ -24,8 +24,6 @@ export const ERC721KPreviewWithStyle = ({
     }
   }, [txRead.data]);
 
-  console.log(txRead, "txReadtxRead");
-
   if (!imgData) return null;
   const classes = classNames(className, "ERC721KPreviewWithStyle");
   return <img alt="Web3 Savings Card" className={classes} src={imgData} />;
