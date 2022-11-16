@@ -214,9 +214,9 @@ export const FormMintWeb3Card = ({ className }: FormMintWeb3CardProps) => {
             />
           </div>
           <div className="my-3 flex  items-center justify-between">
-            <span className="text-xs font-medium">Activation Cost</span>
+            <span className="text-xs font-medium">Custom Design</span>
             <span className="tag tag-cloud">
-              Ξ {utils.formatEther(valueAmount)}
+              0.01 ETH on Optimism | 1 MATIC on Polygon
             </span>
           </div>
           <IsWalletConnected
