@@ -44,7 +44,10 @@ const SectionDesktop = (props) => (
     <SectionHero />
     <SectionDeployedOnComingSoon className="content font-primary" />
     <div className="my-20" />
-    <SectionSalesCopyedit className="content bg-gradient-to-br from-neutral-100 via-neutral-100 to-neutral-200 px-10 py-20  dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900" />
+    <SectionSalesCopyedit
+      className="content bg-gradient-to-b
+    r from-neutral-100 via-neutral-100 to-neutral-200 px-10 py-20  dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900"
+    />
 
     <SectionGettingStarted className="content px-10 py-20 font-primary" />
   </div>

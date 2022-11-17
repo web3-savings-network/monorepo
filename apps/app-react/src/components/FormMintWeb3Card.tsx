@@ -71,7 +71,11 @@ export const FormMintWeb3Card = ({ className }: FormMintWeb3CardProps) => {
   const [valueAmount, setValueAmount] = React.useState<string>("0");
   React.useEffect(() => {
     if (watchAll.color.value + watchAll.emoji.value > 0) {
+      if(chain?.id === 10) {
       setValueAmount(utils.parseEther("0.01").toString());
+      } else {
+        setValueAmount(utils.parseEther("1").toString());
+      }
     } else {
       setValueAmount("0");
     }
